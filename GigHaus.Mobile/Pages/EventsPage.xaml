@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GigHaus.Mobile.Pages.EventsPage"
+             Title="Upcoming Events">
+
+    <VerticalStackLayout Padding="16" Spacing="12">
+        <Label Text="Upcoming Events"
+               FontSize="24"
+               FontAttributes="Bold" />
+
+        <Label Text="Browse and reserve spots at upcoming house concerts and intimate performances."
+               FontSize="14"
+               TextColor="Gray" />
+
+        <!-- Event list will be populated via API -->
+        <Label Text="Loading events..."
+               x:Name="StatusLabel"
+               FontSize="16"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+    </VerticalStackLayout>
+
+</ContentPage>
+

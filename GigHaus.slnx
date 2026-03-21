@@ -1,0 +1,27 @@
+<Solution>
+  <Folder Name="/Aspire/">
+    <Project Path="GigHaus.AppHost/GigHaus.AppHost.csproj" />
+    <Project Path="GigHaus.ServiceDefaults/GigHaus.ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/Core/">
+    <Project Path="GigHaus.Domain/GigHaus.Domain.csproj" />
+    <Project Path="GigHaus.Infrastructure/GigHaus.Infrastructure.csproj" />
+    <Project Path="GigHaus.WebApi/GigHaus.WebApi.csproj" />
+  </Folder>
+  <Folder Name="/Web/">
+    <Project Path="GigHaus.Web/GigHaus.Web.csproj" />
+  </Folder>
+  <Folder Name="/Mobile/">
+    <Project Path="GigHaus.Mobile/GigHaus.Mobile.csproj" />
+  </Folder>
+  <Folder Name="/Tools/">
+    <Project Path="GigHaus.Migrations/GigHaus.Migrations.csproj" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="GigHaus.Tests/GigHaus.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Docs/">
+    <File Path="Docs/GigHaus_Legal_and_Pricing_Notes.md" />
+    <File Path="Docs/README.md" />
+  </Folder>
+</Solution>

@@ -1,0 +1,93 @@
+@page "/artists/{ArtistId:guid}"
+@using GigHaus.Domain.Entities
+@using GigHaus.Domain.Enums
+@using GigHaus.Infrastructure.Repositories
+@inject IArtistRepository ArtistRepo
+@inject IEventRepository EventRepo
+@inject IReservationRepository ReservationRepo
+@inject ISettlementSummaryRepository SettlementRepo
+@inject IPaymentRecordRepository PaymentRepo
+@rendermode InteractiveServer
+
+<PageTitle>Artist Dashboard - GigHaus</PageTitle>
+
+@if (_artist is null)
+{
+    <p><em>Loading artist...</em></p>
+}
+else
+{
+    <h2>@_artist.Name — Artist Dashboard</h2>
+    <p class="text-muted">@_artist.Email @(string.IsNullOrEmpty(_artist.Website) ? "" : $"• {_artist.Website}")</p>
+
+    <div class="row mt-3 mb-4">
+        <div class="col-md-3"><div class="card text-center"><div class="card-body"><h6>Events</h6><p class="display-6">@_events.Count()</p></div></div></div>
+        <div class="col-md-3"><div class="card text-center"><div class="card-body"><h6>Total Guests</h6><p class="display-6">@_totalGuests</p></div></div></div>
+        <div class="col-md-3"><div class="card text-center"><div class="card-body"><h6>Gross Collected</h6><p class="display-6">@_totalGross.ToString("C")</p></div></div></div>
+        <div class="col-md-3"><div class="card text-center bg-success text-white"><div class="card-body"><h6>Net to Artist</h6><p class="display-6">@_netToArtist.ToString("C")</p></div></div></div>
+    </div>
+
+    <h4>Events &amp; Earnings</h4>
+    @if (!_events.Any())
+    {
+        <p class="text-muted">No events yet.</p>
+    }
+    else
+    {
+        <table class="table table-striped">
+            <thead><tr><th>Title</th><th>Date</th><th>Host</th><th>Reservations</th><th>Gross</th><th>Net to Artist</th></tr></thead>
+            <tbody>
+            @foreach (var ev in _events)
+            {
+                var settlement = _settlementsByEvent.GetValueOrDefault(ev.Id);
+                var resCount = _reservationsByEvent.GetValueOrDefault(ev.Id)?.Count ?? 0;
+                <tr>
+                    <td>@ev.Title</td>
+                    <td>@ev.EventDate.ToString("MMM dd, yyyy")</td>
+                    <td>@ev.Host?.Name</td>
+                    <td>@resCount</td>
+                    <td>@(settlement?.TotalGrossCollected.ToString("C") ?? "$0.00")</td>
+                    <td>@(settlement?.NetAttributableToArtist.ToString("C") ?? "$0.00")</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    }
+}
+
+@code {
+    [Parameter] public Guid ArtistId { get; set; }
+
+    private Artist? _artist;
+    private IEnumerable<Event> _events = [];
+    private Dictionary<Guid, List<Reservation>> _reservationsByEvent = new();
+    private Dictionary<Guid, SettlementSummary> _settlementsByEvent = new();
+    private int _totalGuests;
+    private decimal _totalGross;
+    private decimal _netToArtist;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _artist = await ArtistRepo.GetByIdAsync(ArtistId);
+        if (_artist is null) return;
+
+        var allEvents = await EventRepo.GetAllAsync();
+        _events = allEvents.Where(e => e.ArtistId == ArtistId).ToList();
+
+        foreach (var ev in _events)
+        {
+            var reservations = (await ReservationRepo.GetByEventIdAsync(ev.Id)).ToList();
+            _reservationsByEvent[ev.Id] = reservations;
+            _totalGuests += reservations.Sum(r => r.NumberOfGuests);
+
+            var settlement = await SettlementRepo.GetByEventIdAsync(ev.Id);
+            if (settlement is not null)
+            {
+                _settlementsByEvent[ev.Id] = settlement;
+                _totalGross += settlement.TotalGrossCollected;
+                _netToArtist += settlement.NetAttributableToArtist;
+            }
+        }
+    }
+}
+

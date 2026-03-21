@@ -1,0 +1,49 @@
+﻿@page "/"
+@using GigHaus.Infrastructure.Repositories
+@inject IArtistRepository ArtistRepo
+@inject IHostRepository HostRepo
+@inject IEventRepository EventRepo
+
+<PageTitle>GigHaus Admin</PageTitle>
+
+<h1>GigHaus Admin Dashboard</h1>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Artists</h5>
+                <p class="display-6">@_artistCount</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Hosts</h5>
+                <p class="display-6">@_hostCount</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Events</h5>
+                <p class="display-6">@_eventCount</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private int _artistCount;
+    private int _hostCount;
+    private int _eventCount;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _artistCount = (await ArtistRepo.GetAllAsync()).Count();
+        _hostCount = (await HostRepo.GetAllAsync()).Count();
+        _eventCount = (await EventRepo.GetAllAsync()).Count();
+    }
+}

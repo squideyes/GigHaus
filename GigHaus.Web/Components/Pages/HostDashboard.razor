@@ -1,0 +1,93 @@
+@page "/hosts/{HostId:guid}"
+@using GigHaus.Domain.Entities
+@using GigHaus.Domain.Enums
+@using GigHaus.Infrastructure.Repositories
+@inject IHostRepository HostRepo
+@inject IEventRepository EventRepo
+@inject IReservationRepository ReservationRepo
+@inject ISettlementSummaryRepository SettlementRepo
+@rendermode InteractiveServer
+
+<PageTitle>Host Dashboard - GigHaus</PageTitle>
+
+@if (_host is null)
+{
+    <p><em>Loading host...</em></p>
+}
+else
+{
+    <h2>@_host.Name — Host Dashboard</h2>
+    <p class="text-muted">@_host.Address, @_host.City, @_host.State @_host.ZipCode &bull; Capacity: @_host.MaxCapacity</p>
+
+    <div class="row mt-3 mb-4">
+        <div class="col-md-3"><div class="card text-center"><div class="card-body"><h6>Total Events</h6><p class="display-6">@_events.Count()</p></div></div></div>
+        <div class="col-md-3"><div class="card text-center"><div class="card-body"><h6>Total Reservations</h6><p class="display-6">@_totalReservations</p></div></div></div>
+        <div class="col-md-3"><div class="card text-center"><div class="card-body"><h6>Checked In</h6><p class="display-6">@_totalCheckedIn</p></div></div></div>
+        <div class="col-md-3"><div class="card text-center"><div class="card-body"><h6>Gross Collected</h6><p class="display-6">@_totalGross.ToString("C")</p></div></div></div>
+    </div>
+
+    <h4>Events</h4>
+    @if (!_events.Any())
+    {
+        <p class="text-muted">No events yet.</p>
+    }
+    else
+    {
+        <table class="table table-striped">
+            <thead><tr><th>Title</th><th>Date</th><th>Capacity</th><th>Reservations</th><th>Checked In</th><th>Status</th></tr></thead>
+            <tbody>
+            @foreach (var ev in _events)
+            {
+                var res = _reservationsByEvent.GetValueOrDefault(ev.Id) ?? [];
+                var confirmed = res.Count(r => r.Status == ReservationStatus.Confirmed || r.Status == ReservationStatus.CheckedIn);
+                var checkedIn = res.Count(r => r.Status == ReservationStatus.CheckedIn);
+                <tr>
+                    <td>@ev.Title</td>
+                    <td>@ev.EventDate.ToString("MMM dd, yyyy")</td>
+                    <td>@confirmed / @ev.MaxAttendees</td>
+                    <td>@res.Count()</td>
+                    <td>@checkedIn</td>
+                    <td>@(ev.IsPublished ? "Published" : "Draft")</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    }
+}
+
+@code {
+    [Parameter] public Guid HostId { get; set; }
+
+    private GigHaus.Domain.Entities.Host? _host;
+    private IEnumerable<Event> _events = [];
+    private Dictionary<Guid, List<Reservation>> _reservationsByEvent = new();
+    private int _totalReservations;
+    private int _totalCheckedIn;
+    private decimal _totalGross;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _host = await HostRepo.GetByIdAsync(HostId);
+        if (_host is null) return;
+
+        var allEvents = await EventRepo.GetAllAsync();
+        _events = allEvents.Where(e => e.HostId == HostId).ToList();
+
+        foreach (var ev in _events)
+        {
+            var reservations = (await ReservationRepo.GetByEventIdAsync(ev.Id)).ToList();
+            _reservationsByEvent[ev.Id] = reservations;
+        }
+
+        _totalReservations = _reservationsByEvent.Values.Sum(r => r.Count);
+        _totalCheckedIn = _reservationsByEvent.Values.Sum(r => r.Count(x => x.Status == ReservationStatus.CheckedIn));
+
+        foreach (var ev in _events)
+        {
+            var settlement = await SettlementRepo.GetByEventIdAsync(ev.Id);
+            if (settlement is not null)
+                _totalGross += settlement.TotalGrossCollected;
+        }
+    }
+}
+

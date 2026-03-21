@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GigHaus.Mobile.Pages.CheckInPage"
+             Title="Check-In">
+
+    <VerticalStackLayout Padding="16" Spacing="12">
+        <Label Text="Event Check-In"
+               FontSize="24"
+               FontAttributes="Bold" />
+
+        <Label Text="Enter your reservation code or email to check in."
+               FontSize="14"
+               TextColor="Gray" />
+
+        <Entry Placeholder="Email address"
+               x:Name="EmailEntry"
+               Keyboard="Email" />
+
+        <Button Text="Check In"
+                x:Name="CheckInButton"
+                Clicked="OnCheckInClicked" />
+
+        <Label x:Name="ResultLabel"
+               FontSize="16"
+               IsVisible="False" />
+    </VerticalStackLayout>
+
+</ContentPage>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:pages="clr-namespace:GigHaus.Mobile.Pages"
+       x:Class="GigHaus.Mobile.AppShell"
+       Title="GigHaus">
+
+    <ShellContent Title="Events"
+                  ContentTemplate="{DataTemplate pages:EventsPage}"
+                  Route="events" />
+
+    <ShellContent Title="Check-In"
+                  ContentTemplate="{DataTemplate pages:CheckInPage}"
+                  Route="checkin" />
+
+</Shell>
+
