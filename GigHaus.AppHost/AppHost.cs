@@ -3,7 +3,7 @@ var builder = DistributedApplication.CreateBuilder(args);
 // Infrastructure
 var postgres = builder.AddPostgres("postgres")
     .WithPgAdmin()
-    .AddDatabase("gighaus-db");
+    .AddDatabase("gighaus");
 
 var redis = builder.AddRedis("redis");
 
@@ -21,13 +21,12 @@ var migrations = builder.AddProject<Projects.GigHaus_Migrations>("migrations")
     .WaitFor(postgres);
 
 // Web API
-var webapi = builder.AddProject<Projects.GigHaus_WebApi>("webapi")
+var webapi = builder.AddProject<Projects.GigHaus_WebApi>("web-api")
     .WithReference(postgres)
     .WithReference(redis)
     .WithReference(rabbitmq)
     .WithReference(maildev.GetEndpoint("smtp"))
     .WaitFor(postgres)
-    .WaitFor(redis)
     .WaitFor(rabbitmq)
     .WaitFor(migrations);
 

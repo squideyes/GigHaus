@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.AddServiceDefaults();
 
 // Npgsql data source from Aspire
-builder.AddNpgsqlDataSource("gighaus-db");
+builder.AddNpgsqlDataSource("gighaus");
 
 // Dapper repositories
 builder.Services.AddGigHausInfrastructure();

@@ -156,5 +156,149 @@ public class ReservationServiceTests
         Assert.False(result.Success);
         Assert.Contains("cancelled", result.Error!, StringComparison.OrdinalIgnoreCase);
     }
+
+    [Fact]
+    public async Task CheckIn_Fails_WhenAlreadyCheckedIn()
+    {
+        var reservation = new Reservation { Status = ReservationStatus.CheckedIn };
+        _reservationRepo.GetByIdAsync(reservation.Id).Returns(reservation);
+
+        var result = await _svc.CheckInReservationAsync(reservation.Id);
+
+        Assert.False(result.Success);
+        Assert.Contains("already checked in", result.Error!, StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Fact]
+    public async Task CheckIn_FromConfirmed_SetsTimestamp()
+    {
+        var reservation = new Reservation
+        {
+            Status = ReservationStatus.Confirmed,
+            ConfirmedAt = DateTime.UtcNow.AddMinutes(-30)
+        };
+        _reservationRepo.GetByIdAsync(reservation.Id).Returns(reservation);
+        _reservationRepo.UpdateAsync(Arg.Any<Reservation>()).Returns(ci => ci.Arg<Reservation>());
+
+        var result = await _svc.CheckInReservationAsync(reservation.Id);
+
+        Assert.True(result.Success);
+        Assert.Equal(ReservationStatus.CheckedIn, result.Reservation!.Status);
+        Assert.NotNull(result.Reservation.CheckedInAt);
+        // ConfirmedAt should remain from original confirmation
+        Assert.NotNull(result.Reservation.ConfirmedAt);
+    }
+
+    [Fact]
+    public async Task CancelReservation_Fails_WhenAlreadyCancelled()
+    {
+        var reservation = new Reservation { Status = ReservationStatus.Cancelled };
+        _reservationRepo.GetByIdAsync(reservation.Id).Returns(reservation);
+
+        var result = await _svc.CancelReservationAsync(reservation.Id, "duplicate");
+
+        Assert.False(result.Success);
+        Assert.Contains("already cancelled", result.Error!, StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Fact]
+    public async Task CancelReservation_FromPending_Succeeds()
+    {
+        var reservation = new Reservation { Status = ReservationStatus.Pending };
+        _reservationRepo.GetByIdAsync(reservation.Id).Returns(reservation);
+        _reservationRepo.UpdateAsync(Arg.Any<Reservation>()).Returns(ci => ci.Arg<Reservation>());
+
+        var result = await _svc.CancelReservationAsync(reservation.Id);
+
+        Assert.True(result.Success);
+        Assert.Equal(ReservationStatus.Cancelled, result.Reservation!.Status);
+        Assert.NotNull(result.Reservation.CancelledAt);
+    }
+
+    [Fact]
+    public async Task ConfirmReservation_Fails_WhenNotFound()
+    {
+        _reservationRepo.GetByIdAsync(Arg.Any<Guid>()).Returns((Reservation?)null);
+
+        var result = await _svc.ConfirmReservationAsync(Guid.NewGuid());
+
+        Assert.False(result.Success);
+        Assert.Contains("not found", result.Error!, StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Fact]
+    public async Task CancelReservation_Fails_WhenNotFound()
+    {
+        _reservationRepo.GetByIdAsync(Arg.Any<Guid>()).Returns((Reservation?)null);
+
+        var result = await _svc.CancelReservationAsync(Guid.NewGuid());
+
+        Assert.False(result.Success);
+        Assert.Contains("not found", result.Error!, StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Fact]
+    public async Task CheckIn_Fails_WhenNotFound()
+    {
+        _reservationRepo.GetByIdAsync(Arg.Any<Guid>()).Returns((Reservation?)null);
+
+        var result = await _svc.CheckInReservationAsync(Guid.NewGuid());
+
+        Assert.False(result.Success);
+        Assert.Contains("not found", result.Error!, StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Fact]
+    public async Task CreateReservation_ExactCapacity_Succeeds()
+    {
+        var ev = CreateTestEvent(maxAttendees: 10);
+        _eventRepo.GetByIdAsync(ev.Id).Returns(ev);
+        _reservationRepo.GetConfirmedGuestCountAsync(ev.Id).Returns(8);
+        _reservationRepo.CreateAsync(Arg.Any<Reservation>()).Returns(ci => ci.Arg<Reservation>());
+
+        var res = new Reservation { EventId = ev.Id, AttendeeName = "Eve", AttendeeEmail = "e@t.com", NumberOfGuests = 2 };
+        var result = await _svc.CreateReservationAsync(res);
+
+        Assert.True(result.Success);
+    }
+
+    [Fact]
+    public async Task CreateReservation_OneOverCapacity_Fails()
+    {
+        var ev = CreateTestEvent(maxAttendees: 10);
+        _eventRepo.GetByIdAsync(ev.Id).Returns(ev);
+        _reservationRepo.GetConfirmedGuestCountAsync(ev.Id).Returns(10);
+
+        var res = new Reservation { EventId = ev.Id, AttendeeName = "F", AttendeeEmail = "f@t.com", NumberOfGuests = 1 };
+        var result = await _svc.CreateReservationAsync(res);
+
+        Assert.False(result.Success);
+    }
+
+    [Fact]
+    public async Task CreateReservation_DoorOnly_NoCashAtDoor_Fails()
+    {
+        var ev = CreateTestEvent();
+        ev.PricingMode = PricingMode.DoorOnly;
+        ev.AllowCashAtDoor = false;
+        _eventRepo.GetByIdAsync(ev.Id).Returns(ev);
+        _reservationRepo.GetConfirmedGuestCountAsync(ev.Id).Returns(0);
+
+        var res = new Reservation { EventId = ev.Id, AttendeeName = "G", AttendeeEmail = "g@t.com" };
+        var result = await _svc.CreateReservationAsync(res);
+
+        Assert.False(result.Success);
+    }
+
+    [Fact]
+    public async Task ConfirmReservation_Fails_WhenCancelled()
+    {
+        var reservation = new Reservation { Status = ReservationStatus.Cancelled };
+        _reservationRepo.GetByIdAsync(reservation.Id).Returns(reservation);
+
+        var result = await _svc.ConfirmReservationAsync(reservation.Id);
+
+        Assert.False(result.Success);
+    }
 }
 
