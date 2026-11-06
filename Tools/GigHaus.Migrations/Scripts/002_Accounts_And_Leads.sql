@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS leads (
     estimated_capacity  INT,
     message             TEXT,
     status              VARCHAR(50) NOT NULL DEFAULT 'New',
-    staff_notes         TEXT,
+    notes               TEXT,
     is_deleted          BOOLEAN NOT NULL DEFAULT FALSE,
     deleted_at          TIMESTAMPTZ,
     created_at          TIMESTAMPTZ NOT NULL DEFAULT NOW(),

@@ -55,8 +55,8 @@ else
                     <p class="mk-prewrap">@lead.Message</p>
                 }
 
-                <label class="form-label" for="notes-@lead.Id">Staff notes</label>
-                <textarea id="notes-@lead.Id" class="form-control" rows="2" @bind="lead.StaffNotes" @bind:after="() => Repository.UpdateAsync(lead)"></textarea>
+                <label class="form-label" for="notes-@lead.Id">Notes</label>
+                <textarea id="notes-@lead.Id" class="form-control" rows="2" @bind="lead.Notes" @bind:after="() => Repository.UpdateAsync(lead)"></textarea>
             </article>
         }
     </div>

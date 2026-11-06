@@ -1,16 +1,16 @@
 namespace GigHaus.Domain.Enums;
 
 /// <summary>
-/// Where a host stands with GigHaus staff. Only approved hosts can publish shows.
+/// Where a host stands with GigHaus. Only approved hosts can publish shows.
 /// </summary>
 public enum HostStatus
 {
-    /// <summary>Signed up and waiting for staff review.</summary>
+    /// <summary>Signed up and waiting for review.</summary>
     Pending = 0,
 
-    /// <summary>Reviewed by staff and able to publish shows.</summary>
+    /// <summary>Reviewed and able to publish shows.</summary>
     Approved = 1,
 
-    /// <summary>Blocked by staff. Published shows stop accepting reservations.</summary>
+    /// <summary>Blocked by the admin. Published shows stop accepting reservations.</summary>
     Suspended = 2
 }

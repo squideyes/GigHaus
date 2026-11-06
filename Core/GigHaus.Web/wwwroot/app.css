@@ -221,7 +221,7 @@ main h1, main h2 {
 }
 
 .mk-hero h1 {
-    font-size: clamp(2.5rem, 6.2vw, 4.5rem);
+    font-size: clamp(2.2rem, 4.6vw, 3.5rem);
 }
 
 .mk-page-head h1 {
@@ -256,7 +256,7 @@ main .h4, main .h5 {
 }
 
 .mk-hero {
-    padding-block: clamp(2.5rem, 6vw, 5rem);
+    padding-block: clamp(1.5rem, 3vw, 2.5rem);
     border-bottom: var(--border);
     background: repeating-conic-gradient(from 3deg at 74% 56%, var(--gold) 0 9deg, var(--gold-light) 9deg 18deg);
 }
@@ -268,8 +268,13 @@ main .h4, main .h5 {
     gap: 2rem;
 }
 
+.mk-hero__grid {
+    grid-template-columns: 1.5fr 1fr;
+}
+
 .mk-hero__image {
-    width: min(480px, 100%);
+    width: min(320px, 100%);
+    margin-inline: auto;
 }
 
 .mk-page-head {
@@ -607,7 +612,7 @@ main .h4, main .h5 {
     }
 
     .mk-hero__image {
-        width: min(300px, 80%);
+        width: min(180px, 50%);
     }
 
     .mk-page-head__grid .mascot {
@@ -664,7 +669,7 @@ main .h4, main .h5 {
     }
 }
 
-/* Host portal and staff admin */
+/* Host portal and admin */
 .shell {
     display: grid;
     grid-template-columns: 240px 1fr;

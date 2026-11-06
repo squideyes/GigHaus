@@ -8,7 +8,8 @@ GigHaus is now a free service, which changes some of what follows:
 
 - **No platform fee.** GigHaus doesn't charge hosts, artists or guests, and takes no cut of contributions. Mentions of a platform fee below are historical.
 - **No online payments yet.** Guests contribute at the door, so GigHaus doesn't currently collect or hold money for anyone. The sections on Stripe Connect and money transmission apply if online payments are added.
-- **Wording to review.** The site says GigHaus "takes no cut" and is "free for hosts, artists and guests". Those claims are accurate while contributions stay at the door. If online payments launch, processor fees would reduce what artists receive, so the wording must change. The guidance below against "no-fee donation" still applies.
+- **Wording to review.** The site says GigHaus takes "no cut" and is "free for hosts". Those claims are accurate while contributions stay at the door. If online payments launch, processor fees would reduce what artists receive, so the wording must change. The guidance below against "no-fee donation" still applies.
+- **Planned features to review.** Texting guests needs their consent, and using a guest's review in publicity needs their permission. Merch sales and extra donations stay outside this note's money concerns only if GigHaus coordinates them without collecting or holding the money. Ko-fi is optional and pays artists directly.
 
 The disclosure and suggested-donation guidance below still applies, and the show page follows it. The site needs terms of service and a privacy policy before launch, and this whole approach still needs review by an attorney and CPA.
 

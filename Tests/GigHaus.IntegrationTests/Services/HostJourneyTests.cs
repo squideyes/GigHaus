@@ -71,7 +71,7 @@ public sealed class HostJourneyTests(PostgresFixture fixture) : IDisposable
     }
 
     [Fact]
-    public async Task Publish_IsRefusedUntilStaffApprove()
+    public async Task Publish_IsRefusedUntilHostIsApproved()
     {
         var host = await Hosts.CreateAsync(TestData.Host(HostStatus.Pending));
         var ev = await SaveShowAsync(host.Id);

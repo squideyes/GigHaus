@@ -29,7 +29,7 @@ public static class DependencyInjection
     }
 
     /// <summary>
-    /// Adds the host portal and staff services. Needs Identity's UserManager and
+    /// Adds the host portal services. Needs Identity's UserManager and
     /// <see cref="AddGigHausEmail"/>.
     /// </summary>
     public static IServiceCollection AddGigHausPortal(this IServiceCollection services)
@@ -37,7 +37,6 @@ public static class DependencyInjection
         services.AddSingleton(TimeProvider.System);
         services.AddScoped<IHostPortalService, HostPortalService>();
         services.AddScoped<IHostOnboardingService, HostOnboardingService>();
-        services.AddScoped<IStaffService, StaffService>();
         return services;
     }
 

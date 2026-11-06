@@ -20,7 +20,7 @@ public class Host : BaseEntity
     /// </summary>
     public string? VenueDescription { get; set; }
 
-    /// <summary>Staff review state. Only approved hosts can publish shows.</summary>
+    /// <summary>Review state. Only approved hosts can publish shows.</summary>
     public HostStatus Status { get; set; } = HostStatus.Pending;
     public DateTime? ApprovedAt { get; set; }
 

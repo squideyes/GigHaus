@@ -1,7 +1,7 @@
 namespace GigHaus.Domain.Entities;
 
 /// <summary>
-/// A person who can sign in: GigHaus staff or a host.
+/// A person who can sign in: the GigHaus admin or a host.
 /// </summary>
 public class ApplicationUser : BaseEntity
 {
@@ -18,7 +18,7 @@ public class ApplicationUser : BaseEntity
     /// <summary>One of <see cref="UserRoles"/>.</summary>
     public string Role { get; set; } = UserRoles.Host;
 
-    /// <summary>The host profile this user manages. Null for staff.</summary>
+    /// <summary>The host profile this user manages. Null for the admin.</summary>
     public Guid? HostId { get; set; }
 
     public bool IsDeleted { get; set; }

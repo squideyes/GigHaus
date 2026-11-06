@@ -21,14 +21,14 @@ public sealed class LeadRepository(IDbConnectionFactory db) : ILeadRepository
         using var conn = await db.CreateConnectionAsync(ct).ConfigureAwait(false);
         await conn.ExecuteAsync(new CommandDefinition(
             @"INSERT INTO leads (id, name, email, phone, city, state, estimated_capacity, message, status,
-                staff_notes, created_at, updated_at)
+                notes, created_at, updated_at)
               VALUES (@Id, @Name, @Email, @Phone, @City, @State, @EstimatedCapacity, @Message, @Status,
-                @StaffNotes, @CreatedAt, @UpdatedAt)",
+                @Notes, @CreatedAt, @UpdatedAt)",
             new
             {
                 lead.Id, lead.Name, lead.Email, lead.Phone, lead.City, lead.State,
                 lead.EstimatedCapacity, lead.Message, Status = lead.Status.ToString(),
-                lead.StaffNotes, lead.CreatedAt, lead.UpdatedAt
+                lead.Notes, lead.CreatedAt, lead.UpdatedAt
             }, cancellationToken: ct)).ConfigureAwait(false);
         return lead;
     }
@@ -38,8 +38,8 @@ public sealed class LeadRepository(IDbConnectionFactory db) : ILeadRepository
         lead.UpdatedAt = DateTime.UtcNow;
         using var conn = await db.CreateConnectionAsync(ct).ConfigureAwait(false);
         await conn.ExecuteAsync(new CommandDefinition(
-            "UPDATE leads SET status = @Status, staff_notes = @StaffNotes, updated_at = @UpdatedAt WHERE id = @Id AND NOT is_deleted",
-            new { lead.Id, Status = lead.Status.ToString(), lead.StaffNotes, lead.UpdatedAt },
+            "UPDATE leads SET status = @Status, notes = @Notes, updated_at = @UpdatedAt WHERE id = @Id AND NOT is_deleted",
+            new { lead.Id, Status = lead.Status.ToString(), lead.Notes, lead.UpdatedAt },
             cancellationToken: ct)).ConfigureAwait(false);
     }
 

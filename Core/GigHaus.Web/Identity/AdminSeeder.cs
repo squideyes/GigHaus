@@ -6,8 +6,8 @@ using Microsoft.AspNetCore.Identity;
 namespace GigHaus.Web.Identity;
 
 /// <summary>
-/// Creates the first staff account from Admin:Email and Admin:Password when no staff
-/// exist yet. After that, add staff from the admin area.
+/// Creates the admin account from Admin:Email and Admin:Password when none
+/// exists yet.
 /// </summary>
 public sealed class AdminSeeder(
     IServiceScopeFactory scopeFactory,
@@ -29,7 +29,7 @@ public sealed class AdminSeeder(
 
         if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
         {
-            logger.LogWarning("No staff accounts exist. Set Admin:Email and Admin:Password to create the first one");
+            logger.LogWarning("No admin account exists. Set Admin:Email and Admin:Password to create it");
             return;
         }
 
@@ -46,11 +46,11 @@ public sealed class AdminSeeder(
 
         if (created.Succeeded)
         {
-            logger.LogInformation("Created the first staff account");
+            logger.LogInformation("Created the admin account");
         }
         else
         {
-            logger.LogError("Could not create the first staff account: {Errors}",
+            logger.LogError("Could not create the admin account: {Errors}",
                 string.Join(" ", created.Errors.Select(e => e.Description)));
         }
     }

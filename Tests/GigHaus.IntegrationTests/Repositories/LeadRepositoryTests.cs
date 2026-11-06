@@ -30,13 +30,13 @@ public sealed class LeadRepositoryTests(PostgresFixture fixture)
     {
         var lead = await _leads.CreateAsync(NewLead());
         lead.Status = LeadStatus.Contacted;
-        lead.StaffNotes = Notes;
+        lead.Notes = Notes;
 
         await _leads.UpdateAsync(lead);
 
         var stored = (await _leads.GetAllAsync()).Single(l => l.Id == lead.Id);
         stored.Status.ShouldBe(LeadStatus.Contacted);
-        stored.StaffNotes.ShouldBe(Notes);
+        stored.Notes.ShouldBe(Notes);
     }
 
     [Fact]

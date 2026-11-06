@@ -16,8 +16,8 @@ public class Lead : BaseEntity
     public string? Message { get; set; }
     public LeadStatus Status { get; set; } = LeadStatus.New;
 
-    /// <summary>Private notes for GigHaus staff.</summary>
-    public string? StaffNotes { get; set; }
+    /// <summary>Private notes for the GigHaus admin.</summary>
+    public string? Notes { get; set; }
 
     public bool IsDeleted { get; set; }
     public DateTime? DeletedAt { get; set; }

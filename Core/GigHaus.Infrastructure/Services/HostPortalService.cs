@@ -150,7 +150,7 @@ public sealed class HostPortalService(
 
         if (isPublished && ev.Host.Status != HostStatus.Approved)
         {
-            return Result<Event>.Fail("You can publish shows once GigHaus staff have approved your venue.");
+            return Result<Event>.Fail("You can publish shows once your venue is approved.");
         }
 
         ev.IsPublished = isPublished;

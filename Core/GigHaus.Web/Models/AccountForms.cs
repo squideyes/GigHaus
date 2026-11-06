@@ -87,18 +87,3 @@ public sealed class ChangePasswordForm
     [Compare(nameof(NewPassword), ErrorMessage = "The passwords don't match.")]
     public string ConfirmPassword { get; set; } = string.Empty;
 }
-
-public sealed class StaffForm
-{
-    [Required(ErrorMessage = "Enter a name.")]
-    [StringLength(200)]
-    public string DisplayName { get; set; } = string.Empty;
-
-    [Required(ErrorMessage = "Enter an email.")]
-    [EmailAddress(ErrorMessage = "That doesn't look like an email address.")]
-    public string Email { get; set; } = string.Empty;
-
-    [Required(ErrorMessage = "Choose a temporary password.")]
-    [StringLength(100, MinimumLength = 10, ErrorMessage = "Use at least 10 characters.")]
-    public string Password { get; set; } = string.Empty;
-}

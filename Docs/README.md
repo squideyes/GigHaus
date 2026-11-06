@@ -1,8 +1,8 @@
 # GigHaus
 
-GigHaus is a free platform for **house concerts**: live music in private homes. It gives hosts a page for each show, a guest list they control and check-in at the door.
+GigHaus is a free platform that makes **house concerts**, live music in private homes, dead simple for the people who host them. GigHaus is for hosts alone. They get a page for each show, a guest list they control and check-in at the door.
 
-GigHaus doesn't charge hosts, artists or guests, and takes no cut of what guests give. Guests contribute at the door, and that money supports the artist.
+GigHaus doesn't charge anyone, and takes no cut of what guests give. Guests contribute at the door, and that money supports the artist.
 
 ## Documentation
 
@@ -19,7 +19,7 @@ GigHaus doesn't charge hosts, artists or guests, and takes no cut of what guests
 | **Host** | Opens their home as a venue. The people you sell to. | Yes, to the host portal |
 | **Artist** | Performs at a show. Added to a show by a host. | No |
 | **Guest** (Attendee in the code) | Reserves a spot and comes to the show. | No |
-| **Staff** (Admin in the code) | You and your team. | Yes, to the admin area |
+| **Admin** | You, the one person who runs GigHaus. There are no staff. | Yes, to the admin area |
 
 ## Technology
 
@@ -48,7 +48,7 @@ GigHaus.slnx
 │   ├── GigHaus.Domain/             Entities and enums, with no dependencies
 │   ├── GigHaus.Infrastructure/     Repositories, sign-in store, services, email, messaging
 │   ├── GigHaus.Mobile/             .NET MAUI app
-│   ├── GigHaus.Web/                Marketing site, host portal and staff admin
+│   ├── GigHaus.Web/                Marketing site, host portal and admin
 │   └── GigHaus.WebApi/             REST API
 ├── Tools/
 │   └── GigHaus.Migrations/         DbUp migration runner and SQL scripts
@@ -68,13 +68,13 @@ Inside `GigHaus.Web/Components/Pages`, the folder decides who can reach a page:
 | `Public/` | Everyone | Static |
 | `Account/` | Everyone, except `ChangePassword` | Static |
 | `Portal/` | Hosts only, enforced in the folder's `_Imports.razor` | Static or interactive |
-| `Admin/` | Staff only, enforced in the folder's `_Imports.razor` | Static or interactive |
+| `Admin/` | The admin only, enforced in the folder's `_Imports.razor` | Static or interactive |
 
 ## Running it locally
 
 You need the .NET 10 SDK and Docker Desktop.
 
-The first staff account is created at startup from an Aspire parameter. Set its password once per machine:
+The admin account is created at startup from an Aspire parameter. Set its password once per machine:
 
 ```bash
 dotnet user-secrets set Parameters:admin-password "choose-a-long-password" --project Aspire/GigHaus.AppHost

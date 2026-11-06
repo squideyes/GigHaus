@@ -18,7 +18,7 @@ public sealed record HostSignup
 }
 
 /// <summary>
-/// Moves a host from signing up to being approved by staff.
+/// Moves a host from signing up to being approved.
 /// </summary>
 public interface IHostOnboardingService
 {

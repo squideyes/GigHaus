@@ -1,6 +1,6 @@
-@* Renders a still of the mascot that mascot.js upgrades to the looping video. *@
+@* Renders a still of the mascot. With Animated, mascot.js plays the video a few times over it. *@
 <img class="mascot @Class"
-     src="mascot/mascot-@(StillSize).webp"
+     src="@StillSource"
      alt="@Alt"
      width="@Size"
      height="@Size"
@@ -9,7 +9,7 @@
 @code {
     /// <summary>Display size in pixels.</summary>
     [Parameter] public int Size { get; set; } = 256;
-    [Parameter] public bool Animated { get; set; } = true;
+    [Parameter] public bool Animated { get; set; }
     [Parameter] public string? Class { get; set; }
     [Parameter] public string Alt { get; set; } = "The GigHaus mascot, a cheerful yellow house playing an acoustic guitar";
 
@@ -20,6 +20,10 @@
         <= 128 => 256,
         _ => 512
     };
+
+    // The video frames the mascot smaller than the other stills, so an animated mascot uses
+    // a still taken from the video. Otherwise it would jump when the video starts.
+    private string StillSource => Animated ? "mascot/mascot-hero.webp" : $"mascot/mascot-{StillSize}.webp";
 
     private int StillSize => Size switch
     {
