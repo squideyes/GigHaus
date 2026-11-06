@@ -1,0 +1,65 @@
+@inherits LayoutComponentBase
+
+<a class="mk-skip" href="@(NavPath)#main">Skip to content</a>
+
+<header class="mk-header">
+    <div class="mk-wrap mk-header__row">
+        <a class="mk-brand" href="">
+            <img src="mascot/mascot-96.webp" width="48" height="48" alt="" />
+            <span>GigHaus</span>
+        </a>
+
+        <input id="mk-nav-toggle" class="mk-nav-toggle" type="checkbox" aria-label="Show the menu" />
+        <label class="mk-nav-button" for="mk-nav-toggle" aria-hidden="true">Menu</label>
+
+        <nav class="mk-nav" aria-label="Main">
+            <NavLink href="hosts">For hosts</NavLink>
+            <NavLink href="artists">For artists</NavLink>
+            <NavLink href="faq">FAQ</NavLink>
+            <NavLink href="contact">Contact</NavLink>
+            <AuthorizeView>
+                <Authorized>
+                    <a class="mk-btn mk-btn--small" href="@context.User.GetHomePath().TrimStart('/')">
+                        @(context.User.IsInRole(UserRoles.Admin) ? "Admin" : "Your portal")
+                    </a>
+                </Authorized>
+                <NotAuthorized>
+                    <a href="login">Sign in</a>
+                    <a class="mk-btn mk-btn--small" href="signup">Host a show</a>
+                </NotAuthorized>
+            </AuthorizeView>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+    @Body
+</main>
+
+<footer class="mk-footer">
+    <div class="mk-wrap mk-footer__row">
+        <div>
+            <p class="mk-footer__brand">GigHaus</p>
+            <p>Free tools for people who open their homes to live music.</p>
+        </div>
+        <nav aria-label="Footer">
+            <a href="hosts">For hosts</a>
+            <a href="artists">For artists</a>
+            <a href="faq">FAQ</a>
+            <a href="contact">Contact</a>
+            <a href="login">Sign in</a>
+        </nav>
+    </div>
+</footer>
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>
+
+@code {
+    [Inject] private NavigationManager Nav { get; set; } = default!;
+
+    private string NavPath => Nav.ToBaseRelativePath(Nav.Uri).Split('#')[0];
+}

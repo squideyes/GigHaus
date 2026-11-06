@@ -1,6 +1,13 @@
 ﻿<Router AppAssembly="typeof(Program).Assembly" NotFoundPage="typeof(Pages.NotFound)">
     <Found Context="routeData">
-        <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
+        <AuthorizeRouteView RouteData="routeData" DefaultLayout="typeof(Layout.MarketingLayout)">
+            <NotAuthorized>
+                <div class="mk-wrap mk-narrow">
+                    <h1>Please sign in</h1>
+                    <p>You need to <a href="login">sign in</a> to see this page.</p>
+                </div>
+            </NotAuthorized>
+        </AuthorizeRouteView>
         <FocusOnNavigate RouteData="routeData" Selector="h1" />
     </Found>
 </Router>

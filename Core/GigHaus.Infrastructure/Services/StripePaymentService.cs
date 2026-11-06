@@ -19,7 +19,7 @@ public class StripePaymentService : IPaymentService
     // Stripe Connect fee structure (configurable)
     private const decimal StripePercentageFee = 0.029m; // 2.9%
     private const decimal StripeFixedFee = 0.30m;       // $0.30
-    private const decimal PlatformPercentageFee = 0.02m; // 2% platform fee
+    private const decimal PlatformPercentageFee = 0m;   // GigHaus is free: no platform fee
 
     public StripePaymentService(
         IPaymentRecordRepository payments,

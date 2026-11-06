@@ -1,0 +1,112 @@
+@page "/portal/venue"
+@rendermode InteractiveServer
+@inject IHostPortalService Portal
+
+<PageTitle>Your venue - GigHaus</PageTitle>
+
+<h1>Your venue</h1>
+
+@if (_input is not null)
+{
+    <EditForm Model="_input" OnValidSubmit="SaveAsync" class="shell-form">
+        <DataAnnotationsValidator />
+
+        <div class="mb-3">
+            <label class="form-label" for="name">Your name or venue name</label>
+            <InputText id="name" class="form-control" @bind-Value="_input.Name" />
+            <ValidationMessage For="() => _input.Name" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="phone">Phone (optional)</label>
+            <InputText id="phone" class="form-control" type="tel" @bind-Value="_input.Phone" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="address">Street address</label>
+            <InputText id="address" class="form-control" @bind-Value="_input.Address" />
+            <div class="form-text">Only guests you confirm receive this.</div>
+            <ValidationMessage For="() => _input.Address" />
+        </div>
+        <div class="row g-2 mb-3">
+            <div class="col-sm-6">
+                <label class="form-label" for="city">City</label>
+                <InputText id="city" class="form-control" @bind-Value="_input.City" />
+                <ValidationMessage For="() => _input.City" />
+            </div>
+            <div class="col-sm-3">
+                <label class="form-label" for="state">State</label>
+                <InputText id="state" class="form-control" @bind-Value="_input.State" />
+                <ValidationMessage For="() => _input.State" />
+            </div>
+            <div class="col-sm-3">
+                <label class="form-label" for="zip">ZIP code</label>
+                <InputText id="zip" class="form-control" @bind-Value="_input.ZipCode" />
+                <ValidationMessage For="() => _input.ZipCode" />
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="capacity">How many guests fit comfortably?</label>
+            <InputNumber id="capacity" class="form-control" @bind-Value="_input.MaxCapacity" min="1" />
+            <ValidationMessage For="() => _input.MaxCapacity" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="description">Describe your space (optional)</label>
+            <InputTextArea id="description" class="form-control" rows="4" @bind-Value="_input.VenueDescription" />
+        </div>
+
+        @if (_error is not null)
+        {
+            <div class="alert alert-danger" role="alert">@_error</div>
+        }
+        @if (_saved)
+        {
+            <div class="alert alert-success" role="status">Saved.</div>
+        }
+
+        <button type="submit" class="btn btn-primary">Save</button>
+    </EditForm>
+}
+
+@code {
+    private VenueDetailsForm? _input;
+    private bool _saved;
+    private string? _error;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var host = await Portal.GetVenueAsync(await GetHostIdAsync());
+        if (host is null)
+        {
+            return;
+        }
+
+        _input = new VenueDetailsForm
+        {
+            Name = host.Name,
+            Phone = host.Phone,
+            Address = host.Address,
+            City = host.City,
+            State = host.State,
+            ZipCode = host.ZipCode,
+            MaxCapacity = host.MaxCapacity,
+            VenueDescription = host.VenueDescription
+        };
+    }
+
+    private async Task SaveAsync()
+    {
+        var result = await Portal.UpdateVenueAsync(await GetHostIdAsync(), new HostEntity
+        {
+            Name = _input!.Name.Trim(),
+            Phone = _input.Phone?.Trim(),
+            Address = _input.Address.Trim(),
+            City = _input.City.Trim(),
+            State = _input.State.Trim(),
+            ZipCode = _input.ZipCode.Trim(),
+            MaxCapacity = _input.MaxCapacity,
+            VenueDescription = _input.VenueDescription?.Trim()
+        });
+
+        _saved = result.Success;
+        _error = result.Error;
+    }
+}

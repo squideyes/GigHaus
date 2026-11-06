@@ -1,0 +1,46 @@
+@page "/portal/events"
+@inject IHostPortalService Portal
+
+<PageTitle>Your shows - GigHaus</PageTitle>
+
+<div class="shell-head">
+    <h1>Your shows</h1>
+    <a class="btn btn-primary" href="portal/events/new">Add a show</a>
+</div>
+
+@if (_events is { Count: 0 })
+{
+    <div class="shell-empty">
+        <Mascot Size="160" />
+        <h2>No shows yet.</h2>
+        <p>Add your first one and you'll get a link to share.</p>
+    </div>
+}
+else if (_events is not null)
+{
+    <div class="table-responsive">
+        <table class="table align-middle">
+            <thead><tr><th>Show</th><th>Artist</th><th>Date</th><th>Guest limit</th><th>Status</th><th></th></tr></thead>
+            <tbody>
+                @foreach (var ev in _events)
+                {
+                    <tr>
+                        <td>@ev.Title</td>
+                        <td>@ev.Artist.Name</td>
+                        <td>@ev.EventDate.ToString("MMM d, yyyy")</td>
+                        <td>@ev.MaxAttendees</td>
+                        <td>@(ev.IsPublished ? "Published" : "Draft")</td>
+                        <td class="text-end"><a class="btn btn-sm btn-outline-primary" href="portal/events/@ev.Id">Manage</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@code {
+    private IReadOnlyList<Event>? _events;
+
+    protected override async Task OnInitializedAsync() =>
+        _events = await Portal.GetEventsAsync(await GetHostIdAsync());
+}

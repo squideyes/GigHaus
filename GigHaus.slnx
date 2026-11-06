@@ -14,9 +14,12 @@
     <Project Path="Tools/GigHaus.Migrations/GigHaus.Migrations.csproj" />
   </Folder>
   <Folder Name="/Tests/">
+    <Project Path="Tests/GigHaus.IntegrationTests/GigHaus.IntegrationTests.csproj" />
     <Project Path="Tests/GigHaus.Tests/GigHaus.Tests.csproj" />
   </Folder>
   <Folder Name="/Docs/">
+    <File Path="Docs/Concepts.md" />
+    <File Path="Docs/Features.md" />
     <File Path="Docs/GigHaus_Legal_and_Pricing_Notes.md" />
     <File Path="Docs/README.md" />
   </Folder>

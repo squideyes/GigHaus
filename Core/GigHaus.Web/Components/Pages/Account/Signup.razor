@@ -1,0 +1,123 @@
+@page "/signup"
+@inject IHostOnboardingService Onboarding
+@inject SignInManager<ApplicationUser> SignIn
+@inject NavigationManager Nav
+@using Microsoft.AspNetCore.Identity
+
+<PageTitle>Sign up your venue - GigHaus</PageTitle>
+<HeadContent>
+    <meta name="description" content="Sign up your home as a GigHaus venue. It's free, and it takes a few minutes." />
+</HeadContent>
+
+<section class="mk-page-head">
+    <div class="mk-wrap mk-narrow">
+        <p class="mk-kicker">Become a host</p>
+        <h1>Tell us about your place.</h1>
+        <p class="mk-lead">It's free and takes a few minutes. Your street address stays private: guests only get it once you confirm them.</p>
+    </div>
+</section>
+
+<section class="mk-section">
+    <div class="mk-wrap mk-narrow">
+        <EditForm Model="Input" FormName="signup" OnValidSubmit="SignUpAsync" class="mk-form">
+            <DataAnnotationsValidator />
+
+            <h2 class="h4">You</h2>
+            <label>
+                Your name or venue name
+                <InputText @bind-Value="Input.Name" autocomplete="name" />
+                <ValidationMessage For="() => Input.Name" />
+            </label>
+            <label>
+                Email
+                <InputText @bind-Value="Input.Email" type="email" autocomplete="email" />
+                <ValidationMessage For="() => Input.Email" />
+            </label>
+            <label>
+                Phone <span class="mk-optional">(optional)</span>
+                <InputText @bind-Value="Input.Phone" type="tel" autocomplete="tel" />
+            </label>
+            <label>
+                Password <span class="mk-optional">(at least 10 characters)</span>
+                <InputText @bind-Value="Input.Password" type="password" autocomplete="new-password" />
+                <ValidationMessage For="() => Input.Password" />
+            </label>
+
+            <h2 class="h4">Your space</h2>
+            <label>
+                Street address
+                <InputText @bind-Value="Input.Address" autocomplete="street-address" />
+                <ValidationMessage For="() => Input.Address" />
+            </label>
+            <div class="mk-form__row">
+                <label>
+                    City
+                    <InputText @bind-Value="Input.City" autocomplete="address-level2" />
+                    <ValidationMessage For="() => Input.City" />
+                </label>
+                <label>
+                    State
+                    <InputText @bind-Value="Input.State" autocomplete="address-level1" />
+                    <ValidationMessage For="() => Input.State" />
+                </label>
+                <label>
+                    ZIP code
+                    <InputText @bind-Value="Input.ZipCode" autocomplete="postal-code" />
+                    <ValidationMessage For="() => Input.ZipCode" />
+                </label>
+            </div>
+            <label>
+                How many guests fit comfortably?
+                <InputNumber @bind-Value="Input.MaxCapacity" min="1" />
+                <ValidationMessage For="() => Input.MaxCapacity" />
+            </label>
+            <label>
+                Describe your space <span class="mk-optional">(optional)</span>
+                <InputTextArea @bind-Value="Input.VenueDescription" rows="4" />
+            </label>
+
+            @if (_error is not null)
+            {
+                <p class="mk-error" role="alert">@_error</p>
+            }
+
+            <button type="submit" class="mk-btn">Create my account</button>
+            <p class="mk-small">Already signed up? <a href="login">Sign in</a></p>
+        </EditForm>
+    </div>
+</section>
+
+@code {
+    private string? _error;
+
+    [SupplyParameterFromForm]
+    private HostSignupForm Input { get; set; } = default!;
+
+    protected override void OnInitialized() => Input ??= new();
+
+    private async Task SignUpAsync()
+    {
+        var result = await Onboarding.SignUpAsync(new HostSignup
+        {
+            Name = Input.Name,
+            Email = Input.Email,
+            Password = Input.Password,
+            Phone = Input.Phone,
+            Address = Input.Address,
+            City = Input.City,
+            State = Input.State,
+            ZipCode = Input.ZipCode,
+            MaxCapacity = Input.MaxCapacity,
+            VenueDescription = Input.VenueDescription
+        });
+
+        if (!result.Success)
+        {
+            _error = result.Error;
+            return;
+        }
+
+        await SignIn.SignInAsync(result.Value!, isPersistent: false);
+        Nav.NavigateTo("/portal", forceLoad: true);
+    }
+}

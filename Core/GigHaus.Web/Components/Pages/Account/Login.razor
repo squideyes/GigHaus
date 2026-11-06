@@ -1,0 +1,80 @@
+@page "/login"
+@inject SignInManager<ApplicationUser> SignIn
+@inject UserManager<ApplicationUser> Users
+@inject NavigationManager Nav
+@using Microsoft.AspNetCore.Identity
+
+<PageTitle>Sign in - GigHaus</PageTitle>
+
+<section class="mk-section">
+    <div class="mk-wrap mk-narrow mk-auth">
+        <Mascot Size="128" Animated="false" />
+        <h1>Welcome back.</h1>
+
+        <EditForm Model="Input" FormName="login" OnValidSubmit="SignInAsync" class="mk-form">
+            <DataAnnotationsValidator />
+
+            <label>
+                Email
+                <InputText @bind-Value="Input.Email" type="email" autocomplete="username" />
+                <ValidationMessage For="() => Input.Email" />
+            </label>
+            <label>
+                Password
+                <InputText @bind-Value="Input.Password" type="password" autocomplete="current-password" />
+                <ValidationMessage For="() => Input.Password" />
+            </label>
+            <label class="mk-check">
+                <InputCheckbox @bind-Value="Input.RememberMe" /> Keep me signed in
+            </label>
+
+            @if (_error is not null)
+            {
+                <p class="mk-error" role="alert">@_error</p>
+            }
+
+            <button type="submit" class="mk-btn">Sign in</button>
+        </EditForm>
+
+        <p class="mk-auth__links">
+            <a href="forgot-password">Forgot your password?</a><br />
+            New here? <a href="signup">Sign up your venue</a>
+        </p>
+    </div>
+</section>
+
+@code {
+    private string? _error;
+
+    [SupplyParameterFromForm]
+    private LoginForm Input { get; set; } = default!;
+
+    [SupplyParameterFromQuery]
+    private string? ReturnUrl { get; set; }
+
+    protected override void OnInitialized() => Input ??= new();
+
+    private async Task SignInAsync()
+    {
+        var result = await SignIn.PasswordSignInAsync(Input.Email.Trim(), Input.Password, Input.RememberMe, lockoutOnFailure: true);
+
+        if (result.Succeeded)
+        {
+            var user = await Users.FindByEmailAsync(Input.Email.Trim());
+            var home = user?.Role == UserRoles.Admin ? "/admin" : "/portal";
+            Nav.NavigateTo(IsLocal(ReturnUrl) ? ReturnUrl! : home, forceLoad: true);
+            return;
+        }
+
+        _error = result.IsLockedOut
+            ? "Too many attempts. Please wait 15 minutes and try again, or reset your password."
+            : "That email and password don't match.";
+    }
+
+    // Only ever send people to a page on this site after signing in.
+    private static bool IsLocal(string? url) =>
+        !string.IsNullOrEmpty(url)
+        && url.StartsWith('/')
+        && !url.StartsWith("//", StringComparison.Ordinal)
+        && !url.StartsWith("/\\", StringComparison.Ordinal);
+}

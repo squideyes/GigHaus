@@ -1,0 +1,19 @@
+<span class="badge @CssClass">@Text</span>
+
+@code {
+    [Parameter, EditorRequired] public HostStatus Status { get; set; }
+
+    private string Text => Status switch
+    {
+        HostStatus.Approved => "Approved",
+        HostStatus.Suspended => "Suspended",
+        _ => "Pending review"
+    };
+
+    private string CssClass => Status switch
+    {
+        HostStatus.Approved => "text-bg-success",
+        HostStatus.Suspended => "text-bg-danger",
+        _ => "text-bg-warning"
+    };
+}

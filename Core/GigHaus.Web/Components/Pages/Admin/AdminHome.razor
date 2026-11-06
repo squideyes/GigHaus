@@ -1,0 +1,61 @@
+@page "/admin"
+@inject IArtistRepository Artists
+@inject IHostRepository Hosts
+@inject IEventRepository Events
+@inject ILeadRepository Leads
+
+<PageTitle>Admin - GigHaus</PageTitle>
+
+<h1>Dashboard</h1>
+
+<div class="stat-grid">
+    <StatCard Label="New leads" Value="@_newLeads.ToString()" />
+    <StatCard Label="Hosts to review" Value="@_pending.Count.ToString()" />
+    <StatCard Label="Approved hosts" Value="@_approved.ToString()" />
+    <StatCard Label="Artists" Value="@_artistCount.ToString()" />
+    <StatCard Label="Published shows" Value="@_publishedShows.ToString()" />
+</div>
+
+<h2 class="h4 mt-4">Hosts to review</h2>
+@if (_pending.Count == 0)
+{
+    <p class="text-muted">Nobody's waiting for review.</p>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table align-middle">
+            <thead><tr><th>Name</th><th>City</th><th>Capacity</th><th>Signed up</th><th></th></tr></thead>
+            <tbody>
+                @foreach (var host in _pending)
+                {
+                    <tr>
+                        <td>@host.Name</td>
+                        <td>@host.City, @host.State</td>
+                        <td>@host.MaxCapacity</td>
+                        <td>@host.CreatedAt.ToString("MMM d, yyyy")</td>
+                        <td class="text-end"><a class="btn btn-sm btn-primary" href="admin/hosts/@host.Id">Review</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@code {
+    private int _newLeads;
+    private List<HostEntity> _pending = [];
+    private int _approved;
+    private int _artistCount;
+    private int _publishedShows;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var hosts = (await Hosts.GetAllAsync()).ToList();
+        _pending = [.. hosts.Where(h => h.Status == HostStatus.Pending).OrderBy(h => h.CreatedAt)];
+        _approved = hosts.Count(h => h.Status == HostStatus.Approved);
+        _newLeads = (await Leads.GetAllAsync()).Count(l => l.Status == LeadStatus.New);
+        _artistCount = (await Artists.GetAllAsync()).Count();
+        _publishedShows = (await Events.GetAllAsync()).Count(e => e.IsPublished);
+    }
+}

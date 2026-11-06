@@ -1,3 +1,5 @@
+using GigHaus.Domain.Enums;
+
 namespace GigHaus.Domain.Entities;
 
 public class Host : BaseEntity
@@ -17,6 +19,10 @@ public class Host : BaseEntity
     /// Brief description of the venue / hosting space.
     /// </summary>
     public string? VenueDescription { get; set; }
+
+    /// <summary>Staff review state. Only approved hosts can publish shows.</summary>
+    public HostStatus Status { get; set; } = HostStatus.Pending;
+    public DateTime? ApprovedAt { get; set; }
 
     // Navigation
     public ICollection<Event> Events { get; set; } = [];

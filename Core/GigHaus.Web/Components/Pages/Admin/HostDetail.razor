@@ -1,4 +1,4 @@
-@page "/hosts/{HostId:guid}"
+@page "/admin/hosts/{HostId:guid}"
 @using GigHaus.Domain.Entities
 @using GigHaus.Domain.Enums
 @using GigHaus.Infrastructure.Repositories
@@ -6,9 +6,11 @@
 @inject IEventRepository EventRepo
 @inject IReservationRepository ReservationRepo
 @inject ISettlementSummaryRepository SettlementRepo
+@inject IHostOnboardingService Onboarding
+@inject NavigationManager Nav
 @rendermode InteractiveServer
 
-<PageTitle>Host Dashboard - GigHaus</PageTitle>
+<PageTitle>Host - GigHaus Admin</PageTitle>
 
 @if (_host is null)
 {
@@ -16,8 +18,26 @@
 }
 else
 {
-    <h2>@_host.Name — Host Dashboard</h2>
+    <h1>@_host.Name</h1>
     <p class="text-muted">@_host.Address, @_host.City, @_host.State @_host.ZipCode &bull; Capacity: @_host.MaxCapacity</p>
+    <p class="text-muted">@_host.Email @_host.Phone</p>
+
+    <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+        <HostStatusBadge Status="_host.Status" />
+        @if (_host.Status != HostStatus.Approved)
+        {
+            <button type="button" class="btn btn-sm btn-primary" @onclick="() => SetStatusAsync(HostStatus.Approved)">Approve</button>
+        }
+        @if (_host.Status != HostStatus.Suspended)
+        {
+            <button type="button" class="btn btn-sm btn-outline-danger" @onclick="() => SetStatusAsync(HostStatus.Suspended)">Suspend</button>
+        }
+    </div>
+
+    @if (!string.IsNullOrWhiteSpace(_host.VenueDescription))
+    {
+        <p class="mk-prewrap">@_host.VenueDescription</p>
+    }
 
     <div class="row mt-3 mb-4">
         <div class="col-md-3"><div class="card text-center"><div class="card-body"><h6>Total Events</h6><p class="display-6">@_events.Count()</p></div></div></div>
@@ -64,6 +84,15 @@ else
     private int _totalReservations;
     private int _totalCheckedIn;
     private decimal _totalGross;
+
+private async Task SetStatusAsync(HostStatus status)
+    {
+        var result = await Onboarding.SetStatusAsync(HostId, status, Nav.ToAbsoluteUri("portal").ToString());
+        if (result.Success)
+        {
+            _host = result.Value;
+        }
+    }
 
     protected override async Task OnInitializedAsync()
     {

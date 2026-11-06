@@ -1,0 +1,43 @@
+@page "/admin/events"
+@rendermode InteractiveServer
+@inject IEventRepository Repository
+
+<PageTitle>Shows - GigHaus Admin</PageTitle>
+
+<h1>Shows</h1>
+
+@if (_events is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table align-middle">
+            <thead>
+                <tr><th>Title</th><th>Artist</th><th>Host</th><th>Date</th><th>Time</th><th>Guest limit</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+                @foreach (var ev in _events)
+                {
+                    <tr>
+                        <td>@ev.Title</td>
+                        <td>@ev.Artist.Name</td>
+                        <td>@ev.Host.Name</td>
+                        <td>@ev.EventDate.ToString("MMM d, yyyy")</td>
+                        <td>@ev.StartTime.ToString("h:mm tt")</td>
+                        <td>@ev.MaxAttendees</td>
+                        <td>@(ev.IsPublished ? "Published" : "Draft")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@code {
+    private IEnumerable<Event>? _events;
+
+    protected override async Task OnInitializedAsync() =>
+        _events = await Repository.GetAllAsync();
+}

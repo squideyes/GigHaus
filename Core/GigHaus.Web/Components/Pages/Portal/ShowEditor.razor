@@ -1,0 +1,215 @@
+@page "/portal/events/new"
+@page "/portal/events/{Id:guid}/edit"
+@rendermode InteractiveServer
+@inject IHostPortalService Portal
+@inject IArtistRepository Artists
+@inject NavigationManager Nav
+
+<PageTitle>@(IsNew ? "Add a show" : "Edit show") - GigHaus</PageTitle>
+
+<h1>@(IsNew ? "Add a show" : "Edit show")</h1>
+
+@if (_notFound)
+{
+    <p>We couldn't find that show. <a href="portal/events">Back to your shows</a></p>
+}
+else if (_input is not null)
+{
+    <EditForm Model="_input" OnValidSubmit="SaveAsync" class="shell-form">
+        <DataAnnotationsValidator />
+
+        <div class="mb-3">
+            <label class="form-label" for="title">Show title</label>
+            <InputText id="title" class="form-control" @bind-Value="_input.Title" />
+            <ValidationMessage For="() => _input.Title" />
+        </div>
+
+        <fieldset class="mb-3">
+            <legend class="form-label">Artist</legend>
+            @if (_addingArtist)
+            {
+                <div class="row g-2">
+                    <div class="col-sm-6">
+                        <label class="form-label" for="artist-name">Artist name</label>
+                        <InputText id="artist-name" class="form-control" @bind-Value="_input.NewArtistName" />
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="form-label" for="artist-email">Artist email</label>
+                        <InputText id="artist-email" class="form-control" type="email" @bind-Value="_input.NewArtistEmail" />
+                        <ValidationMessage For="() => _input.NewArtistEmail" />
+                    </div>
+                </div>
+                <button type="button" class="btn btn-link px-0" @onclick="() => _addingArtist = false">Choose an existing artist</button>
+            }
+            else
+            {
+                <InputSelect class="form-select" @bind-Value="_input.ArtistId" aria-label="Artist">
+                    <option value="">Choose an artist</option>
+                    @foreach (var artist in _artists)
+                    {
+                        <option value="@artist.Id">@artist.Name</option>
+                    }
+                </InputSelect>
+                <button type="button" class="btn btn-link px-0" @onclick="() => _addingArtist = true">Add a new artist</button>
+            }
+        </fieldset>
+
+        <div class="row g-2 mb-3">
+            <div class="col-sm-4">
+                <label class="form-label" for="date">Date</label>
+                <InputDate id="date" class="form-control" @bind-Value="_input.EventDate" />
+                <ValidationMessage For="() => _input.EventDate" />
+            </div>
+            <div class="col-sm-4">
+                <label class="form-label" for="start">Start time</label>
+                <InputDate id="start" Type="InputDateType.Time" class="form-control" @bind-Value="_input.StartTime" />
+                <ValidationMessage For="() => _input.StartTime" />
+            </div>
+            <div class="col-sm-4">
+                <label class="form-label" for="end">End time (optional)</label>
+                <InputDate id="end" Type="InputDateType.Time" class="form-control" @bind-Value="_input.EndTime" />
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="limit">Guest limit</label>
+            <InputNumber id="limit" class="form-control" @bind-Value="_input.MaxAttendees" min="1" max="@_capacity" />
+            <div class="form-text">Your venue fits @_capacity. Reservations stop when this limit is reached.</div>
+            <ValidationMessage For="() => _input.MaxAttendees" />
+        </div>
+
+        <fieldset class="mb-3">
+            <legend class="form-label">Contribution</legend>
+            <InputRadioGroup @bind-Value="_input.PricingMode">
+                <div class="form-check">
+                    <InputRadio id="mode-suggested" class="form-check-input" Value="PricingMode.SuggestedOnly" />
+                    <label class="form-check-label" for="mode-suggested">Suggested donation: guests pay what they can</label>
+                </div>
+                <div class="form-check">
+                    <InputRadio id="mode-minimum" class="form-check-input" Value="PricingMode.MinimumRequired" />
+                    <label class="form-check-label" for="mode-minimum">Minimum contribution: required to attend</label>
+                </div>
+            </InputRadioGroup>
+        </fieldset>
+
+        <div class="row g-2 mb-3">
+            <div class="col-sm-6">
+                <label class="form-label" for="suggested">Suggested donation ($)</label>
+                <InputNumber id="suggested" class="form-control" @bind-Value="_input.SuggestedDonationAmount" min="0" step="1" />
+                <ValidationMessage For="() => _input.SuggestedDonationAmount" />
+            </div>
+            @if (_input.PricingMode == PricingMode.MinimumRequired)
+            {
+                <div class="col-sm-6">
+                    <label class="form-label" for="minimum">Minimum contribution ($)</label>
+                    <InputNumber id="minimum" class="form-control" @bind-Value="_input.MinimumContributionAmount" min="0" step="1" />
+                    <ValidationMessage For="() => _input.MinimumContributionAmount" />
+                </div>
+            }
+            <div class="col-12 form-text">Guests contribute at the door. The show page tells them this isn't tax-deductible.</div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="description">About the show (optional)</label>
+            <InputTextArea id="description" class="form-control" rows="5" @bind-Value="_input.Description" />
+        </div>
+
+        @if (_error is not null)
+        {
+            <div class="alert alert-danger" role="alert">@_error</div>
+        }
+
+        <button type="submit" class="btn btn-primary" disabled="@_saving">Save show</button>
+        <a class="btn btn-link" href="@(IsNew ? "portal/events" : $"portal/events/{Id}")">Cancel</a>
+    </EditForm>
+}
+
+@code {
+    private EventForm? _input;
+    private List<Artist> _artists = [];
+    private int _capacity;
+    private bool _addingArtist;
+    private bool _notFound;
+    private bool _saving;
+    private string? _error;
+
+    [Parameter] public Guid? Id { get; set; }
+
+    private bool IsNew => Id is null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var hostId = await GetHostIdAsync();
+        var host = await Portal.GetVenueAsync(hostId);
+        _capacity = host?.MaxCapacity ?? 0;
+        _artists = [.. await Artists.GetAllAsync()];
+        _addingArtist = _artists.Count == 0;
+
+        if (IsNew)
+        {
+            _input = new EventForm { MaxAttendees = Math.Max(1, _capacity) };
+            return;
+        }
+
+        var ev = await Portal.GetEventAsync(hostId, Id!.Value);
+        if (ev is null)
+        {
+            _notFound = true;
+            return;
+        }
+
+        _input = EventForm.From(ev);
+    }
+
+    private async Task SaveAsync()
+    {
+        _saving = true;
+        _error = null;
+
+        try
+        {
+            var hostId = await GetHostIdAsync();
+
+            var artistId = await ResolveArtistAsync();
+            if (artistId is null)
+            {
+                return;
+            }
+
+            var result = await Portal.SaveEventAsync(hostId, _input!.ToEvent(Id ?? Guid.NewGuid(), artistId.Value));
+            if (!result.Success)
+            {
+                _error = result.Error;
+                return;
+            }
+
+            Nav.NavigateTo($"portal/events/{result.Value!.Id}");
+        }
+        finally
+        {
+            _saving = false;
+        }
+    }
+
+    private async Task<Guid?> ResolveArtistAsync()
+    {
+        if (!_addingArtist)
+        {
+            if (_input!.ArtistId is null)
+            {
+                _error = "Choose an artist, or add a new one.";
+            }
+
+            return _input.ArtistId;
+        }
+
+        if (string.IsNullOrWhiteSpace(_input!.NewArtistName) || string.IsNullOrWhiteSpace(_input.NewArtistEmail))
+        {
+            _error = "Enter the artist's name and email.";
+            return null;
+        }
+
+        var artist = await Portal.FindOrAddArtistAsync(_input.NewArtistName, _input.NewArtistEmail, website: null);
+        return artist.Value?.Id;
+    }
+}
