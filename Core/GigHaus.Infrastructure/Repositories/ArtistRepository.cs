@@ -17,6 +17,14 @@ public class ArtistRepository : IArtistRepository
             "SELECT id, name, bio, email, phone, website, stripe_connect_account_id, created_at, updated_at FROM artists ORDER BY name");
     }
 
+    public async Task<Artist?> GetByEmailAsync(string email, CancellationToken ct = default)
+    {
+        using var conn = await _db.CreateConnectionAsync(ct);
+        return await conn.QueryFirstOrDefaultAsync<Artist>(
+            "SELECT id, name, bio, email, phone, website, stripe_connect_account_id, created_at, updated_at FROM artists WHERE LOWER(email) = LOWER(@Email)",
+            new { Email = email });
+    }
+
     public async Task<Artist?> GetByIdAsync(Guid id, CancellationToken ct = default)
     {
         using var conn = await _db.CreateConnectionAsync(ct);

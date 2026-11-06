@@ -1,0 +1,42 @@
+@page "/admin/hosts"
+@rendermode InteractiveServer
+@inject IHostRepository Repository
+
+<PageTitle>Hosts - GigHaus Admin</PageTitle>
+
+<h1>Hosts</h1>
+
+@if (_hosts is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table align-middle">
+            <thead>
+                <tr><th>Name</th><th>Email</th><th>City</th><th>Capacity</th><th>Status</th><th></th></tr>
+            </thead>
+            <tbody>
+                @foreach (var host in _hosts)
+                {
+                    <tr>
+                        <td>@host.Name</td>
+                        <td>@host.Email</td>
+                        <td>@host.City, @host.State</td>
+                        <td>@host.MaxCapacity</td>
+                        <td><HostStatusBadge Status="host.Status" /></td>
+                        <td class="text-end"><a href="admin/hosts/@host.Id" class="btn btn-sm btn-outline-primary">Open</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@code {
+    private IEnumerable<HostEntity>? _hosts;
+
+    protected override async Task OnInitializedAsync() =>
+        _hosts = (await Repository.GetAllAsync()).OrderBy(h => h.Status != HostStatus.Pending).ThenBy(h => h.Name);
+}

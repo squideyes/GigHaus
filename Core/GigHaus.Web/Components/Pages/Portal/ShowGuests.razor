@@ -1,0 +1,150 @@
+@page "/portal/events/{Id:guid}"
+@rendermode InteractiveServer
+@inject IHostPortalService Portal
+@inject NavigationManager Nav
+
+<PageTitle>@(_event?.Title ?? "Show") - GigHaus</PageTitle>
+
+@if (_notFound)
+{
+    <h1>Show not found</h1>
+    <p><a href="portal/events">Back to your shows</a></p>
+}
+else if (_event is not null)
+{
+    <div class="shell-head">
+        <div>
+            <h1>@_event.Title</h1>
+            <p class="text-muted mb-0">with @_event.Artist.Name, @_event.EventDate.ToString("dddd, MMMM d, yyyy") at @_event.StartTime.ToString("h:mm tt")</p>
+        </div>
+        <div class="shell-head__actions">
+            <a class="btn btn-outline-primary" href="portal/events/@_event.Id/edit">Edit</a>
+            <button type="button" class="btn btn-primary" @onclick="TogglePublishedAsync">
+                @(_event.IsPublished ? "Unpublish" : "Publish")
+            </button>
+        </div>
+    </div>
+
+    @if (_error is not null)
+    {
+        <div class="alert alert-danger" role="alert">@_error</div>
+    }
+
+    @if (_event.IsPublished)
+    {
+        <div class="alert alert-success">
+            <strong>Your show is live.</strong> Share this link:
+            <a class="share-link" href="@ShareLink">@ShareLink</a>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-secondary">This show is a draft, so guests can't see it yet.</div>
+    }
+
+    <div class="stat-grid">
+        <StatCard Label="Spots taken" Value="@($"{_taken} of {_event.MaxAttendees}")" />
+        <StatCard Label="Requests waiting" Value="@_guests.Count(g => g.Status == ReservationStatus.Pending).ToString()" />
+        <StatCard Label="Checked in" Value="@_guests.Where(g => g.Status == ReservationStatus.CheckedIn).Sum(g => g.NumberOfGuests).ToString()" />
+    </div>
+
+    <h2 class="h4 mt-4">Guest list</h2>
+    @if (_guests.Count == 0)
+    {
+        <div class="shell-empty">
+            <Mascot Size="128" />
+            <p>No reservations yet. Share your link to get the word out.</p>
+        </div>
+    }
+    else
+    {
+        <div>
+            <table class="table align-middle guest-table">
+                <thead><tr><th>Guest</th><th>Spots</th><th>Status</th><th></th></tr></thead>
+                <tbody>
+                    @foreach (var guest in _guests)
+                    {
+                        <tr>
+                            <td>
+                                <strong>@guest.AttendeeName</strong><br />
+                                <span class="text-muted">@guest.AttendeeEmail @guest.AttendeePhone</span>
+                                @if (!string.IsNullOrWhiteSpace(guest.Note))
+                                {
+                                    <br /><em>@guest.Note</em>
+                                }
+                            </td>
+                            <td class="guest-table__spots">@guest.NumberOfGuests</td>
+                            <td>@StatusText(guest.Status)</td>
+                            <td class="text-end text-nowrap">
+                                @if (guest.Status == ReservationStatus.Pending)
+                                {
+                                    <button type="button" class="btn btn-sm btn-primary" @onclick="() => ActAsync(id => Portal.ConfirmGuestAsync(_hostId, id), guest.Id)">Confirm</button>
+                                }
+                                @if (guest.Status == ReservationStatus.Confirmed)
+                                {
+                                    <button type="button" class="btn btn-sm btn-primary" @onclick="() => ActAsync(id => Portal.CheckInGuestAsync(_hostId, id), guest.Id)">Check in</button>
+                                }
+                                @if (guest.Status is ReservationStatus.Pending or ReservationStatus.Confirmed)
+                                {
+                                    <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="() => ActAsync(id => Portal.CancelGuestAsync(_hostId, id, null), guest.Id)">Cancel</button>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+}
+
+@code {
+    private Guid _hostId;
+    private Event? _event;
+    private List<Reservation> _guests = [];
+    private int _taken;
+    private bool _notFound;
+    private string? _error;
+
+    [Parameter] public Guid Id { get; set; }
+
+    private string ShareLink => Nav.ToAbsoluteUri($"shows/{Id}").ToString();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _hostId = await GetHostIdAsync();
+        _event = await Portal.GetEventAsync(_hostId, Id);
+        _notFound = _event is null;
+        await LoadGuestsAsync();
+    }
+
+    private async Task LoadGuestsAsync()
+    {
+        _guests = [.. await Portal.GetGuestsAsync(_hostId, Id)];
+        _taken = _guests.Where(g => g.Status != ReservationStatus.Cancelled).Sum(g => g.NumberOfGuests);
+    }
+
+    private async Task TogglePublishedAsync()
+    {
+        var result = await Portal.SetPublishedAsync(_hostId, Id, !_event!.IsPublished);
+        _error = result.Error;
+        if (result.Success)
+        {
+            _event = result.Value;
+        }
+    }
+
+    private async Task ActAsync(Func<Guid, Task<Result<Reservation>>> action, Guid reservationId)
+    {
+        var result = await action(reservationId);
+        _error = result.Error;
+        await LoadGuestsAsync();
+    }
+
+    private static string StatusText(ReservationStatus status) => status switch
+    {
+        ReservationStatus.Pending => "Waiting for you",
+        ReservationStatus.Confirmed => "Confirmed",
+        ReservationStatus.CheckedIn => "Checked in",
+        _ => "Cancelled"
+    };
+}

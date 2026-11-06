@@ -1,0 +1,42 @@
+@page "/admin/artists"
+@rendermode InteractiveServer
+@inject IArtistRepository Repository
+
+<PageTitle>Artists - GigHaus Admin</PageTitle>
+
+<h1>Artists</h1>
+
+@if (_artists is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table align-middle">
+            <thead>
+                <tr><th>Name</th><th>Email</th><th>Phone</th><th>Website</th><th>Added</th><th></th></tr>
+            </thead>
+            <tbody>
+                @foreach (var artist in _artists)
+                {
+                    <tr>
+                        <td>@artist.Name</td>
+                        <td>@artist.Email</td>
+                        <td>@artist.Phone</td>
+                        <td>@artist.Website</td>
+                        <td>@artist.CreatedAt.ToString("MMM d, yyyy")</td>
+                        <td class="text-end"><a href="admin/artists/@artist.Id" class="btn btn-sm btn-outline-primary">Open</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@code {
+    private IEnumerable<Artist>? _artists;
+
+    protected override async Task OnInitializedAsync() =>
+        _artists = await Repository.GetAllAsync();
+}

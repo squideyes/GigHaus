@@ -1,0 +1,103 @@
+@page "/contact"
+@inject ILeadRepository Leads
+
+<PageTitle>Talk to us - GigHaus</PageTitle>
+<HeadContent>
+    <meta name="description" content="Thinking about hosting a house concert? Tell GigHaus about your space and we'll help you plan your first show." />
+</HeadContent>
+
+<section class="mk-page-head">
+    <div class="mk-wrap mk-narrow">
+        <p class="mk-kicker">Contact</p>
+        <h1>Tell us about your space.</h1>
+        <p class="mk-lead">Not ready to sign up? No problem. Send a note and a real person will get back to you.</p>
+    </div>
+</section>
+
+<section class="mk-section">
+    <div class="mk-wrap mk-narrow">
+        @if (_sent)
+        {
+            <div class="mk-card mk-card--gold mk-center" role="status">
+                <Mascot Size="160" />
+                <h2>Thanks, we got it.</h2>
+                <p>We'll be in touch soon. In the meantime, have a look at <a href="hosts">how hosting works</a>.</p>
+            </div>
+        }
+        else
+        {
+            <EditForm Model="Input" FormName="contact" OnValidSubmit="SubmitAsync" Enhance class="mk-form">
+                <DataAnnotationsValidator />
+
+                <div class="mk-honeypot" aria-hidden="true">
+                    <label>Leave this empty <InputText @bind-Value="Input.Website" tabindex="-1" autocomplete="off" /></label>
+                </div>
+
+                <label>
+                    Your name
+                    <InputText @bind-Value="Input.Name" autocomplete="name" />
+                    <ValidationMessage For="() => Input.Name" />
+                </label>
+                <label>
+                    Email
+                    <InputText @bind-Value="Input.Email" type="email" autocomplete="email" />
+                    <ValidationMessage For="() => Input.Email" />
+                </label>
+                <label>
+                    Phone <span class="mk-optional">(optional)</span>
+                    <InputText @bind-Value="Input.Phone" type="tel" autocomplete="tel" />
+                </label>
+                <div class="mk-form__row">
+                    <label>
+                        City <span class="mk-optional">(optional)</span>
+                        <InputText @bind-Value="Input.City" autocomplete="address-level2" />
+                    </label>
+                    <label>
+                        State <span class="mk-optional">(optional)</span>
+                        <InputText @bind-Value="Input.State" autocomplete="address-level1" />
+                    </label>
+                </div>
+                <label>
+                    How many guests could fit? <span class="mk-optional">(a rough guess is fine)</span>
+                    <InputNumber @bind-Value="Input.EstimatedCapacity" />
+                    <ValidationMessage For="() => Input.EstimatedCapacity" />
+                </label>
+                <label>
+                    Anything else we should know? <span class="mk-optional">(optional)</span>
+                    <InputTextArea @bind-Value="Input.Message" rows="5" />
+                </label>
+
+                <button type="submit" class="mk-btn">Send</button>
+            </EditForm>
+        }
+    </div>
+</section>
+
+@code {
+    private bool _sent;
+
+    [SupplyParameterFromForm]
+    private ContactForm Input { get; set; } = default!;
+
+    protected override void OnInitialized() => Input ??= new();
+
+    private async Task SubmitAsync()
+    {
+        // Bots that fill the hidden field get the same thank-you, but nothing is saved.
+        if (string.IsNullOrEmpty(Input.Website))
+        {
+            await Leads.CreateAsync(new Lead
+            {
+                Name = Input.Name.Trim(),
+                Email = Input.Email.Trim(),
+                Phone = Input.Phone?.Trim(),
+                City = Input.City?.Trim(),
+                State = Input.State?.Trim(),
+                EstimatedCapacity = Input.EstimatedCapacity,
+                Message = Input.Message?.Trim()
+            });
+        }
+
+        _sent = true;
+    }
+}

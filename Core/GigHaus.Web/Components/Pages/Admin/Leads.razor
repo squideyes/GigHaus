@@ -1,0 +1,87 @@
+@page "/admin/leads"
+@rendermode InteractiveServer
+@inject ILeadRepository Repository
+
+<PageTitle>Leads - GigHaus Admin</PageTitle>
+
+<h1>Leads</h1>
+<p class="text-muted">People who got in touch through the contact form. A lead moves to Signed up on its own when that email creates an account.</p>
+
+@if (_leads is null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (_leads.Count == 0)
+{
+    <div class="shell-empty">
+        <Mascot Size="128" />
+        <p>No leads yet. They'll show up here when someone fills in the contact form.</p>
+    </div>
+}
+else
+{
+    <div class="lead-list">
+        @foreach (var lead in _leads)
+        {
+            <article class="lead-card">
+                <div class="lead-card__head">
+                    <div>
+                        <h2 class="h5 mb-0">@lead.Name</h2>
+                        <a href="mailto:@lead.Email">@lead.Email</a> @lead.Phone
+                    </div>
+                    <div class="lead-card__status">
+                        <label class="visually-hidden" for="status-@lead.Id">Status for @lead.Name</label>
+                        <select id="status-@lead.Id" class="form-select form-select-sm" value="@lead.Status"
+                                @onchange="e => SetStatusAsync(lead, e.Value?.ToString())">
+                            @foreach (var status in Enum.GetValues<LeadStatus>())
+                            {
+                                <option value="@status">@StatusText(status)</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+
+                <p class="text-muted mb-1">
+                    @(string.Join(", ", new[] { lead.City, lead.State }.Where(v => !string.IsNullOrWhiteSpace(v))))
+                    @if (lead.EstimatedCapacity is { } capacity)
+                    {
+                        <span> (fits about @capacity)</span>
+                    }
+                    <span> received @lead.CreatedAt.ToString("MMM d, yyyy")</span>
+                </p>
+
+                @if (!string.IsNullOrWhiteSpace(lead.Message))
+                {
+                    <p class="mk-prewrap">@lead.Message</p>
+                }
+
+                <label class="form-label" for="notes-@lead.Id">Notes</label>
+                <textarea id="notes-@lead.Id" class="form-control" rows="2" @bind="lead.Notes" @bind:after="() => Repository.UpdateAsync(lead)"></textarea>
+            </article>
+        }
+    </div>
+}
+
+@code {
+    private List<Lead>? _leads;
+
+    protected override async Task OnInitializedAsync() =>
+        _leads = [.. await Repository.GetAllAsync()];
+
+    private async Task SetStatusAsync(Lead lead, string? value)
+    {
+        if (Enum.TryParse<LeadStatus>(value, out var status))
+        {
+            lead.Status = status;
+            await Repository.UpdateAsync(lead);
+        }
+    }
+
+    private static string StatusText(LeadStatus status) => status switch
+    {
+        LeadStatus.Contacted => "Contacted",
+        LeadStatus.SignedUp => "Signed up",
+        LeadStatus.NotInterested => "Not interested",
+        _ => "New"
+    };
+}

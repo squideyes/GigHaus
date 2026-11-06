@@ -1,0 +1,179 @@
+@page "/shows/{Id:guid}"
+@inject IEventRepository Events
+@inject IReservationRepository Reservations
+@inject IReservationService ReservationService
+@inject NavigationManager Nav
+@inject TimeProvider Clock
+
+@if (_event is not null)
+{
+    <PageTitle>@_event.Title - GigHaus</PageTitle>
+    <HeadContent>
+        <meta name="description" content="@($"{_event.Artist.Name} at a house concert in {_event.Host.City}, {_event.Host.State}.")" />
+        <meta property="og:title" content="@_event.Title" />
+    </HeadContent>
+
+    <section class="mk-page-head">
+        <div class="mk-wrap mk-page-head__grid">
+            <div>
+                <p class="mk-kicker">House concert in @_event.Host.City, @_event.Host.State</p>
+                <h1>@_event.Title</h1>
+                <p class="mk-lead">with @_event.Artist.Name</p>
+                <p class="mk-when">@_event.EventDate.ToString("dddd, MMMM d, yyyy") at @_event.StartTime.ToString("h:mm tt")</p>
+            </div>
+            <Mascot Size="256" />
+        </div>
+    </section>
+
+    <section class="mk-section">
+        <div class="mk-wrap mk-show">
+            <div>
+                @if (!string.IsNullOrWhiteSpace(_event.Description))
+                {
+                    <p class="mk-prewrap">@_event.Description</p>
+                }
+
+                <div class="mk-card mk-card--gold">
+                    @if (_event.PricingMode == PricingMode.MinimumRequired)
+                    {
+                        <h2 class="h4">Minimum contribution to attend: @_event.MinimumContributionAmount?.ToString("C0")</h2>
+                        <p>A contribution of at least this amount is required, paid at the door. Suggested: @_event.SuggestedDonationAmount.ToString("C0").</p>
+                    }
+                    else if (_event.SuggestedDonationAmount > 0)
+                    {
+                        <h2 class="h4">Suggested donation: @_event.SuggestedDonationAmount.ToString("C0")</h2>
+                        <p>Pay what you can, at the door.</p>
+                    }
+                    else
+                    {
+                        <h2 class="h4">No suggested amount</h2>
+                        <p>Contribute what you like at the door.</p>
+                    }
+                    <p class="mk-small">@_event.PricingDisclosureText</p>
+                </div>
+
+                <p class="mk-small">General admission. This is a private home, so the street address is emailed to you once the host confirms your spot.</p>
+            </div>
+
+            <div>
+                @if (_confirmation is not null)
+                {
+                    <div class="mk-card mk-center" role="status">
+                        <h2>You're on the list.</h2>
+                        <p>@_confirmation</p>
+                    </div>
+                }
+                else if (_isPast)
+                {
+                    <div class="mk-card"><h2 class="h4">This show has passed.</h2></div>
+                }
+                else if (_spotsLeft <= 0)
+                {
+                    <div class="mk-card"><h2 class="h4">This show is full.</h2></div>
+                }
+                else
+                {
+                    <EditForm Model="Input" FormName="reserve" OnValidSubmit="ReserveAsync" Enhance class="mk-form mk-card">
+                        <DataAnnotationsValidator />
+                        <h2 class="h4">Reserve your spot</h2>
+                        <p class="mk-small">@_spotsLeft @(_spotsLeft == 1 ? "spot" : "spots") left</p>
+
+                        <div class="mk-honeypot" aria-hidden="true">
+                            <label>Leave this empty <InputText @bind-Value="Input.Website" tabindex="-1" autocomplete="off" /></label>
+                        </div>
+
+                        <label>
+                            Your name
+                            <InputText @bind-Value="Input.Name" autocomplete="name" />
+                            <ValidationMessage For="() => Input.Name" />
+                        </label>
+                        <label>
+                            Email
+                            <InputText @bind-Value="Input.Email" type="email" autocomplete="email" />
+                            <ValidationMessage For="() => Input.Email" />
+                        </label>
+                        <label>
+                            Phone <span class="mk-optional">(optional)</span>
+                            <InputText @bind-Value="Input.Phone" type="tel" autocomplete="tel" />
+                        </label>
+                        <label>
+                            How many spots?
+                            <InputNumber @bind-Value="Input.NumberOfGuests" min="1" max="@Math.Min(20, _spotsLeft)" />
+                            <ValidationMessage For="() => Input.NumberOfGuests" />
+                        </label>
+                        <label>
+                            Note for the host <span class="mk-optional">(optional)</span>
+                            <InputTextArea @bind-Value="Input.Note" rows="3" />
+                        </label>
+
+                        @if (_error is not null)
+                        {
+                            <p class="mk-error" role="alert">@_error</p>
+                        }
+
+                        <button type="submit" class="mk-btn">Request my spot</button>
+                    </EditForm>
+                }
+            </div>
+        </div>
+    </section>
+}
+
+@code {
+    private Event? _event;
+    private int _spotsLeft;
+    private bool _isPast;
+    private string? _error;
+    private string? _confirmation;
+
+    [Parameter] public Guid Id { get; set; }
+
+    [SupplyParameterFromForm]
+    private ReservationForm Input { get; set; } = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Input ??= new();
+
+        var ev = await Events.GetByIdAsync(Id);
+        if (ev is null || !ev.IsPublished || ev.Host.Status != HostStatus.Approved)
+        {
+            Nav.NotFound();
+            return;
+        }
+
+        _event = ev;
+        _isPast = ev.EventDate < DateOnly.FromDateTime(Clock.GetUtcNow().UtcDateTime);
+        _spotsLeft = ev.MaxAttendees - await Reservations.GetConfirmedGuestCountAsync(ev.Id);
+    }
+
+    private async Task ReserveAsync()
+    {
+        if (_event is null || _isPast)
+        {
+            return;
+        }
+
+        // Bots that fill the hidden field see the same message, but nothing is saved.
+        if (string.IsNullOrEmpty(Input.Website))
+        {
+            var result = await ReservationService.CreateReservationAsync(new Reservation
+            {
+                EventId = _event.Id,
+                AttendeeName = Input.Name.Trim(),
+                AttendeeEmail = Input.Email.Trim(),
+                AttendeePhone = Input.Phone?.Trim(),
+                NumberOfGuests = Input.NumberOfGuests,
+                Note = Input.Note?.Trim()
+            });
+
+            if (!result.Success)
+            {
+                _error = result.Error;
+                return;
+            }
+        }
+
+        _confirmation = "The host will review your request. Once they confirm you, we'll email you the address.";
+    }
+}

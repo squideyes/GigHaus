@@ -1,11 +1,23 @@
 ﻿@using System.Net.Http
 @using System.Net.Http.Json
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
 @using Microsoft.AspNetCore.Components.Forms
 @using Microsoft.AspNetCore.Components.Routing
 @using Microsoft.AspNetCore.Components.Web
 @using static Microsoft.AspNetCore.Components.Web.RenderMode
 @using Microsoft.AspNetCore.Components.Web.Virtualization
 @using Microsoft.JSInterop
+@using GigHaus.Domain
+@using GigHaus.Domain.Entities
+@using GigHaus.Domain.Enums
+@using GigHaus.Infrastructure.Repositories
+@using GigHaus.Infrastructure.Services
 @using GigHaus.Web
 @using GigHaus.Web.Components
 @using GigHaus.Web.Components.Layout
+@using GigHaus.Web.Components.Pages.Portal
+@using GigHaus.Web.Components.Shared
+@using GigHaus.Web.Identity
+@using GigHaus.Web.Models
+@using HostEntity = GigHaus.Domain.Entities.Host

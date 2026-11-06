@@ -1,0 +1,41 @@
+@* The frame shared by the host portal and the admin area. *@
+<div class="shell">
+    <aside class="shell__side">
+        <a class="shell__brand" href="@HomeHref">
+            <img src="mascot/mascot-96.webp" width="40" height="40" alt="" />
+            <span>GigHaus <small>@Area</small></span>
+        </a>
+
+        <input id="shell-toggle" class="shell__toggle" type="checkbox" aria-label="Show the menu" />
+        <label class="shell__menu" for="shell-toggle" aria-hidden="true">Menu</label>
+
+        <nav class="shell__nav" aria-label="@Area">
+            @Nav
+            <div class="shell__foot">
+                <AuthorizeView>
+                    <p class="shell__user">@context.User.GetDisplayName()</p>
+                </AuthorizeView>
+                <a href="account/password">Change password</a>
+                <a href="">Public site</a>
+                <SignOutButton Class="shell__signout" />
+            </div>
+        </nav>
+    </aside>
+
+    <main class="shell__main">
+        @ChildContent
+    </main>
+</div>
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>
+
+@code {
+    [Parameter, EditorRequired] public string Area { get; set; } = string.Empty;
+    [Parameter, EditorRequired] public string HomeHref { get; set; } = string.Empty;
+    [Parameter, EditorRequired] public RenderFragment Nav { get; set; } = default!;
+    [Parameter, EditorRequired] public RenderFragment ChildContent { get; set; } = default!;
+}

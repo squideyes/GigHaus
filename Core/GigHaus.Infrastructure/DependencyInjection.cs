@@ -19,10 +19,24 @@ public static class DependencyInjection
         services.AddScoped<IReservationRepository, ReservationRepository>();
         services.AddScoped<IPaymentRecordRepository, PaymentRecordRepository>();
         services.AddScoped<ISettlementSummaryRepository, SettlementSummaryRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<ILeadRepository, LeadRepository>();
 
         // Services
         services.AddScoped<IReservationService, ReservationService>();
 
+        return services;
+    }
+
+    /// <summary>
+    /// Adds the host portal services. Needs Identity's UserManager and
+    /// <see cref="AddGigHausEmail"/>.
+    /// </summary>
+    public static IServiceCollection AddGigHausPortal(this IServiceCollection services)
+    {
+        services.AddSingleton(TimeProvider.System);
+        services.AddScoped<IHostPortalService, HostPortalService>();
+        services.AddScoped<IHostOnboardingService, HostOnboardingService>();
         return services;
     }
 

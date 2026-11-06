@@ -5,6 +5,7 @@ using GigHaus.Infrastructure.Data;
 using GigHaus.Infrastructure.Messaging;
 using GigHaus.Infrastructure.Repositories;
 using GigHaus.Infrastructure.Services;
+using GigHaus.WebApi;
 using GigHaus.WebApi.Auth;
 using GigHaus.WebApi.Hubs;
 using GigHaus.WebApi.Middleware;
@@ -89,13 +90,13 @@ var artists = app.MapGroup("/api/artists").WithTags("Artists");
 
 artists.MapGet("/", async (IArtistRepository repo) =>
     await repo.GetAllAsync())
-    .CacheOutput(p => p.Expire(TimeSpan.FromSeconds(30)).Tag("artists"));
+    .RequireAuthorization(AuthConfiguration.PolicyAdmin);
 
 artists.MapGet("/{id:guid}", async (Guid id, IArtistRepository repo) =>
     await repo.GetByIdAsync(id) is { } artist
         ? Results.Ok(artist)
         : Results.NotFound())
-    .CacheOutput(p => p.Expire(TimeSpan.FromSeconds(30)).Tag("artists"));
+    .RequireAuthorization(AuthConfiguration.PolicyAdmin);
 
 artists.MapPost("/", async (Artist artist, IArtistRepository repo) =>
 {
@@ -119,15 +120,16 @@ artists.MapDelete("/{id:guid}", async (Guid id, IArtistRepository repo) =>
 // ── Hosts ────────────────────────────────────────────────────
 var hosts = app.MapGroup("/api/hosts").WithTags("Hosts");
 
+// Hosts are private homes, so their details never leave this API unauthenticated.
 hosts.MapGet("/", async (IHostRepository repo) =>
     await repo.GetAllAsync())
-    .CacheOutput(p => p.Expire(TimeSpan.FromSeconds(30)).Tag("hosts"));
+    .RequireAuthorization(AuthConfiguration.PolicyAdmin);
 
 hosts.MapGet("/{id:guid}", async (Guid id, IHostRepository repo) =>
     await repo.GetByIdAsync(id) is { } host
         ? Results.Ok(host)
         : Results.NotFound())
-    .CacheOutput(p => p.Expire(TimeSpan.FromSeconds(30)).Tag("hosts"));
+    .RequireAuthorization(AuthConfiguration.PolicyAdmin);
 
 hosts.MapPost("/", async (HostEntity host, IHostRepository repo) =>
 {
@@ -145,12 +147,12 @@ hosts.MapDelete("/{id:guid}", async (Guid id, IHostRepository repo) =>
 var events = app.MapGroup("/api/events").WithTags("Events");
 
 events.MapGet("/", async (IEventRepository repo) =>
-    await repo.GetAllAsync())
+    (await repo.GetAllAsync()).Where(PublicEvent.IsVisible).Select(PublicEvent.From))
     .CacheOutput(p => p.Expire(TimeSpan.FromSeconds(15)).Tag("events"));
 
 events.MapGet("/{id:guid}", async (Guid id, IEventRepository repo) =>
-    await repo.GetByIdAsync(id) is { } ev
-        ? Results.Ok(ev)
+    await repo.GetByIdAsync(id) is { } ev && PublicEvent.IsVisible(ev)
+        ? Results.Ok(PublicEvent.From(ev))
         : Results.NotFound())
     .CacheOutput(p => p.Expire(TimeSpan.FromSeconds(15)).Tag("events"));
 
@@ -170,12 +172,14 @@ events.MapDelete("/{id:guid}", async (Guid id, IEventRepository repo) =>
 var reservations = app.MapGroup("/api/reservations").WithTags("Reservations");
 
 reservations.MapGet("/event/{eventId:guid}", async (Guid eventId, IReservationRepository repo) =>
-    await repo.GetByEventIdAsync(eventId));
+    await repo.GetByEventIdAsync(eventId))
+    .RequireAuthorization(AuthConfiguration.PolicyHost);
 
 reservations.MapGet("/{id:guid}", async (Guid id, IReservationRepository repo) =>
     await repo.GetByIdAsync(id) is { } res
         ? Results.Ok(res)
-        : Results.NotFound());
+        : Results.NotFound())
+    .RequireAuthorization(AuthConfiguration.PolicyHost);
 
 reservations.MapPost("/", async (Reservation res, IReservationService svc, IEventBus bus,
     IHubContext<GigHausHub, IGigHausClient> hub, IReservationRepository resRepo, IEventRepository evRepo, GigHausMetrics metrics) =>

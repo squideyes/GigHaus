@@ -1,0 +1,34 @@
+@* Renders a still of the mascot. With Animated, mascot.js plays the video a few times over it. *@
+<img class="mascot @Class"
+     src="@StillSource"
+     alt="@Alt"
+     width="@Size"
+     height="@Size"
+     data-mascot-video="@(Animated ? $"mascot/mascot-{VideoSize}.webm" : null)" />
+
+@code {
+    /// <summary>Display size in pixels.</summary>
+    [Parameter] public int Size { get; set; } = 256;
+    [Parameter] public bool Animated { get; set; }
+    [Parameter] public string? Class { get; set; }
+    [Parameter] public string Alt { get; set; } = "The GigHaus mascot, a cheerful yellow house playing an acoustic guitar";
+
+    // Files are about twice the display size so they stay sharp on high-density screens.
+    private int VideoSize => Size switch
+    {
+        <= 64 => 128,
+        <= 128 => 256,
+        _ => 512
+    };
+
+    // The video frames the mascot smaller than the other stills, so an animated mascot uses
+    // a still taken from the video. Otherwise it would jump when the video starts.
+    private string StillSource => Animated ? "mascot/mascot-hero.webp" : $"mascot/mascot-{StillSize}.webp";
+
+    private int StillSize => Size switch
+    {
+        <= 48 => 96,
+        <= 160 => 320,
+        _ => 640
+    };
+}

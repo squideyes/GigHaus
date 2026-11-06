@@ -18,6 +18,17 @@ public class ReservationRepository : IReservationRepository
             new { EventId = eventId });
     }
 
+    public async Task<IEnumerable<Reservation>> GetByHostIdAsync(Guid hostId, CancellationToken ct = default)
+    {
+        using var conn = await _db.CreateConnectionAsync(ct);
+        return await conn.QueryAsync<Reservation>(
+            @"SELECT r.* FROM reservations r
+              JOIN events e ON r.event_id = e.id
+              WHERE e.host_id = @HostId
+              ORDER BY r.created_at",
+            new { HostId = hostId });
+    }
+
     public async Task<Reservation?> GetByIdAsync(Guid id, CancellationToken ct = default)
     {
         using var conn = await _db.CreateConnectionAsync(ct);

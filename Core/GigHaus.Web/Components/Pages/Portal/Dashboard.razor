@@ -1,0 +1,83 @@
+@page "/portal"
+@inject IHostPortalService Portal
+@inject TimeProvider Clock
+
+<PageTitle>Dashboard - GigHaus</PageTitle>
+
+@if (_host is not null)
+{
+    <h1>Hi, @_host.Name</h1>
+
+    @if (_host.Status == HostStatus.Pending)
+    {
+        <div class="alert alert-warning" role="status">
+            <strong>Your venue is waiting for review.</strong>
+            You can draft shows now and publish them once your venue is approved.
+        </div>
+    }
+    else if (_host.Status == HostStatus.Suspended)
+    {
+        <div class="alert alert-danger" role="alert">
+            <strong>Your venue is suspended.</strong>
+            Your shows aren't taking reservations. <a href="contact">Contact GigHaus</a> to sort it out.
+        </div>
+    }
+
+    <div class="stat-grid">
+        <StatCard Label="Upcoming shows" Value="@_upcoming.Count.ToString()" />
+        <StatCard Label="Requests waiting" Value="@_waiting.ToString()" />
+        <StatCard Label="Guests confirmed" Value="@_confirmedGuests.ToString()" />
+    </div>
+
+    @if (_upcoming.Count == 0)
+    {
+        <div class="shell-empty">
+            <Mascot Size="160" />
+            <h2>Your first show starts here.</h2>
+            <p>Add the artist and date, and you'll get a link to share.</p>
+            <a class="btn btn-primary" href="portal/events/new">Add a show</a>
+        </div>
+    }
+    else
+    {
+        <h2 class="h4 mt-4">Coming up</h2>
+        <div class="table-responsive">
+            <table class="table align-middle">
+                <thead><tr><th>Show</th><th>Date</th><th>Status</th><th></th></tr></thead>
+                <tbody>
+                    @foreach (var ev in _upcoming)
+                    {
+                        <tr>
+                            <td>@ev.Title <span class="text-muted">with @ev.Artist.Name</span></td>
+                            <td>@ev.EventDate.ToString("MMM d, yyyy")</td>
+                            <td>@(ev.IsPublished ? "Published" : "Draft")</td>
+                            <td class="text-end"><a class="btn btn-sm btn-outline-primary" href="portal/events/@ev.Id">Manage</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+}
+
+@code {
+    private HostEntity? _host;
+    private List<Event> _upcoming = [];
+    private int _waiting;
+    private int _confirmedGuests;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var hostId = await GetHostIdAsync();
+        _host = await Portal.GetVenueAsync(hostId);
+
+        var today = DateOnly.FromDateTime(Clock.GetUtcNow().UtcDateTime);
+        _upcoming = [.. (await Portal.GetEventsAsync(hostId)).Where(e => e.EventDate >= today)];
+
+        var upcomingIds = _upcoming.Select(e => e.Id).ToHashSet();
+        var guests = (await Portal.GetAllGuestsAsync(hostId)).Where(g => upcomingIds.Contains(g.EventId)).ToList();
+
+        _waiting = guests.Count(g => g.Status == ReservationStatus.Pending);
+        _confirmedGuests = guests.Where(g => g.Status == ReservationStatus.Confirmed).Sum(g => g.NumberOfGuests);
+    }
+}

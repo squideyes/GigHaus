@@ -32,7 +32,8 @@ jobs:
           dotnet restore Core/GigHaus.WebApi &&
           dotnet restore Core/GigHaus.Web &&
           dotnet restore Tools/GigHaus.Migrations &&
-          dotnet restore Tests/GigHaus.Tests
+          dotnet restore Tests/GigHaus.Tests &&
+          dotnet restore Tests/GigHaus.IntegrationTests
 
       - name: Build
         run: >
@@ -40,10 +41,14 @@ jobs:
           dotnet build Core/GigHaus.WebApi --no-restore &&
           dotnet build Core/GigHaus.Web --no-restore &&
           dotnet build Tools/GigHaus.Migrations --no-restore &&
-          dotnet build Tests/GigHaus.Tests --no-restore
+          dotnet build Tests/GigHaus.Tests --no-restore &&
+          dotnet build Tests/GigHaus.IntegrationTests --no-restore
 
       - name: Test
         run: dotnet test Tests/GigHaus.Tests --no-build --verbosity normal --logger "trx;LogFileName=test-results.trx"
+
+      - name: Integration tests
+        run: dotnet test Tests/GigHaus.IntegrationTests --no-build --verbosity normal
 
       - name: Upload test results
         uses: actions/upload-artifact@v4

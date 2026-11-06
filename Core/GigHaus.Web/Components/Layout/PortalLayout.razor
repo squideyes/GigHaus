@@ -1,0 +1,10 @@
+@inherits LayoutComponentBase
+
+<AppShell Area="Host portal" HomeHref="portal">
+    <Nav>
+        <NavLink href="portal" Match="NavLinkMatch.All">Dashboard</NavLink>
+        <NavLink href="portal/events">Shows</NavLink>
+        <NavLink href="portal/venue">Your venue</NavLink>
+    </Nav>
+    <ChildContent>@Body</ChildContent>
+</AppShell>

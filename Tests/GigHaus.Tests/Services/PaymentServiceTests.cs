@@ -20,14 +20,14 @@ public class PaymentServiceTests
     [Fact]
     public void CalculateFees_CorrectBreakdown()
     {
-        // $50 gross: processor = 50*0.029 + 0.30 = $1.75, platform = 50*0.02 = $1.00
+        // $50 gross: processor = 50*0.029 + 0.30 = $1.75, and GigHaus takes no platform fee
         var fees = _svc.CalculateFees(50m);
 
         Assert.Equal(50m, fees.GrossAmount);
         Assert.Equal(1.75m, fees.ProcessorFee);
-        Assert.Equal(1.00m, fees.PlatformFee);
-        Assert.Equal(47.25m, fees.NetAmount);
-        Assert.Equal(47.25m, fees.AttributableToArtist);
+        Assert.Equal(0m, fees.PlatformFee);
+        Assert.Equal(48.25m, fees.NetAmount);
+        Assert.Equal(48.25m, fees.AttributableToArtist);
     }
 
     [Fact]
@@ -41,9 +41,9 @@ public class PaymentServiceTests
     }
 
     [Theory]
-    [InlineData(10, 0.59, 0.20, 9.21)]
-    [InlineData(25, 1.03, 0.50, 23.47)]
-    [InlineData(100, 3.20, 2.00, 94.80)]
+    [InlineData(10, 0.59, 0, 9.41)]
+    [InlineData(25, 1.03, 0, 23.97)]
+    [InlineData(100, 3.20, 0, 96.80)]
     public void CalculateFees_VariousAmounts(decimal gross, decimal expectedProcessor, decimal expectedPlatform, decimal expectedNet)
     {
         var fees = _svc.CalculateFees(gross);
@@ -172,8 +172,8 @@ public class PaymentServiceTests
 
         Assert.Equal(1000m, fees.GrossAmount);
         Assert.Equal(29.30m, fees.ProcessorFee); // 1000*0.029 + 0.30
-        Assert.Equal(20.00m, fees.PlatformFee);  // 1000*0.02
-        Assert.Equal(950.70m, fees.NetAmount);
+        Assert.Equal(0m, fees.PlatformFee);
+        Assert.Equal(970.70m, fees.NetAmount);
     }
 
     [Fact]
@@ -183,8 +183,8 @@ public class PaymentServiceTests
 
         Assert.Equal(1m, fees.GrossAmount);
         Assert.Equal(0.33m, fees.ProcessorFee); // 1*0.029 + 0.30 = 0.329 → 0.33
-        Assert.Equal(0.02m, fees.PlatformFee);
-        Assert.Equal(0.65m, fees.NetAmount);
+        Assert.Equal(0m, fees.PlatformFee);
+        Assert.Equal(0.67m, fees.NetAmount);
     }
 
     [Fact]
