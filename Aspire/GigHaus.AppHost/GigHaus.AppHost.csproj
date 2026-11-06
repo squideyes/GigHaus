@@ -11,9 +11,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GigHaus.WebApi\GigHaus.WebApi.csproj" />
-    <ProjectReference Include="..\GigHaus.Web\GigHaus.Web.csproj" />
-    <ProjectReference Include="..\GigHaus.Migrations\GigHaus.Migrations.csproj" />
+    <ProjectReference Include="..\..\Core\GigHaus.WebApi\GigHaus.WebApi.csproj" />
+    <ProjectReference Include="..\..\Core\GigHaus.Web\GigHaus.Web.csproj" />
+    <ProjectReference Include="..\..\Tools\GigHaus.Migrations\GigHaus.Migrations.csproj" />
   </ItemGroup>
 
   <ItemGroup>

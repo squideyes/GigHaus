@@ -20,9 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GigHaus.Domain\GigHaus.Domain.csproj" />
-    <ProjectReference Include="..\GigHaus.Infrastructure\GigHaus.Infrastructure.csproj" />
-    <ProjectReference Include="..\GigHaus.WebApi\GigHaus.WebApi.csproj" />
+    <ProjectReference Include="..\..\Core\GigHaus.Domain\GigHaus.Domain.csproj" />
+    <ProjectReference Include="..\..\Core\GigHaus.Infrastructure\GigHaus.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Core\GigHaus.WebApi\GigHaus.WebApi.csproj" />
   </ItemGroup>
 
 </Project>

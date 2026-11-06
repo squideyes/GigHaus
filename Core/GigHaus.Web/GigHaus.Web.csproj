@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <ItemGroup>
-    <ProjectReference Include="..\GigHaus.ServiceDefaults\GigHaus.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\..\Aspire\GigHaus.ServiceDefaults\GigHaus.ServiceDefaults.csproj" />
     <ProjectReference Include="..\GigHaus.Domain\GigHaus.Domain.csproj" />
     <ProjectReference Include="..\GigHaus.Infrastructure\GigHaus.Infrastructure.csproj" />
   </ItemGroup>
