@@ -1,0 +1,25 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.6.4">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>7281f831-4a54-4dd8-9dab-46954feeed1b</UserSecretsId>
+    <!-- DCP and the dashboard come from NuGet, so `dotnet run` and CI need no Aspire CLI. -->
+    <NoWarn>$(NoWarn);ASPIRE010</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\GigHaus.WebApi\GigHaus.WebApi.csproj" />
+    <ProjectReference Include="..\..\Core\GigHaus.Web\GigHaus.Web.csproj" />
+    <ProjectReference Include="..\..\Tools\GigHaus.Migrations\GigHaus.Migrations.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.PostgreSQL" Version="13.6.4" />
+    <PackageReference Include="Aspire.Hosting.RabbitMQ" Version="13.6.4" />
+    <PackageReference Include="Aspire.Hosting.Redis" Version="13.6.4" />
+  </ItemGroup>
+
+</Project>

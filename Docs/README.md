@@ -39,18 +39,17 @@ GigHaus.slnx
 ├── /Core/
 │   ├── GigHaus.Domain/           # Domain entities and enums (no dependencies)
 │   ├── GigHaus.Infrastructure/   # Dapper repositories, email service, DI
+│   ├── GigHaus.Mobile/           # .NET MAUI app (end-user events + check-in)
+│   ├── GigHaus.Web/              # Blazor Web App (Admin UI)
 │   └── GigHaus.WebApi/           # REST API (Minimal APIs)
-├── /Web/
-│   └── GigHaus.Web/              # Blazor Web App (Admin UI)
-├── /Mobile/
-│   └── GigHaus.Mobile/           # .NET MAUI app (end-user events + check-in)
 ├── /Tools/
-│   └── GigHaus.Migrations/      # DbUp SQL migration runner
+│   └── GigHaus.Migrations/       # DbUp SQL migration runner
 ├── /Tests/
 │   └── GigHaus.Tests/            # xUnit + NSubstitute tests
-└── /Docs/
-    ├── GigHaus_Legal_and_Pricing_Notes.md
-    └── README.md
+├── /Docs/
+│   ├── GigHaus_Legal_and_Pricing_Notes.md
+│   └── README.md
+└── /Mascot/                      # Mascot artwork and animations
 ```
 
 ---
@@ -111,14 +110,14 @@ GigHaus.slnx
 
 ### Start the application
 ```bash
-cd GigHaus.AppHost
+cd Aspire/GigHaus.AppHost
 dotnet run
 ```
 Aspire will start PostgreSQL, Redis, RabbitMQ containers and the WebApi automatically.
 
 ### Run tests
 ```bash
-dotnet test GigHaus.Tests
+dotnet test Tests/GigHaus.Tests
 ```
 
 ---

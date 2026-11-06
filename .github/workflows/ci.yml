@@ -28,29 +28,29 @@ jobs:
 
       - name: Restore dependencies
         run: >
-          dotnet restore GigHaus.AppHost &&
-          dotnet restore GigHaus.WebApi &&
-          dotnet restore GigHaus.Web &&
-          dotnet restore GigHaus.Migrations &&
-          dotnet restore GigHaus.Tests
+          dotnet restore Aspire/GigHaus.AppHost &&
+          dotnet restore Core/GigHaus.WebApi &&
+          dotnet restore Core/GigHaus.Web &&
+          dotnet restore Tools/GigHaus.Migrations &&
+          dotnet restore Tests/GigHaus.Tests
 
       - name: Build
         run: >
-          dotnet build GigHaus.AppHost --no-restore &&
-          dotnet build GigHaus.WebApi --no-restore &&
-          dotnet build GigHaus.Web --no-restore &&
-          dotnet build GigHaus.Migrations --no-restore &&
-          dotnet build GigHaus.Tests --no-restore
+          dotnet build Aspire/GigHaus.AppHost --no-restore &&
+          dotnet build Core/GigHaus.WebApi --no-restore &&
+          dotnet build Core/GigHaus.Web --no-restore &&
+          dotnet build Tools/GigHaus.Migrations --no-restore &&
+          dotnet build Tests/GigHaus.Tests --no-restore
 
       - name: Test
-        run: dotnet test GigHaus.Tests --no-build --verbosity normal --logger "trx;LogFileName=test-results.trx"
+        run: dotnet test Tests/GigHaus.Tests --no-build --verbosity normal --logger "trx;LogFileName=test-results.trx"
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: test-results
-          path: GigHaus.Tests/TestResults/*.trx
+          path: Tests/GigHaus.Tests/TestResults/*.trx
 
   code-quality:
     name: Code Quality
@@ -67,10 +67,10 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: Restore
-        run: dotnet restore GigHaus.WebApi && dotnet restore GigHaus.Tests
+        run: dotnet restore Core/GigHaus.WebApi && dotnet restore Tests/GigHaus.Tests
 
       - name: Build with warnings as errors
         run: >
-          dotnet build GigHaus.WebApi --no-restore -warnaserror &&
-          dotnet build GigHaus.Tests --no-restore -warnaserror
+          dotnet build Core/GigHaus.WebApi --no-restore -warnaserror &&
+          dotnet build Tests/GigHaus.Tests --no-restore -warnaserror
 
