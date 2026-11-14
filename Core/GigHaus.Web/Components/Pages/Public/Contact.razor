@@ -1,16 +1,17 @@
+@page "/request-invite"
 @page "/contact"
 @inject ILeadRepository Leads
 
-<PageTitle>Talk to us - GigHaus</PageTitle>
+<PageTitle>Request an invitation - GigHaus</PageTitle>
 <HeadContent>
-    <meta name="description" content="Thinking about hosting a house concert? Tell GigHaus about your space and we'll help you plan your first show." />
+    <meta name="description" content="GigHaus is invite only. Tell us about your space to request an invitation to host house concerts." />
 </HeadContent>
 
 <section class="mk-page-head">
     <div class="mk-wrap mk-narrow">
-        <p class="mk-kicker">Contact</p>
-        <h1>Tell us about your space.</h1>
-        <p class="mk-lead">Not ready to sign up? No problem. Send a note and a real person will get back to you.</p>
+        <p class="mk-kicker">Invite only</p>
+        <h1>Request an invitation.</h1>
+        <p class="mk-lead">GigHaus is invite only for now. Tell us about your space and a real person will get back to you, with a sign-up link if it's a fit.</p>
     </div>
 </section>
 
@@ -21,7 +22,7 @@
             <div class="mk-card mk-card--gold mk-center" role="status">
                 <Mascot Size="160" />
                 <h2>Thanks, we got it.</h2>
-                <p>We'll be in touch soon. In the meantime, have a look at <a href="hosts">how hosting works</a>.</p>
+                <p>We'll be in touch soon. If it's a fit, you'll get an email with your sign-up link. In the meantime, have a look at <a href="hosts">how hosting works</a>.</p>
             </div>
         }
         else
@@ -67,7 +68,7 @@
                     <InputTextArea @bind-Value="Input.Message" rows="5" />
                 </label>
 
-                <button type="submit" class="mk-btn">Send</button>
+                <button type="submit" class="mk-btn">Request an invitation</button>
             </EditForm>
         }
     </div>

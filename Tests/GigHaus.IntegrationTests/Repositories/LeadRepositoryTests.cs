@@ -60,6 +60,23 @@ public sealed class LeadRepositoryTests(PostgresFixture fixture)
         (await _leads.GetAllAsync()).Single(l => l.Id == lead.Id).Status.ShouldBe(LeadStatus.SignedUp);
     }
 
+    [Fact]
+    public async Task SetInvited_StoresTheLinkAndMarkSignedUpSpendsIt()
+    {
+        var lead = await _leads.CreateAsync(NewLead());
+        var hash = Guid.NewGuid().ToString("N") + Guid.NewGuid().ToString("N");
+
+        (await _leads.SetInvitedAsync(lead.Id, hash, DateTime.UtcNow.AddDays(14))).ShouldBeTrue();
+        var invited = await _leads.GetByInviteTokenHashAsync(hash);
+        await _leads.MarkSignedUpAsync(lead.Email);
+
+        invited!.Id.ShouldBe(lead.Id);
+        invited.Status.ShouldBe(LeadStatus.Invited);
+        invited.InvitedAt.ShouldNotBeNull();
+        (await _leads.GetByInviteTokenHashAsync(hash)).ShouldBeNull();
+        (await _leads.GetOpenByEmailAsync(lead.Email)).ShouldBeNull();
+    }
+
     private static Lead NewLead() => new()
     {
         Name = LeadName,

@@ -1,11 +1,39 @@
 @page "/admin/leads"
 @rendermode InteractiveServer
 @inject ILeadRepository Repository
+@inject IHostOnboardingService Onboarding
+@inject NavigationManager Nav
 
-<PageTitle>Leads - GigHaus Admin</PageTitle>
+<PageTitle>Invitations - GigHaus Admin</PageTitle>
 
-<h1>Leads</h1>
-<p class="text-muted">People who got in touch through the contact form. A lead moves to Signed up on its own when that email creates an account.</p>
+<h1>Invitations</h1>
+<p class="text-muted">
+    GigHaus is invite only. People ask for an invitation on the site, and you answer by emailing them a sign-up link
+    that works once and lasts @((int)HostOnboardingService.InviteLifetime.TotalDays) days.
+    A request moves to Signed up on its own when the link is used.
+</p>
+
+<form class="lead-card" @onsubmit="InviteNewAsync">
+    <h2 class="h5">Invite someone who hasn't asked</h2>
+    <div class="row g-2 align-items-end">
+        <div class="col-md">
+            <label class="form-label" for="invite-name">Name</label>
+            <input id="invite-name" class="form-control" @bind="_newName" required maxlength="200" />
+        </div>
+        <div class="col-md">
+            <label class="form-label" for="invite-email">Email</label>
+            <input id="invite-email" class="form-control" type="email" @bind="_newEmail" required maxlength="200" />
+        </div>
+        <div class="col-md-auto">
+            <button type="submit" class="btn btn-primary" disabled="@_busy">Send invitation</button>
+        </div>
+    </div>
+</form>
+
+@if (_message is not null)
+{
+    <p class="@(_failed ? "text-danger" : "text-success") mt-3" role="status">@_message</p>
+}
 
 @if (_leads is null)
 {
@@ -15,12 +43,12 @@ else if (_leads.Count == 0)
 {
     <div class="shell-empty">
         <Mascot Size="128" />
-        <p>No leads yet. They'll show up here when someone fills in the contact form.</p>
+        <p>No requests yet. They'll show up here when someone asks for an invitation.</p>
     </div>
 }
 else
 {
-    <div class="lead-list">
+    <div class="lead-list mt-3">
         @foreach (var lead in _leads)
         {
             <article class="lead-card">
@@ -35,7 +63,8 @@ else
                                 @onchange="e => SetStatusAsync(lead, e.Value?.ToString())">
                             @foreach (var status in Enum.GetValues<LeadStatus>())
                             {
-                                <option value="@status">@StatusText(status)</option>
+                                @* Invited and Signed up are set by sending and using an invitation. *@
+                                <option value="@status" disabled="@(status is LeadStatus.Invited or LeadStatus.SignedUp && status != lead.Status)">@StatusText(status)</option>
                             }
                         </select>
                     </div>
@@ -55,6 +84,23 @@ else
                     <p class="mk-prewrap">@lead.Message</p>
                 }
 
+                @if (lead.Status != LeadStatus.SignedUp)
+                {
+                    <p class="mb-2">
+                        <button type="button" class="btn btn-sm @(lead.Status == LeadStatus.Invited ? "btn-outline-primary" : "btn-primary")"
+                                disabled="@_busy" @onclick="() => InviteAsync(lead)">
+                            @(lead.Status == LeadStatus.Invited ? "Send a new link" : "Send invitation")
+                        </button>
+                        @if (lead.Status == LeadStatus.Invited && lead.InviteExpiresAt is { } expires)
+                        {
+                            <span class="text-muted ms-2">
+                                Invited @lead.InvitedAt?.ToString("MMM d, yyyy").
+                                @(expires < DateTime.UtcNow ? "The link has expired." : $"The link works until {expires:MMM d, yyyy}.")
+                            </span>
+                        }
+                    </p>
+                }
+
                 <label class="form-label" for="notes-@lead.Id">Notes</label>
                 <textarea id="notes-@lead.Id" class="form-control" rows="2" @bind="lead.Notes" @bind:after="() => Repository.UpdateAsync(lead)"></textarea>
             </article>
@@ -64,9 +110,45 @@ else
 
 @code {
     private List<Lead>? _leads;
+    private string _newName = string.Empty;
+    private string _newEmail = string.Empty;
+    private string? _message;
+    private bool _failed;
+    private bool _busy;
 
-    protected override async Task OnInitializedAsync() =>
-        _leads = [.. await Repository.GetAllAsync()];
+    private string SignupUrl => Nav.ToAbsoluteUri("signup").ToString();
+
+    protected override Task OnInitializedAsync() => LoadAsync();
+
+    private async Task LoadAsync() => _leads = [.. await Repository.GetAllAsync()];
+
+    private async Task InviteAsync(Lead lead) =>
+        await RunAsync(() => Onboarding.InviteAsync(lead.Id, SignupUrl));
+
+    private async Task InviteNewAsync()
+    {
+        if (await RunAsync(() => Onboarding.InviteNewAsync(_newName, _newEmail, SignupUrl)))
+        {
+            _newName = _newEmail = string.Empty;
+        }
+    }
+
+    private async Task<bool> RunAsync(Func<Task<Result<Lead>>> invite)
+    {
+        _busy = true;
+        try
+        {
+            var result = await invite();
+            _failed = !result.Success;
+            _message = result.Success ? $"Invitation sent to {result.Value!.Email}." : result.Error;
+            await LoadAsync();
+            return result.Success;
+        }
+        finally
+        {
+            _busy = false;
+        }
+    }
 
     private async Task SetStatusAsync(Lead lead, string? value)
     {
@@ -80,8 +162,9 @@ else
     private static string StatusText(LeadStatus status) => status switch
     {
         LeadStatus.Contacted => "Contacted",
+        LeadStatus.Invited => "Invited",
         LeadStatus.SignedUp => "Signed up",
-        LeadStatus.NotInterested => "Not interested",
-        _ => "New"
+        LeadStatus.NotInterested => "Declined",
+        _ => "Requested"
     };
 }

@@ -3,7 +3,7 @@ using GigHaus.Domain.Enums;
 namespace GigHaus.Domain.Entities;
 
 /// <summary>
-/// A prospective host who got in touch through the contact form.
+/// A prospective host: someone who asked for an invitation, or whom the admin invited directly.
 /// </summary>
 public class Lead : BaseEntity
 {
@@ -18,6 +18,11 @@ public class Lead : BaseEntity
 
     /// <summary>Private notes for the GigHaus admin.</summary>
     public string? Notes { get; set; }
+
+    /// <summary>SHA-256 of the sign-up link's token. The token itself is only ever in the email.</summary>
+    public string? InviteTokenHash { get; set; }
+    public DateTime? InvitedAt { get; set; }
+    public DateTime? InviteExpiresAt { get; set; }
 
     public bool IsDeleted { get; set; }
     public DateTime? DeletedAt { get; set; }

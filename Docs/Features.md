@@ -11,7 +11,7 @@ Public pages built to sell hosting to prospective venues. They're static pages, 
 | Home | `/` | The pitch to hosts: what GigHaus does today, five steps to a show, what's on the way, and why it's free |
 | How it works | `/hosts` | Who can host, who does what, and how a private home is protected |
 | FAQ | `/faq` | Cost, privacy, approval, money, tax and what to check before hosting |
-| Contact | `/contact` | Lead form for people not ready to sign up |
+| Request an invitation | `/request-invite`, `/contact` | GigHaus is invite only. This form asks for an invitation and creates a lead |
 
 GigHaus is for hosts alone, so all the selling is aimed at them. The pitch is that GigHaus makes house concerts dead simple. It's about managing shows and guests, and it doesn't find or book artists.
 
@@ -35,7 +35,7 @@ The swap is limited to Chromium because a browser that ignores WebM transparency
 
 | Page | Route | Purpose |
 |---|---|---|
-| Sign up | `/signup` | Creates a host account and venue, then signs the host in |
+| Sign up | `/signup?invite=...` | Invitation only. Creates an approved host account and venue from an emailed link, then signs the host in |
 | Sign in | `/login` | Sends hosts to the portal and the admin to the admin area |
 | Forgot password | `/forgot-password` | Emails a reset link. Shows the same message whether or not the account exists. |
 | Reset password | `/reset-password` | Sets a new password from the emailed link |
@@ -66,7 +66,7 @@ For you alone, as the person who runs GigHaus.
 | Page | Route | What you do |
 |---|---|---|
 | Dashboard | `/admin` | See new leads, hosts waiting for review and overall counts |
-| Leads | `/admin/leads` | Work the sales pipeline: set a stage and keep notes |
+| Invitations | `/admin/leads` | Answer invitation requests, invite people directly, resend links and keep notes |
 | Hosts | `/admin/hosts` | See all hosts, with pending ones first |
 | Host detail | `/admin/hosts/{id}` | Review a venue, approve or suspend it, and see its shows |
 | Artists | `/admin/artists`, `/admin/artists/{id}` | See artists and their shows |
@@ -118,7 +118,7 @@ Also, the API's Host role isn't tied to a specific host, so its reservation endp
 | **Finding shows** | There's no public list of shows. Guests need the link. |
 | **Mobile app** | `GigHaus.Mobile` is a skeleton. Its pages have TODOs where the API calls belong, it has no `Platforms` folder, and it doesn't build on Windows. |
 | **Live updates** | The SignalR hub exists, but no page listens to it. |
-| **Notifying you** | New leads and sign-ups show on the dashboard, but nobody is emailed. |
+| **Notifying you** | New invitation requests and sign-ups show on the dashboard, but nobody is emailed. |
 
 ## Before launch
 
