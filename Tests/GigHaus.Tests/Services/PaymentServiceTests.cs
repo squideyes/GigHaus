@@ -44,9 +44,15 @@ public class PaymentServiceTests
     [InlineData(10, 0.59, 0, 9.41)]
     [InlineData(25, 1.03, 0, 23.97)]
     [InlineData(100, 3.20, 0, 96.80)]
-    public void CalculateFees_VariousAmounts(decimal gross, decimal expectedProcessor, decimal expectedPlatform, decimal expectedNet)
+    public void CalculateFees_VariousAmounts(double gross, double processor, double platform, double net)
     {
-        var fees = _svc.CalculateFees(gross);
+        // Attribute arguments can't be decimal, and .NET 11 converts double to decimal exactly
+        // (0.59 becomes 0.58999...), so round the expected values back to cents.
+        var expectedProcessor = Math.Round((decimal)processor, 2);
+        var expectedPlatform = Math.Round((decimal)platform, 2);
+        var expectedNet = Math.Round((decimal)net, 2);
+
+        var fees = _svc.CalculateFees((decimal)gross);
 
         Assert.Equal(expectedProcessor, fees.ProcessorFee);
         Assert.Equal(expectedPlatform, fees.PlatformFee);
