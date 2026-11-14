@@ -1,0 +1,763 @@
+VENUE: Midtown | Grand Rapids, MI | Intimate Venue
+SITE: themidtowngr.com/shows-events
+CSV NOTES: Quinn Mathews, Manager of Music Programming, 200 cap
+
+=== PAGE https://themidtowngr.com/shows-events
+Live Music Performances and Events Grand Rapids | Midtown 
+ Toggle navigation 
+ Shows & Events 
+ Private Events 
+ About the Venue 
+ Contact Us 
+ Quick Links 
+ Contact Us 
+ My Account 
+ (Sign out) 
+ Quick Links 
+ Contact Us 
+My Watchlist 
+ You don’t have any shows added to your Watchlist yet! Add shows to your Watchlist to get updates, reminders, and low ticket alerts so you don’t miss your chance to see some awesome performances. 
+ Sign in or become a member to get started. 
+ My Watchlist 
+ View All 
+ Tickets selling fast! 
+ Coming soon! 
+{{show.month}} 
+{{show.date}} 
+{{show.title}} 
+{{show.subtitle}} 
+ Buy Tickets 
+Tickets Purchased 
+ Shows & Events 
+ Private Events 
+ About the Venue 
+ | 
+ | 
+ My Account 
+ (Sign out) 
+ Toggle navigation 
+ SHOWS & EVENTS 
+ New artists and shows are added every week. For a small venue, we’ve got a huge line-up. 
+ Jump To 
+ {{month}} 
+ Jump To 
+ {{$root.selectedMonth}} 
+ {{month}} 
+ No results
+ November
+ Luke Winslow-King
+November 14 / 7:00 PM
+ Tickets: $30-40
+ More Info & Tickets
+ Mike Zito
+November 21 / 7:00 PM
+ Tickets: $25-$35
+ More Info & Tickets
+ December
+ COMEDY
+ River City Improv
+December 5 / 7:00 PM
+ Tickets: $20
+ More Info & Tickets
+ Love Under The Mistletoe
+December 12 / 6:00 PM
+ Tickets: $75-$125
+ More Info & Tickets
+ Jamie Dionne & Guests: Arts Marketplace Benefit
+December 16 / 7:00 PM
+ Tickets: $30-$40
+ More Info & Tickets
+ Bradley Sinclair and The Corey Sound
+December 19 / 6:00 PM
+December 19 / 9:00 PM
+ Tickets: $30-$40
+ More Info & Tickets
+ January
+ Mark Lavengood Band
+January 15 / 7:00 PM
+ Tickets: $25-$40
+ More Info & Tickets
+ COMEDY
+ River City Improv
+January 16 / 7:00 PM
+ Tickets: $20
+ More Info & Tickets
+ COMEDY
+ Pop Scholars Improv Comedy
+January 23 / 7:00 PM
+ Tickets: $20
+ More Info & Tickets
+ February
+ COMEDY
+ River City Improv
+February 6 / 7:00 PM
+ Tickets: $20
+ More Info & Tickets
+ COMEDY
+ Pop Scholars Improv Comedy
+February 20 / 7:00 PM
+ Tickets: $20
+ More Info & Tickets
+ The Insiders: A Tribute to Tom Petty
+February 26 / 7:00 PM
+ Tickets: $30-$40
+ More Info & Tickets
+ The Insiders: A Traveling Wilburys Tribute
+February 27 / 7:00 PM
+ Tickets: $30-$40
+ More Info & Tickets
+ March
+ COMEDY
+ River City Improv
+March 6 / 7:00 PM
+ Tickets: $20
+ More Info & Tickets
+ April
+ COMEDY
+ River City Improv
+April 17 / 7:00 PM
+ Tickets: $20
+ More Info & Tickets
+ May
+ COMEDY
+ River City Improv
+May 15 / 7:00 PM
+ Tickets: $20
+ More Info & Tickets
+ June
+ No Shows At This Time
+ July
+ No Shows At This Time
+Want On The List?
+JOIN OUR EMAIL LIST
+Be the first to hear who's coming and when tickets go on sale! 
+ Join Now
+ Shows & Events 
+ About the Venue 
+ Contact Us 
+ Booking 
+ Midtown FAQ 
+ Private Events 
+ Menu 
+Connect with Us 
+WANT ON THE LIST? 
+ Join our newsletter and be the first to hear who's coming and when tickets go on sale. Join Now 
+ Midtown at Studio Park 
+123 Ionia Ave. SW
+Grand Rapids, MI 49503
+Directions Parking
+ Studio Park 
+The heart of downtown Grand Rapids' entertainment district.
+Studio Park Site
+Listening Lawn FAQ 
+Sign in 
+Sign in to see the points you’ve earned, load your saved preferences, speed up checkout, and much more 
+ Email Address 
+Email is required. 
+Email is in incorrect format. 
+ {{feedback}} 
+ Password 
+Password is required. 
+ {{feedback}} 
+ Join C Rewards 
+ Forgot your password? 
+Already joined C Rewards in a theatre? Finish your registration 
+Forgot your password? 
+ Enter your email address, and we’ll send you a link to reset your password. 
+ Email Address 
+Email is required. 
+Email has incorrect format. 
+ {{feedback}} 
+Password reset link sent! 
+ Please check your inbox for an email containing the link to reset your password. After resetting your password, click here in order to sign in. 
+Forgot your password? 
+Create a new password to continue. 
+ Create password 
+Password is required. 
+ {{feedback}} 
+ Confirm password 
+Confirm password is required. 
+Passwords do not match. 
+ {{feedback}} 
+Your password has been changed! 
+Sign in with your new password to continue. 
+ Sign In 
+© 2026 Studio C Privacy Policy Terms of Use 
+Privacy PolicyTerms of Use
+© 2019 Studio C
+=== PAGE https://themidtowngr.com/private-events
+Private Events Grand Rapids Music Venue | Midtown 
+ Toggle navigation 
+ Shows & Events 
+ Private Events 
+ About the Venue 
+ Contact Us 
+ Quick Links 
+ Contact Us 
+ My Account 
+ (Sign out) 
+ Quick Links 
+ Contact Us 
+My Watchlist 
+ You don’t have any shows added to your Watchlist yet! Add shows to your Watchlist to get updates, reminders, and low ticket alerts so you don’t miss your chance to see some awesome performances. 
+ Sign in or become a member to get started. 
+ My Watchlist 
+ View All 
+ Tickets selling fast! 
+ Coming soon! 
+{{show.month}} 
+{{show.date}} 
+{{show.title}} 
+{{show.subtitle}} 
+ Buy Tickets 
+Tickets Purchased 
+ Shows & Events 
+ Private Events 
+ About the Venue 
+ | 
+ | 
+ My Account 
+ (Sign out) 
+ Toggle navigation 
+ Private Rentals 
+ Book Midtown 
+Midtown is available for private rentals in downtown Grand Rapids, with flexible options for events, celebrations, and live music. Whether you're planning something formal or more relaxed, we make it easy to turn the venue into your own.
+Midtown features:
+170 seats
+Premium-grade sound equipment
+Adjacent mezzanine for pre-receptions
+Luxury seating, bar, and screen 
+ Virtual Tour 
+Private Events 
+ Rent our venue 
+ Make Midtown your own. With a world-class sound system, luxury seating, and a built-in screen, our space is a great fit for everything from company events to private parties. It’s a unique alternative to a traditional banquet hall, and the atmosphere feels special the moment guests walk in. 
+Live Entertainment 
+Want something more memorable than a standard event space? Midtown is built for live entertainment. Host an event with incredible sound, a stage-ready setup, and in-seat drink service that keeps the experience smooth from start to finish.
+It’s a great option for live music, DJs, comedy, special guests, or even a speaker presentation that needs professional audio. 
+Luxury Seating 
+Midtown features 170 plush seats, 3 booths, and a standing bar area. Guests can settle in comfortably, whether they’re watching a presentation, enjoying a performance, or simply spending the evening together.
+Banquet table rentals are available upon request, making it easy to add food service, a reception setup, or a more traditional event layout. 
+Mezzanine 
+Host your pre-reception on the attached mezzanine overlooking Studio Park’s piazza. It’s a great space for cocktail hour, mingling, photos, or welcoming guests before the main event begins.
+The mezzanine adds a second area to your rental, giving your event a natural flow and making Midtown feel even more like a private venue built just for your group. 
+ Midtown Private Event Form
+ Contact First Name 
+ Contact Last Name 
+ Contact Email 
+ Phone 
+ Contact Method 
+ Phone 
+ Email 
+ Organization 
+ Start Date Range Desired 
+One month notice required. 
+ Estimated Group Size 
+ End Date Range Desired 
+. 
+ Event Time Frame 
+ Want Live Entertainment? 
+ Tell us more: 
+ Submit 
+ Shows & Events 
+ About the Venue 
+ Contact Us 
+ Booking 
+ Midtown FAQ 
+ Private Events 
+ Menu 
+Connect with Us 
+WANT ON THE LIST? 
+ Join our newsletter and be the first to hear who's coming and when tickets go on sale. Join Now 
+ Midtown at Studio Park 
+123 Ionia Ave. SW
+Grand Rapids, MI 49503
+Directions Parking
+ Studio Park 
+The heart of downtown Grand Rapids' entertainment district.
+Studio Park Site
+Listening Lawn FAQ 
+Sign in 
+Sign in to see the points you’ve earned, load your saved preferences, speed up checkout, and much more 
+ Email Address 
+Email is required. 
+Email is in incorrect format. 
+ {{feedback}} 
+ Password 
+Password is required. 
+ {{feedback}} 
+ Join C Rewards 
+ Forgot your password? 
+Already joined C Rewards in a theatre? Finish your registration 
+Forgot your password? 
+ Enter your email address, and we’ll send you a link to reset your password. 
+ Email Address 
+Email is required. 
+Email has incorrect format. 
+ {{feedback}} 
+Password reset link sent! 
+ Please check your inbox for an email containing the link to reset your password. After resetting your password, click here in order to sign in. 
+Forgot your password? 
+Create a new password to continue. 
+ Create password 
+Password is required. 
+ {{feedback}} 
+ Confirm password 
+Confirm password is required. 
+Passwords do not match. 
+ {{feedback}} 
+Your password has been changed! 
+Sign in with your new password to continue. 
+ Sign In 
+© 2026 Studio C Privacy Policy Terms of Use 
+Privacy PolicyTerms of Use
+© 2019 Studio C
+=== PAGE https://themidtowngr.com/about
+About Our Grand Rapids Music Venue | Midtown 
+ Toggle navigation 
+ Shows & Events 
+ Private Events 
+ About the Venue 
+ Contact Us 
+ Quick Links 
+ Contact Us 
+ My Account 
+ (Sign out) 
+ Quick Links 
+ Contact Us 
+My Watchlist 
+ You don’t have any shows added to your Watchlist yet! Add shows to your Watchlist to get updates, reminders, and low ticket alerts so you don’t miss your chance to see some awesome performances. 
+ Sign in or become a member to get started. 
+ My Watchlist 
+ View All 
+ Tickets selling fast! 
+ Coming soon! 
+{{show.month}} 
+{{show.date}} 
+{{show.title}} 
+{{show.subtitle}} 
+ Buy Tickets 
+Tickets Purchased 
+ Shows & Events 
+ Private Events 
+ About the Venue 
+ Contact Us 
+ | 
+ | 
+ My Account 
+ (Sign out) 
+ Toggle navigation 
+ Step Inside & Discover 
+ Explore Midtown 
+Midtown features:
+200 seats
+Premium-grade sound equipment
+Close, intimate setting
+In-seat service with specialty drinks available
+ WATCH A SHOW 
+Hear here 
+ Midtown isn't your average venue 
+ In a culture where live performances have become increasingly more and more impersonal, we decided to build a different kind of experience. One with a world-class sound system and a semi-circle of seating, for more engaged musicians and a more captive audience. 
+Sound design takes center stage 
+Midtown strikes a chord with music lovers who crave a more intimate setting—one that goes against the mainstream concert experience. 
+So close you can read the setlist 
+Our venue’s stage is one foot off the ground, creating an instant connection between the artist and the audience. You’ll feel like you’re in an underground jazz club, whether you’re hearing folk, rock, or whatever that band was that your friend loves. 
+an elevated concert experience 
+Yes, we’re a second floor music venue, but that’s not what we mean by elevated. Midtown is top-notch musical performances paired with craft cocktails and beer. We’ll probably even have those huge ice cubes. 
+Follow us on social 
+ Don't miss a beat 
+ Follow us for concert announcements, special offers, and more. 
+ Facebook 
+ Instagram 
+ Twitter 
+Not a bad seat in the house 
+ Explore our 200 seat venue 
+ From the front row to the back corner, every seat in Midtown has been optimized for world-class sound. Photos coming soon! 
+Find your way over 
+ We're right in the heart of downtown Grand Rapids 
+ We have parking, lots of parking. 
+ Directions 
+ Downtown has a brand new beat 
+Studio Park has plenty of things to do and see. In addition to experiencing a show, you can have a meal, catch a movie, and much, much more.
+ STUDIO PARK SITE
+Book your act 
+ Play in the heart of Grand Rapids 
+ Fill out our booking form, if our talent buyer is interested they will contact you directly. 
+ Booking 
+The only thing as good as the show? The drink you have after. 
+Grab a Bite, Before or After 
+A few short steps from Midtown is One Twenty Three—our neighborly New American Tavern, serving hearty dishes with modern flare. 
+Want On The List? 
+Join our email list 
+Be the first to hear who's coming and when tickets go on sale! 
+ Join Now 
+ Shows & Events 
+ About the Venue 
+ Contact Us 
+ Booking 
+ Midtown FAQ 
+ Private Events 
+ Menu 
+Connect with Us 
+WANT ON THE LIST? 
+ Join our newsletter and be the first to hear who's coming and when tickets go on sale. Join Now 
+ Midtown at Studio Park 
+123 Ionia Ave. SW
+Grand Rapids, MI 49503
+Directions Parking
+ Studio Park 
+The heart of downtown Grand Rapids' entertainment district.
+Studio Park Site
+Listening Lawn FAQ 
+Sign in 
+Sign in to see the points you’ve earned, load your saved preferences, speed up checkout, and much more 
+ Email Address 
+Email is required. 
+Email is in incorrect format. 
+ {{feedback}} 
+ Password 
+Password is required. 
+ {{feedback}} 
+ Join C Rewards 
+ Forgot your password? 
+Already joined C Rewards in a theatre? Finish your registration 
+Forgot your password? 
+ Enter your email address, and we’ll send you a link to reset your password. 
+ Email Address 
+Email is required. 
+Email has incorrect format. 
+ {{feedback}} 
+Password reset link sent! 
+ Please check your inbox for an email containing the link to reset your password. After resetting your password, click here in order to sign in. 
+Forgot your password? 
+Create a new password to continue. 
+ Create password 
+Password is required. 
+ {{feedback}} 
+ Confirm password 
+Confirm password is required. 
+Passwords do not match. 
+ {{feedback}} 
+Your password has been changed! 
+Sign in with your new password to continue. 
+ Sign In 
+© 2026 Studio C Privacy Policy Terms of Use 
+Privacy PolicyTerms of Use
+© 2019 Studio C
+=== PAGE https://themidtowngr.com/contact-us
+Contact Us 
+ Toggle navigation 
+ Shows & Events 
+ Private Events 
+ About the Venue 
+ Contact Us 
+ Quick Links 
+ Contact Us 
+ My Account 
+ (Sign out) 
+ Quick Links 
+ Contact Us 
+My Watchlist 
+ You don’t have any shows added to your Watchlist yet! Add shows to your Watchlist to get updates, reminders, and low ticket alerts so you don’t miss your chance to see some awesome performances. 
+ Sign in or become a member to get started. 
+ My Watchlist 
+ View All 
+ Tickets selling fast! 
+ Coming soon! 
+{{show.month}} 
+{{show.date}} 
+{{show.title}} 
+{{show.subtitle}} 
+ Buy Tickets 
+Tickets Purchased 
+ Shows & Events 
+ Private Events 
+ About the Venue 
+ | 
+ | 
+ My Account 
+ (Sign out) 
+ Toggle navigation 
+ Contact Us
+ First Name 
+ Last Name 
+ Email 
+ Phone 
+ Message 
+ Submit 
+ Shows & Events 
+ About the Venue 
+ Contact Us 
+ Booking 
+ Midtown FAQ 
+ Private Events 
+ Menu 
+Connect with Us 
+WANT ON THE LIST? 
+ Join our newsletter and be the first to hear who's coming and when tickets go on sale. Join Now 
+ Midtown at Studio Park 
+123 Ionia Ave. SW
+Grand Rapids, MI 49503
+Directions Parking
+ Studio Park 
+The heart of downtown Grand Rapids' entertainment district.
+Studio Park Site
+Listening Lawn FAQ 
+Sign in 
+Sign in to see the points you’ve earned, load your saved preferences, speed up checkout, and much more 
+ Email Address 
+Email is required. 
+Email is in incorrect format. 
+ {{feedback}} 
+ Password 
+Password is required. 
+ {{feedback}} 
+ Join C Rewards 
+ Forgot your password? 
+Already joined C Rewards in a theatre? Finish your registration 
+Forgot your password? 
+ Enter your email address, and we’ll send you a link to reset your password. 
+ Email Address 
+Email is required. 
+Email has incorrect format. 
+ {{feedback}} 
+Password reset link sent! 
+ Please check your inbox for an email containing the link to reset your password. After resetting your password, click here in order to sign in. 
+Forgot your password? 
+Create a new password to continue. 
+ Create password 
+Password is required. 
+ {{feedback}} 
+ Confirm password 
+Confirm password is required. 
+Passwords do not match. 
+ {{feedback}} 
+Your password has been changed! 
+Sign in with your new password to continue. 
+ Sign In 
+© 2026 Studio C Privacy Policy Terms of Use 
+Privacy PolicyTerms of Use
+© 2019 Studio C
+=== PAGE https://themidtowngr.com/shows-events/detail/Luke-Winslow-King
+Luke Winslow-King 
+ Toggle navigation 
+ Shows & Events 
+ Private Events 
+ About the Venue 
+ Contact Us 
+ Quick Links 
+ Contact Us 
+ My Account 
+ (Sign out) 
+ Quick Links 
+ Contact Us 
+My Watchlist 
+ You don’t have any shows added to your Watchlist yet! Add shows to your Watchlist to get updates, reminders, and low ticket alerts so you don’t miss your chance to see some awesome performances. 
+ Sign in or become a member to get started. 
+ My Watchlist 
+ View All 
+ Tickets selling fast! 
+ Coming soon! 
+{{show.month}} 
+{{show.date}} 
+{{show.title}} 
+{{show.subtitle}} 
+ Buy Tickets 
+Tickets Purchased 
+ Shows & Events 
+ Private Events 
+ About the Venue 
+ | 
+ | 
+ My Account 
+ (Sign out) 
+ Toggle navigation 
+Luke Winslow-King 
+ Show Details 
+Luke Winslow-King 
+ SATURDAY NOVEMBER 14, 2026 
+ 7:00 pm / Doors open 6:00 pm 
+ Tickets: $30-40 
+Seating 
+ Buy Tickets 
+ Share: 
+ Facebook 
+ Twitter 
+ “Seamlessly melds delta blues, gospel, and jazz themes with personal, simplified lyrics that speak to his personal and artistic evolution.” – New York Times. 
+ Originally from Cadillac, Michigan, Luke Winslow-King is a career guitarist, singer, producer, songwriter, and craftsman of sound; blending delta blues, roots, rock, and folk into a rich, soulful tapestry. His music is a journey through the heart of America, characterized by masterful guitar work, captivating lyrics, and a voice that resonates with authenticity. After having spent more than 15 years in New Orleans, Luke has gone on and honed his craft on stages across the world, captivating audiences with his dynamic performances and forming a real and personal connection with his listeners. 
+Whether it's an intimate venue or a large festival stage, Luke's live shows are known for their powerful energy and emotional depth, leaving audiences enthralled and eager for more. His set lists are mostly original compositions, but also include timeless classics, each delivered with a level of artistry that is both rare and refreshing. 
+Artist Links 
+Website 
+Instagram 
+Facebook 
+ The only thing as good as the show? The drink you have after 
+GRAB A BITE, BEFORE OR AFTER 
+A few short steps from Midtown is One Twenty Three—our neighborly New American Tavern, serving hearty dishes with modern flare. 
+ One Twenty Three 
+ Shows & Events 
+ About the Venue 
+ Contact Us 
+ Booking 
+ Midtown FAQ 
+ Private Events 
+ Menu 
+Connect with Us 
+WANT ON THE LIST? 
+ Join our newsletter and be the first to hear who's coming and when tickets go on sale. Join Now 
+ Midtown at Studio Park 
+123 Ionia Ave. SW
+Grand Rapids, MI 49503
+Directions Parking
+ Studio Park 
+The heart of downtown Grand Rapids' entertainment district.
+Studio Park Site
+Listening Lawn FAQ 
+Sign in 
+Sign in to see the points you’ve earned, load your saved preferences, speed up checkout, and much more 
+ Email Address 
+Email is required. 
+Email is in incorrect format. 
+ {{feedback}} 
+ Password 
+Password is required. 
+ {{feedback}} 
+ Join C Rewards 
+ Forgot your password? 
+Already joined C Rewards in a theatre? Finish your registration 
+Forgot your password? 
+ Enter your email address, and we’ll send you a link to reset your password. 
+ Email Address 
+Email is required. 
+Email has incorrect format. 
+ {{feedback}} 
+Password reset link sent! 
+ Please check your inbox for an email containing the link to reset your password. After resetting your password, click here in order to sign in. 
+Forgot your password? 
+Create a new password to continue. 
+ Create password 
+Password is required. 
+ {{feedback}} 
+ Confirm password 
+Confirm password is required. 
+Passwords do not match. 
+ {{feedback}} 
+Your password has been changed! 
+Sign in with your new password to continue. 
+ Sign In 
+© 2026 Studio C Privacy Policy Terms of Use 
+Privacy PolicyTerms of Use
+© 2019 Studio C
+=== PAGE https://themidtowngr.com/shows-events/detail/Mike-Zito
+Mike Zito 
+ Toggle navigation 
+ Shows & Events 
+ Private Events 
+ About the Venue 
+ Contact Us 
+ Quick Links 
+ Contact Us 
+ My Account 
+ (Sign out) 
+ Quick Links 
+ Contact Us 
+My Watchlist 
+ You don’t have any shows added to your Watchlist yet! Add shows to your Watchlist to get updates, reminders, and low ticket alerts so you don’t miss your chance to see some awesome performances. 
+ Sign in or become a member to get started. 
+ My Watchlist 
+ View All 
+ Tickets selling fast! 
+ Coming soon! 
+{{show.month}} 
+{{show.date}} 
+{{show.title}} 
+{{show.subtitle}} 
+ Buy Tickets 
+Tickets Purchased 
+ Shows & Events 
+ Private Events 
+ About the Venue 
+ | 
+ | 
+ My Account 
+ (Sign out) 
+ Toggle navigation 
+Mike Zito 
+ Show Details 
+Mike Zito 
+ SATURDAY NOVEMBER 21, 2026 
+ 7:00 pm / Doors open 6:00 pm 
+ Tickets: $25-$35 
+Seating 
+ Buy Tickets 
+ Share: 
+ Facebook 
+ Twitter 
+ From his childhood in St. Louis to the global blues-rock circuit, Mike Zito has always kept it real. He began playing guitar at age five and by his late teens was a fixture on the St. Louis music scene. For Zito, honesty, authenticity, and integrity aren’t just part of the brand, they’re the foundation. I have nothing to hide; it seems my honesty is what people relate to most, he once told Vintage Guitar.
+Zito is a powerhouse in modern blues rock. He’s an artist whose gritty guitar work, deeply human songwriting, and magnetic stage presence have made him a defining force in the genre. From smoke-filled bars in East St. Louis to major festival stages around the world, Mike has built a career on emotional honesty, fearless playing, and an unshakable commitment to the song.
+In 2025, Zito claimed the Blues Music Award for Blues Rock Album of the Year with Life Is Hard, a deeply personal and sonically bold record that cements his place among the genre’s elite. The win followed his 2024 sweep, where he was honored with Blues Rock Album of the Year and Blues Rock Artist of the Year, reflecting both his creative output and his relentless touring schedule.
+A lifelong road warrior, Zito has spent decades sharpening his craft onstage, blending classic blues, rock, soul, and Americana into something unmistakably his own. His live shows are equal parts fire and heart: searing guitar work, powerhouse grooves, and storytelling that invites audiences straight into his world.
+Offstage, Zito is a respected producer and co-founder of Gulf Coast Records, championing fellow artists and helping shape some of the most exciting new music in today’s blues landscape.
+Onstage and on record, Zito currently moves through three distinct but connected lanes. Under his own name, Mike Zito delivers the raw, personal, guitar-driven blues rock that fans across the world have come to love. He also co-leads Blood Brothers with Albert Castiglia—a high-energy, guitar-slinging band built on friendship, shared history, and a near-telepathic musical connection. Their chemistry has earned praise from some of the biggest names in blues: as Joe Bonamassa put it, Mike and Albert have a special chemistry together when they plug in and play that few have. They finish each other’s sentences musically… Great tunes, great people, great hang!
+Albert adds his own perspective: Mike is the hardest working man in show business and a force as a singer, guitarist, producer, and songwriter. There’s nothing the man can’t do. He’s also got a heart of gold, raising money for countless causes. He’s a credit to the blues rock genre!
+And then there’s Bill Murray & His Blood Brothers, a more theatrical, humor-driven extension of the Blood Brothers universe that allows Zito and the band to lean into joy, storytelling, and over-the-top rock ’n’ roll while staying anchored in the same serious musical fire.
+Whether he’s fronting his own band, locking in with Albert in Blood Brothers, or steering the joyful chaos of Bill Murray & His Blood Brothers, Mike Zito is always chasing the same thing: real connection. The songs are honest, the guitar is loud, and the heart is wide open and that’s exactly how he intends to keep it. 
+Artist Links 
+Website 
+Instagram 
+Facebook 
+ The only thing as good as the show? The drink you have after 
+GRAB A BITE, BEFORE OR AFTER 
+A few short steps from Midtown is One Twenty Three—our neighborly New American Tavern, serving hearty dishes with modern flare. 
+ One Twenty Three 
+ Shows & Events 
+ About the Venue 
+ Contact Us 
+ Booking 
+ Midtown FAQ 
+ Private Events 
+ Menu 
+Connect with Us 
+WANT ON THE LIST? 
+ Join our newsletter and be the first to hear who's coming and when tickets go on sale. Join Now 
+ Midtown at Studio Park 
+123 Ionia Ave. SW
+Grand Rapids, MI 49503
+Directions Parking
+ Studio Park 
+The heart of downtown Grand Rapids' entertainment district.
+Studio Park Site
+Listening Lawn FAQ 
+Sign in 
+Sign in to see the points you’ve earned, load your saved preferences, speed up checkout, and much more 
+ Email Address 
+Email is required. 
+Email is in incorrect format. 
+ {{feedback}} 
+ Password 
+Password is required. 
+ {{feedback}} 
+ Join C Rewards 
+ Forgot your password? 
+Already joined C Rewards in a theatre? Finish your registration 
+Forgot your password? 
+ Enter your email address, and we’ll send you a link to reset your password. 
+ Email Address 
+Email is required. 
+Email has incorrect format. 
+ {{feedback}} 
+Password reset link sent! 
+ Please check your inbox for an email containing the link to reset your password. After resetting your password, click here in order to sign in. 
+Forgot your password? 
+Create a new password to continue. 
+ Create password 
+Password is required. 
+ {{feedback}} 
+ Confirm password 
+Confirm password is required. 
+Passwords do not match. 
+ {{feedback}} 
+Your password has been changed! 
+Sign in with your new password to continue. 
+ Sign In 
+© 2026 Studio C Privacy Policy Terms of Use 
+Privacy PolicyTerms of Use
+© 2019 Studio C

@@ -1,0 +1,9 @@
+reviewed venues: 447
+shortlist (active house concerts + active intimate venues mentioning donations): 230
+  house concerts: 109
+  intimate venues: 121
+  donation basis on shortlist: {('Intimate Venue', 'no'): 99, ('House Concert', 'yes'): 68, ('House Concert', 'unknown'): 16, ('House Concert', 'no'): 15, ('Intimate Venue', 'likely'): 11, ('House Concert', 'likely'): 10, ('Intimate Venue', 'unknown'): 8, ('Intimate Venue', 'yes'): 3}
+artist appearances: 3137; distinct artists: 2686
+artists at 3+ venues: luke bulla, pat byrne, dana cooper, flagship romance, rupert wates, sam robbins, the suitcase junket, jesse roper, liz longley, marshall crenshaw, michael mcdermott, robbie fulks, susan gibson, the rifters, daniel kimbro, ellis paul, hiroya tsukamoto, kray van kirk, lucy kaplansky, maia sharp, michael o'connor, mike nash, ordinary elephant, pressing strings, sam baker, sam lewis, sarah borges, stillhouse junkies, the rough & tumble, abigayle oakley, alice wallace, amy speace, antje duvekot, barnaby bright, becky shaw, bob livingston, butch morgan, chris smither, cowboy junkies, crystal bowersox
+pay methods on shortlist: {'other': 86, 'cash': 54, 'check': 28, 'Venmo': 17, 'PayPal': 17, 'Zelle': 5, 'Eventbrite': 5, 'Stripe': 1, 'Apple Pay': 1}
+house concerts reviewed by active/donation: {('yes', 'yes'): 56, ('yes', 'no'): 14, ('yes', 'unknown'): 12, ('likely', 'yes'): 12, ('yes', 'likely'): 9, ('unknown', 'unknown'): 4, ('likely', 'unknown'): 4, ('no', 'yes'): 1, ('no', 'unknown'): 1, ('likely', 'no'): 1, ('unknown', 'yes'): 1, ('likely', 'likely'): 1}

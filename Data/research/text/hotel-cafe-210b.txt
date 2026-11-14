@@ -1,0 +1,6 @@
+VENUE: Hotel Cafe | Los Angeles, CA | Intimate Venue
+SITE: hotelcafe.com
+CSV NOTES: Marko Shafer, Booking, 215 cap Main Stage, 75 cap Second Stage
+
+=== PAGE https://hotelcafe.com
+the hotel cafe

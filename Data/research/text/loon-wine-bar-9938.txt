@@ -1,0 +1,8 @@
+VENUE: Loon Wine Bar | Cincinnati, OH | Intimate Venue
+SITE: theloonwinebar.com
+CSV NOTES: Melanie Quallen, Owner, 50 cap, original music only, local acts on bill must confirm any booking dates
+
+=== PAGE https://www.theloonwinebar.com/
+Wine Bar & Shop | The Loon Wine Bar
+4027 Hamilton Avenue
+Cincinnati, Ohio 45223

@@ -1,0 +1,1056 @@
+[
+ {
+  "slug": "riverdog-86e4",
+  "name": "Riverdog",
+  "city": "Oberlin",
+  "st": "OH",
+  "type": "House Concert",
+  "site": "riverdogmusic.weebly.com",
+  "active": "likely",
+  "latest_show": "",
+  "donation_basis": "yes",
+  "donation_evidence": "All donations collected go to performers; pay donation by secure link, check, Venmo or Zelle; reservation first.",
+  "pay_methods": [
+   "Venmo",
+   "Zelle",
+   "check",
+   "other"
+  ],
+  "recent_artists": [],
+  "notes": "Barn on private estate, by invitation; season May to October; past-artist list is undated."
+ },
+ {
+  "slug": "robin-s-nest-concerts-9797",
+  "name": "Robin's Nest Concerts",
+  "city": "Davis",
+  "st": "CA",
+  "type": "House Concert",
+  "site": "robinsnestconcerts.com",
+  "active": "yes",
+  "latest_show": "2026-10-24",
+  "donation_basis": "yes",
+  "donation_evidence": "$20 per person donation requested; 100% of donations go to the musicians.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Sophia Talvik Band",
+    "date": "2026-04-11"
+   },
+   {
+    "name": "CBDC",
+    "date": "2026-04-25"
+   },
+   {
+    "name": "Hattie & Joe Craven",
+    "date": "2026-05-09"
+   },
+   {
+    "name": "The Real Sarahs",
+    "date": "2026-05-23"
+   },
+   {
+    "name": "Powerhouse Ladies",
+    "date": "2026-06-13"
+   },
+   {
+    "name": "Chris Webster & Nina Gerber",
+    "date": "2026-06-20"
+   },
+   {
+    "name": "Misner & Smith",
+    "date": "2026-09-12"
+   },
+   {
+    "name": "Eric & Suzy Thompson",
+    "date": "2026-09-26"
+   },
+   {
+    "name": "Ian George & The Knee Pockets",
+    "date": "2026-10-10"
+   },
+   {
+    "name": "According to Bazooka",
+    "date": "2026-10-24"
+   }
+  ],
+  "notes": "Outdoor backyard series in Davis; RSVP required, address sent on confirmation; seasonal May to October."
+ },
+ {
+  "slug": "russ-julie-s-house-concerts-a49e",
+  "name": "Russ & Julie's House Concerts",
+  "city": "Oak Park",
+  "st": "CA",
+  "type": "House Concert",
+  "site": "houseconcerts.us",
+  "active": "yes",
+  "latest_show": "2027-05-08",
+  "donation_basis": "yes",
+  "donation_evidence": "Suggested donation $25 per person at the door; 100% goes to performers.",
+  "pay_methods": [
+   "cash"
+  ],
+  "recent_artists": [
+   {
+    "name": "Rita Hosking",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "The Refugees",
+    "date": "2027-02-06"
+   },
+   {
+    "name": "House of Hamill",
+    "date": "2027-05-08"
+   }
+  ],
+  "notes": "Private home, by invitation, reservations required; running since 1997."
+ },
+ {
+  "slug": "sailing-into-song-house-concerts-a17c",
+  "name": "Sailing Into Song House Concerts",
+  "city": "Newton",
+  "st": "MA",
+  "type": "House Concert",
+  "site": "bostoncoffeehouses.org/venue/sailing-into-song-house-concerts-newton-ma",
+  "active": "unknown",
+  "latest_show": "",
+  "donation_basis": "unknown",
+  "donation_evidence": "Only a BACHA listing with no events and no money info.",
+  "pay_methods": [],
+  "recent_artists": [],
+  "notes": "Text is just a BACHA directory page with zero events found."
+ },
+ {
+  "slug": "second-sunday-studio-shows-ec8a",
+  "name": "Second Sunday Studio Shows",
+  "city": "Bernalillo",
+  "st": "NM",
+  "type": "House Concert",
+  "site": "solamentenaturalplaster.com/music-events",
+  "active": "likely",
+  "latest_show": "",
+  "donation_basis": "unknown",
+  "donation_evidence": "Says all money from ticket sales goes to the featured musician; no price or donation language.",
+  "pay_methods": [],
+  "recent_artists": [],
+  "notes": "Monthly Second Sunday shows in a plaster gallery since 2019; no specific shows named in text."
+ },
+ {
+  "slug": "serenity-ledge-house-concerts-c419",
+  "name": "Serenity Ledge House Concerts",
+  "city": "Winter Harbor",
+  "st": "ME",
+  "type": "House Concert",
+  "site": "gordonthomasward.com/serenity-ledge-house-concerts",
+  "active": "yes",
+  "latest_show": "2026",
+  "donation_basis": "no",
+  "donation_evidence": "Fixed tickets: $35 premium seats, regular seats also ticketed; no door sales.",
+  "pay_methods": [],
+  "recent_artists": [],
+  "notes": "Exclusive living-room series, 28 tickets per show, 2026 season on Saturdays; artists not named in scraped text."
+ },
+ {
+  "slug": "sessions-on-mary-ea2e",
+  "name": "Sessions on Mary",
+  "city": "Austin",
+  "st": "TX",
+  "type": "House Concert",
+  "site": "sessionsonmary.com",
+  "active": "yes",
+  "latest_show": "2026-12-19",
+  "donation_basis": "likely",
+  "donation_evidence": "Webb Wilder show is $20 tickets; the Mojo happy hour is no advance tickets, tip the band.",
+  "pay_methods": [
+   "PayPal",
+   "cash",
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Webb Wilder",
+    "date": "2026-11-27"
+   },
+   {
+    "name": "The Little Darlins",
+    "date": "2026-11-27"
+   },
+   {
+    "name": "Austin Band Camp with Wendy Colonna",
+    "date": "2026-12-06"
+   },
+   {
+    "name": "Marshall Hood's Mojo Working Happy Hour",
+    "date": "2026-12-19"
+   }
+  ],
+  "notes": "South Austin living room and a farm meadow; mix of ticketed and tip-the-band shows."
+ },
+ {
+  "slug": "seth-and-tony-s-house-concerts-9c6f",
+  "name": "Seth and Tony's House Concerts",
+  "city": "Los Angeles",
+  "st": "CA",
+  "type": "House Concert",
+  "site": "sethandtonyshouseconcerts.com",
+  "active": "yes",
+  "latest_show": "2026-08-29",
+  "donation_basis": "yes",
+  "donation_evidence": "Suggested donation $30-$40 per person, paid in advance; goes to artist and catering.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Flagship Romance",
+    "date": "2024-08-24"
+   },
+   {
+    "name": "Susan Werner",
+    "date": "2024-10-04"
+   },
+   {
+    "name": "Bobby Jo Valentine",
+    "date": "2025-02-14"
+   },
+   {
+    "name": "Kevin Fisher",
+    "date": "2025-08-16"
+   },
+   {
+    "name": "The Refugees",
+    "date": "2026-01-17"
+   },
+   {
+    "name": "Maia Sharp",
+    "date": "2026-08-29"
+   }
+  ],
+  "notes": "Private home in Highland Park LA, catered dinner before show; only a few shows a year."
+ },
+ {
+  "slug": "shoeless-sounds-9579",
+  "name": "Shoeless Sounds",
+  "city": "Ashburn",
+  "st": "VA",
+  "type": "House Concert",
+  "site": "shoelesssounds.org",
+  "active": "yes",
+  "latest_show": "2026-11-21",
+  "donation_basis": "yes",
+  "donation_evidence": "$25-30 donation requested, 100% to musicians; teddy bear jar or Venmo.",
+  "pay_methods": [
+   "Venmo",
+   "cash"
+  ],
+  "recent_artists": [
+   {
+    "name": "Nathans & Ronstadt",
+    "date": "2026-11-21"
+   }
+  ],
+  "notes": "Townhouse concerts in Ashburn; operated by a 501(c)(3) with a kids music education side."
+ },
+ {
+  "slug": "silicon-valley-house-concerts-c675",
+  "name": "Silicon Valley House Concerts",
+  "city": "Mountain View",
+  "st": "CA",
+  "type": "House Concert",
+  "site": "sites.google.com/view/silicon-valley-house-concerts/home?authuser=0",
+  "active": "yes",
+  "latest_show": "2026-10-28",
+  "donation_basis": "yes",
+  "donation_evidence": "Suggested donation about $20-25, all to musicians; payable by cash, check, PayPal, Zelle or Venmo.",
+  "pay_methods": [
+   "cash",
+   "check",
+   "PayPal",
+   "Zelle",
+   "Venmo"
+  ],
+  "recent_artists": [
+   {
+    "name": "Newberry & Verch",
+    "date": "2026-10-28"
+   }
+  ],
+  "notes": "Mountain View home; workshops sometimes priced separately; one page lists the concert at $25."
+ },
+ {
+  "slug": "singing-oak-house-concerts-1b92",
+  "name": "Singing Oak House Concerts",
+  "city": "West Harwich",
+  "st": "MA",
+  "type": "House Concert",
+  "site": "singingoakhouseconcerts.org",
+  "active": "yes",
+  "latest_show": "2026-06-19",
+  "donation_basis": "no",
+  "donation_evidence": "Joe Crookston show at Unity on Cape Cod sold as $25 tickets online or at door.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Joe Crookston",
+    "date": "2026-06-19"
+   }
+  ],
+  "notes": "Currently presents ticketed concerts in collaboration with Unity Concerts rather than in the host home."
+ },
+ {
+  "slug": "south-bay-house-concerts-f93c",
+  "name": "South Bay House Concerts",
+  "city": "San Jose",
+  "st": "CA",
+  "type": "House Concert",
+  "site": "tamimulcahy.com/south-bay-house-concerts",
+  "active": "unknown",
+  "latest_show": "",
+  "donation_basis": "unknown",
+  "donation_evidence": "Meetup network page; links to donation-based house concert guides but states no admission terms.",
+  "pay_methods": [],
+  "recent_artists": [],
+  "notes": "Meetup/network of South Bay hosts run by singer Tami Mulcahy; no dated shows in text."
+ },
+ {
+  "slug": "stardust-house-concerts-55f4",
+  "name": "Stardust House Concerts",
+  "city": "North Hills",
+  "st": "CA",
+  "type": "House Concert",
+  "site": "stardustconcerts.com",
+  "active": "likely",
+  "latest_show": "2025-08-09",
+  "donation_basis": "yes",
+  "donation_evidence": "Suggested donation $20-25 per person; 100% goes to performers.",
+  "pay_methods": [
+   "cash"
+  ],
+  "recent_artists": [
+   {
+    "name": "Brian Whelan",
+    "date": "2025-07-19"
+   },
+   {
+    "name": "Jeff Berkley",
+    "date": "2025-08-09"
+   },
+   {
+    "name": "Teresa James And The Rhythm Tramps",
+    "date": ""
+   },
+   {
+    "name": "I See Hawks In L.A.",
+    "date": ""
+   }
+  ],
+  "notes": "Backyard series in North Hills; show dates lack years (weekdays match 2025); RSVP by email."
+ },
+ {
+  "slug": "stone-room-concerts-at-the-hill-center-32d5",
+  "name": "Stone Room Concerts at the Hill Center",
+  "city": "Washington",
+  "st": "DC",
+  "type": "House Concert",
+  "site": "www.stoneroomconcerts.com",
+  "active": "yes",
+  "latest_show": "2026-11-13",
+  "donation_basis": "no",
+  "donation_evidence": "Nonprofit; says to reserve a spot or purchase a ticket; no donation-to-artist language.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Robinson & Rohe",
+    "date": "2025-01-10"
+   },
+   {
+    "name": "Nani Vazana",
+    "date": "2025-03-02"
+   },
+   {
+    "name": "Carrie Elkin & Danny Schmidt",
+    "date": "2025-04-27"
+   },
+   {
+    "name": "Buffalo Rose",
+    "date": "2025-07-13"
+   },
+   {
+    "name": "High Horse",
+    "date": "2025-08-22"
+   },
+   {
+    "name": "Joe Troop's Truth Machine",
+    "date": "2025-08-31"
+   },
+   {
+    "name": "Kipyn Martin",
+    "date": "2025-09-05"
+   },
+   {
+    "name": "Megan Burtt",
+    "date": "2025-10-26"
+   },
+   {
+    "name": "Luke Bulla",
+    "date": "2025-11-07"
+   },
+   {
+    "name": "Crys Matthews",
+    "date": "2025-12-07"
+   },
+   {
+    "name": "Heather Mae",
+    "date": "2025-12-07"
+   },
+   {
+    "name": "Flamy Grant",
+    "date": "2025-12-07"
+   },
+   {
+    "name": "Korby Lenker",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "Violet Bell",
+    "date": "2024-03-10"
+   },
+   {
+    "name": "Sam Reider and the Human Hands",
+    "date": "2024-05-17"
+   },
+   {
+    "name": "Barnaby Bright",
+    "date": "2024-09-12"
+   },
+   {
+    "name": "House of Hamill",
+    "date": "2024-10-27"
+   },
+   {
+    "name": "Moors & McCumber",
+    "date": "2024-11-08"
+   },
+   {
+    "name": "Halley Neal & Sam Robbins",
+    "date": "2024-12-08"
+   }
+  ],
+  "notes": "Nonprofit now mostly at Hill Center in DC; occasional house concerts; 2026 year of Nov 13 show inferred."
+ },
+ {
+  "slug": "studio-84-house-concerts-67ac",
+  "name": "Studio 84 House Concerts",
+  "city": "Middleboro",
+  "st": "MA",
+  "type": "House Concert",
+  "site": "free-4502204.webadorsite.com",
+  "active": "yes",
+  "latest_show": "2026-10-24",
+  "donation_basis": "yes",
+  "donation_evidence": "Suggested donations; 100 percent goes to the artists, BYOB.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Pat Byrne",
+    "date": "2026-05-02"
+   },
+   {
+    "name": "Grain Thief",
+    "date": "2026-06-20"
+   },
+   {
+    "name": "Jenna Nicholls",
+    "date": "2026-10-17"
+   },
+   {
+    "name": "Ian Flanigan",
+    "date": "2026-10-24"
+   },
+   {
+    "name": "Abby Vail",
+    "date": "2026-10-24"
+   }
+  ],
+  "notes": "2026 is billed as the final season; indoor seating 45."
+ },
+ {
+  "slug": "sycamore-creek-concerts-7d68",
+  "name": "Sycamore Creek Concerts",
+  "city": "Dripping Springs",
+  "st": "TX",
+  "type": "House Concert",
+  "site": "sycamorecreekconcerts.com",
+  "active": "yes",
+  "latest_show": "2027-01-09",
+  "donation_basis": "yes",
+  "donation_evidence": "Suggested minimum donation $30 per person; 100% of donations go to artists.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Walt Wilkins",
+    "date": "2026-02-14"
+   },
+   {
+    "name": "The Rifters",
+    "date": "2026-03-21"
+   },
+   {
+    "name": "Pat Byrne",
+    "date": "2026-04-12"
+   },
+   {
+    "name": "George Ensle",
+    "date": "2026-12-05"
+   },
+   {
+    "name": "Melissa Carper, Jenn Miori and Emily Gimble",
+    "date": "2027-01-09"
+   }
+  ],
+  "notes": "Barn concerts by invitation (mail list); reservations sell out fast; no summer shows."
+ },
+ {
+  "slug": "theater-5150-house-concerts-981f",
+  "name": "Theater 5150 House Concerts",
+  "city": "Carmichael",
+  "st": "CA",
+  "type": "House Concert",
+  "site": "theater5150.com",
+  "active": "yes",
+  "latest_show": "2026-11-22",
+  "donation_basis": "unknown",
+  "donation_evidence": "Reservations via mailing list; text does not state how admission or money works.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Josh Rouse",
+    "date": "2026-11-22"
+   },
+   {
+    "name": "Boot Juice",
+    "date": "2026-09-25"
+   },
+   {
+    "name": "Natalie Hagwood",
+    "date": "2026-08-21"
+   },
+   {
+    "name": "Adrian Bourgeois and Ricky Berger",
+    "date": "2026-06-20"
+   },
+   {
+    "name": "Solabel",
+    "date": "2026-05-09"
+   },
+   {
+    "name": "The Gold Souls",
+    "date": "2026-03-27"
+   },
+   {
+    "name": "Jessica Malone",
+    "date": "2026-02-13"
+   },
+   {
+    "name": "Katie Knipp",
+    "date": "2026-01-10"
+   },
+   {
+    "name": "T Sisters",
+    "date": "2025-12-05"
+   },
+   {
+    "name": "Joy and Madness",
+    "date": "2025-10-24"
+   },
+   {
+    "name": "Hannah Jane Kile",
+    "date": "2025-09-12"
+   },
+   {
+    "name": "Citywater",
+    "date": "2025-01-11"
+   },
+   {
+    "name": "The Pacific Standard Jazz Orchestra",
+    "date": "2024-12-14"
+   },
+   {
+    "name": "The Hattie Craven Band",
+    "date": "2024-11-15"
+   },
+   {
+    "name": "The Katie Knipp Big Band",
+    "date": "2024-09-13"
+   },
+   {
+    "name": "Ideateam",
+    "date": "2024-08-10"
+   },
+   {
+    "name": "Hans! and the Hot Mess",
+    "date": "2024-06-15"
+   },
+   {
+    "name": "JoDavi",
+    "date": "2024-05-04"
+   }
+  ],
+  "notes": "Regular monthly-ish home concerts in Carmichael; reservation opens by email list."
+ },
+ {
+  "slug": "timber-house-concerts-2fe1",
+  "name": "Timber House Concerts",
+  "city": "Victor",
+  "st": "NY",
+  "type": "House Concert",
+  "site": "thetimberhouse.org",
+  "active": "yes",
+  "latest_show": "2026-12-05",
+  "donation_basis": "no",
+  "donation_evidence": "Tickets sold first-come to mailing list; 100% net ticket sales to artists, each ticket called a donation.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Maya de Vitry",
+    "date": "2026-11-06"
+   },
+   {
+    "name": "Driftwood",
+    "date": "2026-12-04"
+   }
+  ],
+  "notes": "501(c)(3) in Victor NY; shows sell out; ticketed model although proceeds go to artists."
+ },
+ {
+  "slug": "trash-moon-collective-01c2",
+  "name": "Trash Moon Collective",
+  "city": "Salt Lake City",
+  "st": "UT",
+  "type": "House Concert",
+  "site": "trashmooncollective.org",
+  "active": "yes",
+  "latest_show": "2026-11-13",
+  "donation_basis": "unknown",
+  "donation_evidence": "Says many events are free or by donation; special shows are ticketed.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Jake and Rebekah Workman",
+    "date": "2026-10-24"
+   },
+   {
+    "name": "Pearly Blue",
+    "date": "2026-10-24"
+   },
+   {
+    "name": "Megan Simper",
+    "date": ""
+   },
+   {
+    "name": "Kate Macleod Perennial Band",
+    "date": ""
+   }
+  ],
+  "notes": "Salt Lake community collective with jams, dances and occasional house concert series; not purely a house venue."
+ },
+ {
+  "slug": "treehouse-concerts-los-gatos-431c",
+  "name": "Treehouse Concerts Los Gatos",
+  "city": "Los Gatos",
+  "st": "CA",
+  "type": "House Concert",
+  "site": "treehouseconcerts.net",
+  "active": "yes",
+  "latest_show": "2026-10-24",
+  "donation_basis": "no",
+  "donation_evidence": "Tickets sold online, non-refundable, none at the door.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Estero",
+    "date": "2026-07-25"
+   },
+   {
+    "name": "Hot Buttered Rum Trio",
+    "date": "2026-08-29"
+   },
+   {
+    "name": "The Alex Lucero Band",
+    "date": "2026-09-05"
+   },
+   {
+    "name": "Wolf Jett",
+    "date": "2026-10-24"
+   }
+  ],
+  "notes": "BYOB backyard deck in the redwoods, 2026 series; shows sell out."
+ },
+ {
+  "slug": "treewild-house-concerts-02f9",
+  "name": "Treewild House Concerts",
+  "city": "Shelburne",
+  "st": "VT",
+  "type": "House Concert",
+  "site": "treewild.org",
+  "active": "yes",
+  "latest_show": "2026-11-02",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed via PayPal, discounted limited-income tickets; ticket proceeds go to musicians.",
+  "pay_methods": [
+   "PayPal",
+   "cash",
+   "check",
+   "Venmo"
+  ],
+  "recent_artists": [
+   {
+    "name": "Cecilia",
+    "date": "2026-11-02"
+   }
+  ],
+  "notes": "Monthly concerts with vegetarian potluck, max 30 seats; Treewild is a nonprofit also running other programs."
+ },
+ {
+  "slug": "tulsa-time-house-concerts-c133",
+  "name": "Tulsa Time House Concerts",
+  "city": "Tulsa",
+  "st": "OK",
+  "type": "House Concert",
+  "site": "eventcreate.com/e/tulsatimehouseconcert",
+  "active": "yes",
+  "latest_show": "2026-12-16",
+  "donation_basis": "likely",
+  "donation_evidence": "\"Ticket donation\" $20-$40 prepaid; proceeds minus 10% to musicians; tips welcome.",
+  "pay_methods": [
+   "cash",
+   "check",
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "John Calvin Abney",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Ian Moore",
+    "date": "2026-12-16"
+   }
+  ],
+  "notes": "Private residence, address after purchase; host keeps 10% for expenses."
+ },
+ {
+  "slug": "under-the-oaks-c7fe",
+  "name": "Under the Oaks",
+  "city": "Austin",
+  "st": "TX",
+  "type": "House Concert",
+  "site": "undertheoaksevents.com",
+  "active": "likely",
+  "latest_show": "",
+  "donation_basis": "yes",
+  "donation_evidence": "Suggested donation $30 per guest; all contributions go directly to the artists.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Giulia Millanta",
+    "date": ""
+   },
+   {
+    "name": "Hot Pickin' 57s",
+    "date": ""
+   }
+  ],
+  "notes": "Backyard series in Jonestown TX; 2027 concerts still to be scheduled."
+ },
+ {
+  "slug": "waggintails-house-concert-f390",
+  "name": "WagginTails House Concert",
+  "city": "Elgin",
+  "st": "TX",
+  "type": "House Concert",
+  "site": "waggintailshouseconcerts.com",
+  "active": "yes",
+  "latest_show": "2026-04-12",
+  "donation_basis": "unknown",
+  "donation_evidence": "No text on admission or donations; by invitation only.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Sarah Pierce",
+    "date": "2026-03-22"
+   },
+   {
+    "name": "John Lowell",
+    "date": "2026-03-22"
+   },
+   {
+    "name": "Dana Cooper",
+    "date": "2026-04-12"
+   },
+   {
+    "name": "Susan Gibson",
+    "date": "2024-03-24"
+   },
+   {
+    "name": "Max Gomez",
+    "date": "2024-10-13"
+   }
+  ],
+  "notes": "Sunday 3pm outdoor carport shows in March, April, October and November since 2023."
+ },
+ {
+  "slug": "whale-cove-house-concerts-18e6",
+  "name": "Whale Cove House Concerts",
+  "city": "Rockport",
+  "st": "MA",
+  "type": "House Concert",
+  "site": "bostoncoffeehouses.org/venue/whale-cove-house-concerts-rockport-ma/?eventDisplay=past",
+  "active": "yes",
+  "latest_show": "2026-11-20",
+  "donation_basis": "yes",
+  "donation_evidence": "Suggested contribution $20-25 payable at the door by cash, check or Venmo.",
+  "pay_methods": [
+   "cash",
+   "check",
+   "Venmo"
+  ],
+  "recent_artists": [
+   {
+    "name": "Cold Chocolate",
+    "date": "2026-08-16"
+   },
+   {
+    "name": "Sarah McQuaid",
+    "date": "2026-11-01"
+   },
+   {
+    "name": "Scott Cook",
+    "date": "2026-11-20"
+   }
+  ],
+  "notes": "Invitation by email; capacity 30 indoors; Meghan Cary show Sept 26 was canceled."
+ },
+ {
+  "slug": "yard-fb5f",
+  "name": "Yard",
+  "city": "Tampa",
+  "st": "FL",
+  "type": "House Concert",
+  "site": "theyardtampa.com",
+  "active": "yes",
+  "latest_show": "2027-01-10",
+  "donation_basis": "yes",
+  "donation_evidence": "Suggested donation $15-20 per person at the gate; 100% to artists.",
+  "pay_methods": [
+   "cash"
+  ],
+  "recent_artists": [
+   {
+    "name": "Igor & Red Elvises",
+    "date": "2026-10-24"
+   },
+   {
+    "name": "Jerry Diaz",
+    "date": "2026-12-06"
+   },
+   {
+    "name": "Mike Nash",
+    "date": "2027-01-10"
+   }
+  ],
+  "notes": "Backyard Trop Rock house concert venue in Tampa, RSVP requested."
+ },
+ {
+  "slug": "20-front-street-206f",
+  "name": "20 Front Street",
+  "city": "Lake Orion",
+  "st": "MI",
+  "type": "Intimate Venue",
+  "site": "20frontstreet.com",
+  "active": "yes",
+  "latest_show": "2026-11-20",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed listening room, e.g. $35 and $23; tickets final sale; also asks tax-deductible donations.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Luke Winslow-King",
+    "date": "2026-11-19"
+   },
+   {
+    "name": "Michaela Anne",
+    "date": "2026-11-20"
+   }
+  ],
+  "notes": "Independent nonprofit-style listening room with cafe; alcohol-free."
+ },
+ {
+  "slug": "443-social-club-lounge-2364",
+  "name": "443 Social Club & Lounge",
+  "city": "Syracuse",
+  "st": "NY",
+  "type": "Intimate Venue",
+  "site": "443socialclub.com",
+  "active": "yes",
+  "latest_show": "2026-12-20",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed shows via Eventbrite, sold-out notices, bar with cocktails; membership program.",
+  "pay_methods": [
+   "Eventbrite"
+  ],
+  "recent_artists": [
+   {
+    "name": "Bruce Katz",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Sarah Borges",
+    "date": "2026-11-16"
+   },
+   {
+    "name": "Michael McDermott",
+    "date": "2026-11-18"
+   },
+   {
+    "name": "Nick Moss Band",
+    "date": "2026-11-19"
+   },
+   {
+    "name": "Sawyer Fredericks",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Grupo Pagan",
+    "date": "2026-11-25"
+   },
+   {
+    "name": "Griffin House",
+    "date": "2026-12-17"
+   },
+   {
+    "name": "Dead to the Core",
+    "date": "2026-12-18"
+   },
+   {
+    "name": "Scott Tournet",
+    "date": "2026-12-19"
+   },
+   {
+    "name": "Cool Club",
+    "date": "2026-12-20"
+   },
+   {
+    "name": "The Lipker Sisters",
+    "date": "2026-12-20"
+   }
+  ],
+  "notes": "Bar-lounge listening room, 75 seats; 30 events listed through Jan 9 2027."
+ },
+ {
+  "slug": "5-points-music-sanctuary-8de3",
+  "name": "5 Points Music Sanctuary",
+  "city": "Roanoke",
+  "st": "VA",
+  "type": "Intimate Venue",
+  "site": "5pointsmusic.com",
+  "active": "yes",
+  "latest_show": "2026-12-11",
+  "donation_basis": "no",
+  "donation_evidence": "Nonprofit selling tickets ($15-$55); donations go to the organization.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Allen Thompson",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Lilly Winwood",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Lilly Hiatt",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Tand",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Fungkshui",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Harvest Blaque",
+    "date": "2026-11-27"
+   },
+   {
+    "name": "Disco Diner",
+    "date": "2026-12-04"
+   }
+  ],
+  "notes": "250-cap nonprofit music hall with bar; mostly tribute acts; accepts crypto and stock gifts."
+ },
+ {
+  "slug": "aendre-7417",
+  "name": "aendre",
+  "city": "Ferryville",
+  "st": "WI",
+  "type": "Intimate Venue",
+  "site": "aendre.art",
+  "active": "yes",
+  "latest_show": "2026-11-14",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed events with Purchase Tickets links; nonprofit donations are tax-deductible.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Humbird",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Bad Posture Club",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "S. Carey",
+    "date": "2026-10-03"
+   },
+   {
+    "name": "Ian George & the Knee Pockets",
+    "date": "2026-09-05"
+   },
+   {
+    "name": "Joe Kaplow",
+    "date": "2026-09-05"
+   },
+   {
+    "name": "dadweed",
+    "date": "2026-08-02"
+   },
+   {
+    "name": "Dial Painters",
+    "date": "2026-08-02"
+   },
+   {
+    "name": "Paper Wings",
+    "date": "2026-05-30"
+   },
+   {
+    "name": "Jeffrey Martin",
+    "date": "2026-04-16"
+   },
+   {
+    "name": "Niall Connolly",
+    "date": "2026-04-16"
+   }
+  ],
+  "notes": "501(c)(3) arts house on a 16-acre farm in the Driftless region."
+ }
+]

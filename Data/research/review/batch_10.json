@@ -1,0 +1,909 @@
+[
+ {
+  "slug": "buffalo-grass-music-hall-048b",
+  "name": "Buffalo Grass Music Hall",
+  "city": "Panhandle",
+  "st": "TX",
+  "type": "Intimate Venue",
+  "site": "buffalograssmusichall.com",
+  "active": "yes",
+  "latest_show": "2026-12-10",
+  "donation_basis": "no",
+  "donation_evidence": "Concerts sold via online tickets, e.g. $68 for Suzy Bogguss; hall also rents for events.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Suzy Bogguss",
+    "date": "2026-12-03"
+   },
+   {
+    "name": "The Purple Hulls",
+    "date": "2026-12-10"
+   }
+  ],
+  "notes": "Restored 1899 building hosting ticketed concerts; one listed show is at the high school."
+ },
+ {
+  "slug": "bull-run-47da",
+  "name": "Bull Run",
+  "city": "Shirley",
+  "st": "MA",
+  "type": "Intimate Venue",
+  "site": "bullrunrestaurant.com",
+  "active": "yes",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "Restaurant with ticketed concerts and comedy series via ticket site; concert menu and dinner service.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Lenny Clarke",
+    "date": ""
+   }
+  ],
+  "notes": "Restaurant first, with concerts, comedy and a tavern entertainment schedule; site shows 2026 holiday and 2027 series."
+ },
+ {
+  "slug": "bur-oak-03a4",
+  "name": "Bur Oak",
+  "city": "Madison",
+  "st": "WI",
+  "type": "Intimate Venue",
+  "site": "theburoakmadison.com",
+  "active": "yes",
+  "latest_show": "2026-11-30",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed shows roughly $7-$30 advance/door; some free events and open mic; no service fees.",
+  "pay_methods": [
+   "cash"
+  ],
+  "recent_artists": [
+   {
+    "name": "Steve Poltz",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "vaultboy",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "GUS",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Kiernan",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "The Spine Stealers",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "Brian Benford",
+    "date": "2026-11-17"
+   },
+   {
+    "name": "The Effigies",
+    "date": "2026-11-19"
+   },
+   {
+    "name": "Brenneis Hester",
+    "date": "2026-11-19"
+   },
+   {
+    "name": "Pretty from a Distance",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "It's All You Cowboy",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Brendan Forrest & Friends",
+    "date": "2026-11-22"
+   },
+   {
+    "name": "Aodan Coyne",
+    "date": "2026-11-22"
+   },
+   {
+    "name": "Eli Gray & The Steel Hearts",
+    "date": "2026-11-25"
+   },
+   {
+    "name": "Marengo",
+    "date": "2026-11-25"
+   }
+  ],
+  "notes": "130-cap independent hall with a busy ticketed calendar including drag, burlesque and polka nights."
+ },
+ {
+  "slug": "buttonball-barn-549f",
+  "name": "Buttonball Barn",
+  "city": "South Egremont",
+  "st": "MA",
+  "type": "Intimate Venue",
+  "site": "buttonballbarn.com",
+  "active": "yes",
+  "latest_show": "2026-11-21",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed shows, e.g. $20 for Hazzard County; bar and inn on site.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Wanda Houston",
+    "date": "2026-11-12"
+   },
+   {
+    "name": "Hazzard County",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Rees Shad",
+    "date": "2026-11-11"
+   }
+  ],
+  "notes": "Barn music room behind an inn and restaurant; mix of open mic, comedy, fundraisers and ticketed bands."
+ },
+ {
+  "slug": "buttonwood-tree-pac-b4d6",
+  "name": "Buttonwood Tree PAC",
+  "city": "Middletown",
+  "st": "CT",
+  "type": "Intimate Venue",
+  "site": "buttonwood.org",
+  "active": "yes",
+  "latest_show": "2026-11-18",
+  "donation_basis": "unknown",
+  "donation_evidence": "Nonprofit arts center that solicits donations and grants; no admission terms for shows visible in the text.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Bob Gotta",
+    "date": ""
+   },
+   {
+    "name": "Terri Lachance",
+    "date": ""
+   }
+  ],
+  "notes": "Nonprofit performing arts center now inside South Church; open mics, drum circle, 37th anniversary event 2026-11-18."
+ },
+ {
+  "slug": "cadenza-92e9",
+  "name": "Cadenza",
+  "city": "Freeport",
+  "st": "ME",
+  "type": "Intimate Venue",
+  "site": "cadenzafreeport.com",
+  "active": "yes",
+  "latest_show": "2026-12-20",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed events with cash bar; performers paid, no donation language seen.",
+  "pay_methods": [
+   "cash"
+  ],
+  "recent_artists": [
+   {
+    "name": "Isabel Oliart",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Anna Seda",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Gordon Thomas Ward",
+    "date": "2026-12-06"
+   },
+   {
+    "name": "Kat and the Kooltones",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Jud Caswell",
+    "date": "2026-12-19"
+   },
+   {
+    "name": "Bess Jacques",
+    "date": "2026-11-28"
+   },
+   {
+    "name": "Barney Balch",
+    "date": "2026-11-28"
+   },
+   {
+    "name": "Bailey's Mistake",
+    "date": "2026-12-04"
+   },
+   {
+    "name": "Pat Colwell & The Soul Sensations",
+    "date": "2026-12-05"
+   },
+   {
+    "name": "Collins and Friends",
+    "date": "2026-12-11"
+   },
+   {
+    "name": "Heather Pierson",
+    "date": "2026-12-12"
+   },
+   {
+    "name": "The Last Of The Duke Street Kings",
+    "date": "2026-12-18"
+   },
+   {
+    "name": "David Watts",
+    "date": "2026-12-20"
+   },
+   {
+    "name": "Sarah Hanahan",
+    "date": "2026-12-20"
+   },
+   {
+    "name": "Blues Prophet",
+    "date": "2026-11-06"
+   },
+   {
+    "name": "Denny Breau",
+    "date": "2026-11-07"
+   },
+   {
+    "name": "High Horse",
+    "date": "2026-11-08"
+   }
+  ],
+  "notes": "60-cap listening room with full ticketed calendar and sound engineer."
+ },
+ {
+  "slug": "cafe-eleven-b020",
+  "name": "Cafe Eleven",
+  "city": "St. Augustine Beach",
+  "st": "FL",
+  "type": "Intimate Venue",
+  "site": "originalcafe11.com",
+  "active": "yes",
+  "latest_show": "2026-11-18",
+  "donation_basis": "no",
+  "donation_evidence": "Restaurant with ticketed national touring acts; $5 under-21 fee at door.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "The Garcia Project",
+    "date": "2026-11-09"
+   },
+   {
+    "name": "First to Eleven",
+    "date": "2026-11-12"
+   },
+   {
+    "name": "The Reverend Peyton's Big Damn Band",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "Jason Salmon",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "The Steepwater Band",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "William Elliott Whitmore",
+    "date": "2026-11-18"
+   }
+  ],
+  "notes": "Restaurant and bar with a 200-cap music room booking touring acts."
+ },
+ {
+  "slug": "cafe-paradiso-0be1",
+  "name": "Cafe Paradiso",
+  "city": "Fairfield",
+  "st": "IA",
+  "type": "Intimate Venue",
+  "site": "cafeparadiso.net",
+  "active": "yes",
+  "latest_show": "2026-11-28",
+  "donation_basis": "no",
+  "donation_evidence": "Tickets sold online through Eventbrite for weekly concerts; coffeehouse with beer and wine.",
+  "pay_methods": [
+   "Eventbrite"
+  ],
+  "recent_artists": [
+   {
+    "name": "Steve Grismore Jazz Trio",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Dan Tedesco",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Todd Partridge",
+    "date": "2026-11-28"
+   }
+  ],
+  "notes": "Coffeehouse listening room with weekly ticketed national acts."
+ },
+ {
+  "slug": "cafe-wha-8c3b",
+  "name": "Cafe Wha?",
+  "city": "New York",
+  "st": "NY",
+  "type": "Intimate Venue",
+  "site": "cafewhaentertainment.com",
+  "active": "likely",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "Site is for Cafe Wha Entertainment event bands for hire; no admission or donation info.",
+  "pay_methods": [],
+  "recent_artists": [],
+  "notes": "Site sells wedding/corporate bands; the club itself has no schedule in this text (2025 recap only)."
+ },
+ {
+  "slug": "camel-1e2e",
+  "name": "Camel",
+  "city": "Richmond",
+  "st": "VA",
+  "type": "Intimate Venue",
+  "site": "thecamel.org",
+  "active": "yes",
+  "latest_show": "2026-11-17",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed shows sold online and at door by cash or card; bar and restaurant.",
+  "pay_methods": [
+   "cash"
+  ],
+  "recent_artists": [
+   {
+    "name": "Jesse Roper",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "Big Tobacco",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "Tyler Meacham",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "Open Fleur",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Heavy Is The Head",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "Duressted",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "Peter Stone",
+    "date": "2026-11-16"
+   },
+   {
+    "name": "Anterra",
+    "date": "2026-11-16"
+   },
+   {
+    "name": "Sun v Set",
+    "date": "2026-11-16"
+   },
+   {
+    "name": "Nic Shaw",
+    "date": "2026-11-16"
+   },
+   {
+    "name": "Hogweed",
+    "date": "2026-10-16"
+   },
+   {
+    "name": "Deathcat",
+    "date": "2026-10-16"
+   },
+   {
+    "name": "Twin Films",
+    "date": "2026-10-17"
+   },
+   {
+    "name": "Valentin Prince",
+    "date": "2026-10-17"
+   },
+   {
+    "name": "Chloe Ester",
+    "date": "2026-10-17"
+   },
+   {
+    "name": "Robert Lester Folsom",
+    "date": "2026-10-18"
+   },
+   {
+    "name": "Kurt Crandall & True Story",
+    "date": "2026-10-23"
+   },
+   {
+    "name": "Dizgo",
+    "date": "2026-10-15"
+   }
+  ],
+  "notes": "200-cap bar and music venue with nightly shows."
+ },
+ {
+  "slug": "camp-street-cafe-b8c1",
+  "name": "Camp Street Cafe",
+  "city": "Crockett",
+  "st": "TX",
+  "type": "Intimate Venue",
+  "site": "campstreetcafe.com",
+  "active": "yes",
+  "latest_show": "2027-03-26",
+  "donation_basis": "no",
+  "donation_evidence": "Reserved-seat concerts at fixed price, e.g. $22; BYOB.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Jason McIntyre",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Michael O'Connor",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Mustang Red",
+    "date": "2026-12-12"
+   },
+   {
+    "name": "Nathan Stanley & Constant Sorrow",
+    "date": "2027-03-26"
+   }
+  ],
+  "notes": "Long-running acoustic roots listening room; year inferred from weekday matching; home page itself dated 2010."
+ },
+ {
+  "slug": "chelsea-table-stage-6877",
+  "name": "Chelsea Table & Stage",
+  "city": "New York",
+  "st": "NY",
+  "type": "Intimate Venue",
+  "site": "chelseatableandstage.com/new-york-city-chelsea-table-and-stage-events",
+  "active": "unknown",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed shows with $25 food and beverage minimum per person; ticket sales final.",
+  "pay_methods": [
+   "cash"
+  ],
+  "recent_artists": [],
+  "notes": "Supper-club style room; the scraped calendar had no dates or acts."
+ },
+ {
+  "slug": "church-at-waring-6351",
+  "name": "Church at Waring",
+  "city": "Waring",
+  "st": "TX",
+  "type": "Intimate Venue",
+  "site": "churchatwaring.com",
+  "active": "yes",
+  "latest_show": "2026-11-14",
+  "donation_basis": "no",
+  "donation_evidence": "Tickets purchased through Roadhouse Tickets affiliate.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "The Little Darlins",
+    "date": "2026-11-14"
+   }
+  ],
+  "notes": "Historic 1899 church used as a listening room in the Hill Country."
+ },
+ {
+  "slug": "city-vineyard-3649",
+  "name": "City Vineyard",
+  "city": "New York",
+  "st": "NY",
+  "type": "Intimate Venue",
+  "site": "citywinery.com/city-vineyard-nyc",
+  "active": "yes",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "City Winery waterfront restaurant with ticketed City Vineyard Sessions.",
+  "pay_methods": [],
+  "recent_artists": [],
+  "notes": "Commercial wine garden and restaurant with ticketed concert series; no specific acts in text."
+ },
+ {
+  "slug": "city-winery-atlanta-f84f",
+  "name": "City Winery Atlanta",
+  "city": "Atlanta",
+  "st": "GA",
+  "type": "Intimate Venue",
+  "site": "citywinery.com/atlanta",
+  "active": "yes",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "City Winery sells tickets with reserved seating and dinner service; membership gives fee-free tickets.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Musiq Soulchild",
+    "date": "2026"
+   },
+   {
+    "name": "Rakim",
+    "date": "2026"
+   },
+   {
+    "name": "John Scofield",
+    "date": "2026"
+   },
+   {
+    "name": "Shalamar",
+    "date": "2026"
+   }
+  ],
+  "notes": "Commercial winery chain; holiday 2026 lineup advertised."
+ },
+ {
+  "slug": "city-winery-boston-and-haymarket-lounge-03a3",
+  "name": "City Winery Boston and Haymarket Lounge",
+  "city": "Boston",
+  "st": "MA",
+  "type": "Intimate Venue",
+  "site": "citywinery.com/boston",
+  "active": "yes",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "City Winery sells tickets with reserved seating and dinner service; membership gives fee-free tickets.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "October London",
+    "date": "2026"
+   },
+   {
+    "name": "D'Lai",
+    "date": "2026"
+   },
+   {
+    "name": "Cem Adrian",
+    "date": "2026"
+   },
+   {
+    "name": "Martin Sexton",
+    "date": "2026"
+   },
+   {
+    "name": "Demola",
+    "date": "2026"
+   }
+  ],
+  "notes": "Commercial winery chain; holiday 2026 lineup advertised."
+ },
+ {
+  "slug": "city-winery-chicago-7c04",
+  "name": "City Winery Chicago",
+  "city": "Chicago",
+  "st": "IL",
+  "type": "Intimate Venue",
+  "site": "citywinery.com/chicago",
+  "active": "yes",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "City Winery sells tickets with reserved seating and dinner service; membership gives fee-free tickets.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Wood Harris",
+    "date": "2026"
+   },
+   {
+    "name": "Ami Taf Ra",
+    "date": "2026"
+   },
+   {
+    "name": "Kamasi Washington",
+    "date": "2026"
+   },
+   {
+    "name": "DL Hughley",
+    "date": "2026"
+   },
+   {
+    "name": "Mickey Guyton",
+    "date": "2026"
+   },
+   {
+    "name": "Boney James",
+    "date": "2026"
+   }
+  ],
+  "notes": "Commercial winery chain; holiday 2026 lineup advertised."
+ },
+ {
+  "slug": "city-winery-hudson-valley-64c5",
+  "name": "City Winery Hudson Valley",
+  "city": "Montgomery",
+  "st": "NY",
+  "type": "Intimate Venue",
+  "site": "citywinery.com/hudson-valley",
+  "active": "yes",
+  "latest_show": "2026-11-14",
+  "donation_basis": "no",
+  "donation_evidence": "City Winery sells tickets with reserved seating and dinner service; membership gives fee-free tickets.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Daniel Lanois Trio",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Robbie Fulks",
+    "date": "2026-11-11"
+   },
+   {
+    "name": "Heather Maloney",
+    "date": "2026-11-11"
+   }
+  ],
+  "notes": "Commercial winery chain with amphitheater; listed shows Nov 11 and Nov 14."
+ },
+ {
+  "slug": "city-winery-nashville-7baa",
+  "name": "City Winery Nashville",
+  "city": "Nashville",
+  "st": "TN",
+  "type": "Intimate Venue",
+  "site": "citywinery.com/nashville",
+  "active": "yes",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "City Winery sells tickets with reserved seating and dinner service; membership gives fee-free tickets.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "John Scofield",
+    "date": "2026"
+   },
+   {
+    "name": "Musiq Soulchild",
+    "date": "2026"
+   },
+   {
+    "name": "Eric Roberson",
+    "date": "2026"
+   },
+   {
+    "name": "Patti Austin",
+    "date": "2026"
+   }
+  ],
+  "notes": "Commercial winery chain; holiday 2026 lineup advertised."
+ },
+ {
+  "slug": "city-winery-nashville-the-lounge-7baa",
+  "name": "City Winery Nashville - The Lounge",
+  "city": "Nashville",
+  "st": "TN",
+  "type": "Intimate Venue",
+  "site": "citywinery.com/nashville",
+  "active": "yes",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "City Winery sells tickets with reserved seating and dinner service; membership gives fee-free tickets.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "John Scofield",
+    "date": "2026"
+   },
+   {
+    "name": "Musiq Soulchild",
+    "date": "2026"
+   },
+   {
+    "name": "Eric Roberson",
+    "date": "2026"
+   },
+   {
+    "name": "Patti Austin",
+    "date": "2026"
+   }
+  ],
+  "notes": "Same page as main room; The Lounge is the small stage of a commercial chain."
+ },
+ {
+  "slug": "city-winery-nyc-223f",
+  "name": "City Winery NYC",
+  "city": "New York",
+  "st": "NY",
+  "type": "Intimate Venue",
+  "site": "citywinery.com/pages/locations/new-york-city",
+  "active": "yes",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "City Winery sells tickets with reserved seating and dinner service; membership gives fee-free tickets.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Los Lobos",
+    "date": "2026"
+   },
+   {
+    "name": "Cowboy Junkies",
+    "date": "2026"
+   },
+   {
+    "name": "James Hunter Six",
+    "date": "2026"
+   },
+   {
+    "name": "Marshall Crenshaw",
+    "date": "2026"
+   }
+  ],
+  "notes": "Commercial winery chain at Pier 57."
+ },
+ {
+  "slug": "city-winery-nyc-the-loft-c4b3",
+  "name": "City Winery NYC - The Loft",
+  "city": "New York",
+  "st": "NY",
+  "type": "Intimate Venue",
+  "site": "citywinery.com/newyork",
+  "active": "yes",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "City Winery sells tickets with reserved seating and dinner service; membership gives fee-free tickets.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Los Lobos",
+    "date": "2026"
+   },
+   {
+    "name": "Cowboy Junkies",
+    "date": "2026"
+   },
+   {
+    "name": "James Hunter Six",
+    "date": "2026"
+   },
+   {
+    "name": "Marshall Crenshaw",
+    "date": "2026"
+   }
+  ],
+  "notes": "Same page as main room; The Loft is the small stage of a commercial chain."
+ },
+ {
+  "slug": "city-winery-philly-d277",
+  "name": "City Winery Philly",
+  "city": "Philadelphia",
+  "st": "PA",
+  "type": "Intimate Venue",
+  "site": "citywinery.com/philadelphia",
+  "active": "yes",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "City Winery sells tickets with reserved seating and dinner service; membership gives fee-free tickets.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Raheem Devaughn",
+    "date": "2026"
+   },
+   {
+    "name": "BoDeans",
+    "date": "2026"
+   },
+   {
+    "name": "John Oates",
+    "date": "2026"
+   },
+   {
+    "name": "MC Lyte",
+    "date": "2026"
+   }
+  ],
+  "notes": "Commercial winery chain; holiday 2026 lineup advertised."
+ },
+ {
+  "slug": "city-winery-philly-the-loft-d277",
+  "name": "City Winery Philly - The Loft",
+  "city": "Philadelphia",
+  "st": "PA",
+  "type": "Intimate Venue",
+  "site": "citywinery.com/philadelphia",
+  "active": "yes",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "City Winery sells tickets with reserved seating and dinner service; membership gives fee-free tickets.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Raheem Devaughn",
+    "date": "2026"
+   },
+   {
+    "name": "BoDeans",
+    "date": "2026"
+   },
+   {
+    "name": "John Oates",
+    "date": "2026"
+   },
+   {
+    "name": "MC Lyte",
+    "date": "2026"
+   }
+  ],
+  "notes": "Same page as main room; The Loft is the small stage of a commercial chain."
+ },
+ {
+  "slug": "city-winery-pittsburgh-1ccb",
+  "name": "City Winery Pittsburgh",
+  "city": "Pittsburgh",
+  "st": "PA",
+  "type": "Intimate Venue",
+  "site": "citywinery.com/pittsburgh",
+  "active": "yes",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "City Winery sells tickets with reserved seating and dinner service; membership gives fee-free tickets.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "James Hunter Six",
+    "date": "2026"
+   },
+   {
+    "name": "Shep Rose",
+    "date": "2026"
+   },
+   {
+    "name": "Over The Rhine",
+    "date": "2026"
+   },
+   {
+    "name": "Phil Vassar",
+    "date": "2026"
+   }
+  ],
+  "notes": "Commercial winery chain in the Strip District."
+ },
+ {
+  "slug": "city-winery-st-louis-6b84",
+  "name": "City Winery St. Louis",
+  "city": "St. Louis",
+  "st": "MO",
+  "type": "Intimate Venue",
+  "site": "citywinery.com/st-louis",
+  "active": "yes",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "City Winery sells tickets with reserved seating and dinner service; membership gives fee-free tickets.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Ami Taf Ra",
+    "date": "2026"
+   },
+   {
+    "name": "Kamasi Washington",
+    "date": "2026"
+   },
+   {
+    "name": "Patti Austin",
+    "date": "2026"
+   },
+   {
+    "name": "After 7",
+    "date": "2026"
+   }
+  ],
+  "notes": "Commercial winery chain at City Foundry."
+ }
+]

@@ -1,0 +1,1217 @@
+[
+ {
+  "slug": "newtown-theatre-71b4",
+  "name": "Newtown Theatre",
+  "city": "Newtown",
+  "st": "PA",
+  "type": "Intimate Venue",
+  "site": "thenewtowntheatre.com",
+  "active": "yes",
+  "latest_show": "2027-01-30",
+  "donation_basis": "no",
+  "donation_evidence": "Sells tickets via 'Get Tickets' for tribute bands, movies, comedy; nonprofit also has Donate/Membership pages.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Sweet Baby James: The #1 James Taylor Tribute",
+    "date": "2026-11-12"
+   },
+   {
+    "name": "The American Bombshells",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "The Odyssey",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Give & Take Jugglers",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "The Family Recipe",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "Andy Falco and Travis Book",
+    "date": "2026-11-19"
+   },
+   {
+    "name": "The Music of Fleetwood Mac",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "Joe DeVito",
+    "date": "2026-11-27"
+   },
+   {
+    "name": "Johnny Cash Tribute Concert",
+    "date": "2027-01-23"
+   }
+  ],
+  "notes": "260-seat historic theater with ticketed tribute acts, movies and comedy."
+ },
+ {
+  "slug": "ok-theatre-9f07",
+  "name": "OK Theatre",
+  "city": "Enterprise",
+  "st": "OR",
+  "type": "Intimate Venue",
+  "site": "theoldok.com",
+  "active": "unknown",
+  "latest_show": "",
+  "donation_basis": "unknown",
+  "donation_evidence": "No money info; page shows 'No Events Found' and only a list of undated previous acts.",
+  "pay_methods": [],
+  "recent_artists": [],
+  "notes": "Historic 1918 theater in Joseph, OR; no upcoming shows listed, footer copyright 2026."
+ },
+ {
+  "slug": "old-icehouse-98d2",
+  "name": "Old Icehouse",
+  "city": "Edmond",
+  "st": "OK",
+  "type": "Intimate Venue",
+  "site": "theoldicehouse.com",
+  "active": "yes",
+  "latest_show": "2027-01-17",
+  "donation_basis": "no",
+  "donation_evidence": "Ticket required after 8pm; advance tickets $12-$35 plus tax/fees; restaurant and bar.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Jamie Lin Wilson",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "BC & The Big Rig",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Jackopierce",
+    "date": "2026-12-11"
+   },
+   {
+    "name": "Creede Williams",
+    "date": "2026-12-11"
+   },
+   {
+    "name": "Adam Hood",
+    "date": "2027-01-17"
+   }
+  ],
+  "notes": "Restaurant and listening room with ticketed shows."
+ },
+ {
+  "slug": "old-quarter-acoustic-cafe-0c54",
+  "name": "Old Quarter Acoustic Cafe",
+  "city": "Galveston",
+  "st": "TX",
+  "type": "Intimate Venue",
+  "site": "oldquarteracousticcafe.com",
+  "active": "yes",
+  "latest_show": "2026-11-14",
+  "donation_basis": "no",
+  "donation_evidence": "Songwriter festival with ticket sales; no donation wording seen in the scraped text.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Jimmie Dale Gilmore",
+    "date": "2026-11"
+   },
+   {
+    "name": "Butch Hancock",
+    "date": "2026-11"
+   }
+  ],
+  "notes": "Songwriter listening room; 2nd annual Old Quarter Songwriter Festival Nov 12-14, 2026; regular show listings not captured."
+ },
+ {
+  "slug": "old-steeple-205a",
+  "name": "Old Steeple",
+  "city": "Ferndale",
+  "st": "CA",
+  "type": "Intimate Venue",
+  "site": "ferndalemusiccompany.com",
+  "active": "yes",
+  "latest_show": "2026-10-24",
+  "donation_basis": "no",
+  "donation_evidence": "Concert tickets sold online; paperless Will Call list; no ticket price shown in text.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Chris Pierce",
+    "date": "2026-10-24"
+   },
+   {
+    "name": "Led Kaapana",
+    "date": "2026-10-18"
+   },
+   {
+    "name": "Natalie and Brittany Haas",
+    "date": "2026-06-07"
+   },
+   {
+    "name": "Alash",
+    "date": "2026-03-21"
+   }
+  ],
+  "notes": "Converted church concert hall (225 seats) that also does lessons, rentals and PBS recordings."
+ },
+ {
+  "slug": "opening-bell-coffee-4832",
+  "name": "Opening Bell Coffee",
+  "city": "Dallas",
+  "st": "TX",
+  "type": "Intimate Venue",
+  "site": "openingbellcoffee.com",
+  "active": "yes",
+  "latest_show": "2026-12-06",
+  "donation_basis": "no",
+  "donation_evidence": "Coffee shop/bar; mix of ticketed shows and free/RSVP shows and open mics; no tip wording seen.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "LandoRadio w/ Dorrough",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Garciaparra",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "Theo Kandel",
+    "date": "2026-11-18"
+   },
+   {
+    "name": "Jake Wild",
+    "date": "2026-11-18"
+   },
+   {
+    "name": "Taylor Hollingsworth",
+    "date": "2026-11-19"
+   },
+   {
+    "name": "Jeff Cohen",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "Payton Makenna",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Gable Burnett",
+    "date": "2026-11-22"
+   },
+   {
+    "name": "Jaden Cantu",
+    "date": "2026-11-28"
+   },
+   {
+    "name": "Nikki Habib",
+    "date": "2026-11-29"
+   },
+   {
+    "name": "Liz Longley",
+    "date": "2026-11-29"
+   },
+   {
+    "name": "Brooke Obrian",
+    "date": "2026-12-03"
+   },
+   {
+    "name": "Hudson Pierce",
+    "date": "2026-12-03"
+   },
+   {
+    "name": "Bloom Basket",
+    "date": "2026-12-04"
+   },
+   {
+    "name": "Steve Long",
+    "date": "2026-12-06"
+   },
+   {
+    "name": "Burton Lee",
+    "date": "2026-12-06"
+   }
+  ],
+  "notes": "Coffee bar with live music most nights; several free RSVP shows."
+ },
+ {
+  "slug": "orange-646e",
+  "name": "Orange",
+  "city": "Delaware Water Gap",
+  "st": "PA",
+  "type": "Intimate Venue",
+  "site": "orangecoffeeartmusic.com",
+  "active": "likely",
+  "latest_show": "",
+  "donation_basis": "unknown",
+  "donation_evidence": "Run by a 501c3 arts foundation; events page text has no admission or money details.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Emily Barnes",
+    "date": ""
+   },
+   {
+    "name": "Alex Dawson",
+    "date": ""
+   },
+   {
+    "name": "Arlan Feiles",
+    "date": ""
+   },
+   {
+    "name": "Regina Sayles",
+    "date": ""
+   },
+   {
+    "name": "Vik Gecyte",
+    "date": ""
+   }
+  ],
+  "notes": "Coffee shop, gallery and folk listening room; event listings undated, footer 2025."
+ },
+ {
+  "slug": "ore-dock-brewing-facd",
+  "name": "Ore Dock Brewing",
+  "city": "Marquette",
+  "st": "MI",
+  "type": "Intimate Venue",
+  "site": "oredockbrewing.com",
+  "active": "yes",
+  "latest_show": "2026-12-01",
+  "donation_basis": "no",
+  "donation_evidence": "Brewery taproom; some events require tickets; no donation wording seen.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Erik Koskinen Band",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Westerly Winds Big Band",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "The Make-Believe Spurs",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "The Jakey Thomas Show",
+    "date": "2026-11-25"
+   }
+  ],
+  "notes": "Brewery taproom with live music plus trivia and dance nights; takes band submissions."
+ },
+ {
+  "slug": "oxbow-blending-bottling-41bd",
+  "name": "Oxbow Blending & Bottling",
+  "city": "Portland",
+  "st": "ME",
+  "type": "Intimate Venue",
+  "site": "oxbowbeer.com/events",
+  "active": "yes",
+  "latest_show": "2027-02-12",
+  "donation_basis": "no",
+  "donation_evidence": "Brewery/bar with ticketed 21+ 'Oxbow Live' shows; no price shown in text.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "The Orrs",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Ezra Cohen and the Big City Band",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "State Birds",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Surprise Chef",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "Ben Hackett",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "Dead Gowns",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Portland Plays Wilco",
+    "date": "2026-12-05"
+   },
+   {
+    "name": "Mihali",
+    "date": "2026-12-06"
+   },
+   {
+    "name": "Benny the Butcher",
+    "date": "2026-12-11"
+   },
+   {
+    "name": "Deaf Club",
+    "date": "2026-12-13"
+   },
+   {
+    "name": "Fireside Collective",
+    "date": "2027-01-28"
+   },
+   {
+    "name": "Jon Spencer",
+    "date": "2027-02-12"
+   }
+  ],
+  "notes": "Brewery-run music room (about 200 cap) with touring acts."
+ },
+ {
+  "slug": "oyster-shoals-music-hall-7ed2",
+  "name": "Oyster Shoals Music Hall",
+  "city": "Warsaw",
+  "st": "VA",
+  "type": "Intimate Venue",
+  "site": "oystershoals.com",
+  "active": "likely",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "Tickets sold through sister venue Easy Wind Farm's site; bar service by Old Rappahannock Taphouse.",
+  "pay_methods": [],
+  "recent_artists": [],
+  "notes": "New ownership in 2026; no event dates in the scraped text."
+ },
+ {
+  "slug": "park-theatre-foundation-2f53",
+  "name": "Park Theatre Foundation",
+  "city": "Glens Falls",
+  "st": "NY",
+  "type": "Intimate Venue",
+  "site": "parktheatergf.com/#/events",
+  "active": "likely",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed events, wedding and event rentals; event list did not load in scraped text.",
+  "pay_methods": [],
+  "recent_artists": [],
+  "notes": "1911 theater run by Park Street Hospitality; mostly rentals and weddings in the text."
+ },
+ {
+  "slug": "parlour-81b1",
+  "name": "Parlour",
+  "city": "Providence",
+  "st": "RI",
+  "type": "Intimate Venue",
+  "site": "theparlourri.com",
+  "active": "yes",
+  "latest_show": "2026-12-11",
+  "donation_basis": "no",
+  "donation_evidence": "Bar/venue with $10 shows, some open dates; open mic and blues jam have no cover.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Leon Trout",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Cosmic Factory",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Tom White Trio",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Dead Gowns",
+    "date": "2026-11-19"
+   },
+   {
+    "name": "Nova One",
+    "date": "2026-11-19"
+   },
+   {
+    "name": "Professor Roots",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "Mark Berney Project",
+    "date": "2026-11-22"
+   },
+   {
+    "name": "Consider the Source",
+    "date": "2026-12-11"
+   }
+  ],
+  "notes": "Bar-style music venue with weekly open mic and blues jam."
+ },
+ {
+  "slug": "peninsula-arts-center-37e6",
+  "name": "Peninsula Arts Center",
+  "city": "Long Beach",
+  "st": "WA",
+  "type": "Intimate Venue",
+  "site": "peninsulaartscenter.org",
+  "active": "yes",
+  "latest_show": "2026-12-12",
+  "donation_basis": "no",
+  "donation_evidence": "House-concert-style shows benefit a 501c3 foundation, but tickets are sold ('Click here for tickets').",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Stumptown Swing",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Kristin Grainger",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Dan Wetzel",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Jim Faddis",
+    "date": "2026-12-05"
+   },
+   {
+    "name": "Dale Adkins",
+    "date": "2026-12-05"
+   },
+   {
+    "name": "Brad Parsons",
+    "date": "2026-12-12"
+   }
+  ],
+  "notes": "Listening room run by a nonprofit foundation; ticketed concerts plus Donate button and weekly open mics."
+ },
+ {
+  "slug": "people-s-pub-cadb",
+  "name": "People's Pub",
+  "city": "Bayport",
+  "st": "NY",
+  "type": "Intimate Venue",
+  "site": "peoplespubbayport.com",
+  "active": "yes",
+  "latest_show": "2027-04-25",
+  "donation_basis": "no",
+  "donation_evidence": "Pub with cover bands and ticketed shows ('Purchase Tickets Here'); no donation wording.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "The Scofflaws",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "Falco Bros.",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Alwyn Robinson",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Andrew Ahr Duo",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "The Irish Sessions",
+    "date": "2026-11-19"
+   },
+   {
+    "name": "Quarter Horse",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "The Brother Puckers",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Fitz & Groney",
+    "date": "2026-11-22"
+   },
+   {
+    "name": "Sarah & Sophia",
+    "date": "2026-11-25"
+   },
+   {
+    "name": "GUNK",
+    "date": "2026-11-27"
+   },
+   {
+    "name": "Jon & Anthony",
+    "date": "2026-11-29"
+   },
+   {
+    "name": "Jeffrey Gaines",
+    "date": "2027-01-23"
+   },
+   {
+    "name": "David Wilcox",
+    "date": "2027-04-25"
+   }
+  ],
+  "notes": "Restaurant and pub with music nearly every weekend."
+ },
+ {
+  "slug": "petra-s-d472",
+  "name": "Petra's",
+  "city": "Charlotte",
+  "st": "NC",
+  "type": "Intimate Venue",
+  "site": "petrasbar.com",
+  "active": "yes",
+  "latest_show": "2026-11-23",
+  "donation_basis": "no",
+  "donation_evidence": "Bar with door cover $7-$12 and online tickets; 21+ club.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "The Volver",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Along Time AgoGo",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Distracted Eyes",
+    "date": "2026-11-19"
+   },
+   {
+    "name": "Schuld",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "My Gal Monday",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "Whistlestop",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "Blue Cactus",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Ramona & the Holy Smokes",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Anna Kimm",
+    "date": "2026-11-21"
+   }
+  ],
+  "notes": "Original-music bar and club with jazz Mondays; takes door cash or card."
+ },
+ {
+  "slug": "pie-shop-8906",
+  "name": "Pie Shop",
+  "city": "Washington",
+  "st": "DC",
+  "type": "Intimate Venue",
+  "site": "pieshopdc.com",
+  "active": "yes",
+  "latest_show": "2027-05-16",
+  "donation_basis": "no",
+  "donation_evidence": "Pie shop and club selling tickets for each show; no donation wording.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Diles que no me maten",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "TORO",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "ARDO",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Identity Shock",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "Camylio",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "Slowhole",
+    "date": "2026-11-16"
+   },
+   {
+    "name": "Darryl Rahn",
+    "date": "2026-11-19"
+   },
+   {
+    "name": "Erik Vincent Huey",
+    "date": "2026-12-04"
+   },
+   {
+    "name": "Belle Blue",
+    "date": "2026-12-05"
+   },
+   {
+    "name": "The Mercy Alliance",
+    "date": "2026-12-06"
+   },
+   {
+    "name": "Kinoko",
+    "date": "2026-12-08"
+   },
+   {
+    "name": "James Bruner",
+    "date": "2026-12-09"
+   },
+   {
+    "name": "MEND",
+    "date": "2026-12-17"
+   },
+   {
+    "name": "Gorf",
+    "date": "2026-12-18"
+   },
+   {
+    "name": "Nayan",
+    "date": "2026-12-20"
+   },
+   {
+    "name": "Outta Pocket",
+    "date": "2027-01-14"
+   },
+   {
+    "name": "DUUNES",
+    "date": "2027-02-20"
+   },
+   {
+    "name": "Kate Yeager",
+    "date": "2027-03-09"
+   },
+   {
+    "name": "Knats",
+    "date": "2027-03-14"
+   },
+   {
+    "name": "Gyasi",
+    "date": "2027-03-24"
+   },
+   {
+    "name": "almost a.m.",
+    "date": "2027-05-16"
+   }
+  ],
+  "notes": "Woman-owned pie shop and independent live music venue."
+ },
+ {
+  "slug": "pine-creek-lodge-f6f2",
+  "name": "Pine Creek Lodge",
+  "city": "Livingston",
+  "st": "MT",
+  "type": "Intimate Venue",
+  "site": "pinecreeklodge.com",
+  "active": "yes",
+  "latest_show": "2027-03-25",
+  "donation_basis": "no",
+  "donation_evidence": "Fixed-price tickets, e.g. $20 advance/$30 day of show; $25-$55 for Joe Robinson.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "49 Winchester",
+    "date": "2026-10-13"
+   },
+   {
+    "name": "Briscoe",
+    "date": "2026-10-13"
+   },
+   {
+    "name": "Lee Henke",
+    "date": "2027-01-08"
+   },
+   {
+    "name": "Joe Robinson",
+    "date": "2027-01-09"
+   },
+   {
+    "name": "The Beagles",
+    "date": "2027-01-22"
+   },
+   {
+    "name": "The Cullen Brothers Band",
+    "date": "2027-01-23"
+   },
+   {
+    "name": "Desperate Electric",
+    "date": "2027-01-30"
+   },
+   {
+    "name": "Sicard Hollow",
+    "date": "2027-03-25"
+   }
+  ],
+  "notes": "Outdoor summer stage plus limited-capacity indoor winter shows; closed until January."
+ },
+ {
+  "slug": "pine-grove-hall-4095",
+  "name": "Pine Grove Hall",
+  "city": "Pine Grove Mills",
+  "st": "PA",
+  "type": "Intimate Venue",
+  "site": "pinegrovehall.com",
+  "active": "likely",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed dinner-plus-show events booked via Resy; ticket includes entry and reserved seating.",
+  "pay_methods": [],
+  "recent_artists": [],
+  "notes": "Restaurant with upstairs/downstairs music room; 2026 touring artists page but no show names captured."
+ },
+ {
+  "slug": "poe-mill-music-e395",
+  "name": "Poe Mill Music",
+  "city": "Greenville",
+  "st": "SC",
+  "type": "Intimate Venue",
+  "site": "poemillmusic.com",
+  "active": "yes",
+  "latest_show": "2026-11-20",
+  "donation_basis": "no",
+  "donation_evidence": "Advance tickets $10-$15 (e.g. $15 adv / $18 door); no donation wording.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Hurt&Skip",
+    "date": "2026-11-07"
+   },
+   {
+    "name": "Caleb Lee Hutchinson",
+    "date": "2026-11-12"
+   },
+   {
+    "name": "The Regulars",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "Gláss",
+    "date": "2026-11"
+   },
+   {
+    "name": "Jest",
+    "date": "2026-11"
+   },
+   {
+    "name": "Celadon",
+    "date": "2026-11"
+   },
+   {
+    "name": "Watts McCormick",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "SHAGO",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "Drew Springs",
+    "date": "2026-11-20"
+   }
+  ],
+  "notes": "Original-music listening room with recording studio."
+ },
+ {
+  "slug": "polaris-hall-b6fa",
+  "name": "Polaris Hall",
+  "city": "Portland",
+  "st": "OR",
+  "type": "Intimate Venue",
+  "site": "polarishall.com",
+  "active": "yes",
+  "latest_show": "2027-01-12",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed shows via 'Get Tickets'; many sold out; no donation wording.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Stephen Day",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "Elysia Biro",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "Pretty Sick",
+    "date": "2026-11-16"
+   },
+   {
+    "name": "Computerwife",
+    "date": "2026-11-16"
+   },
+   {
+    "name": "Olivia O'Brien",
+    "date": "2026-11-17"
+   },
+   {
+    "name": "Sophie Cates",
+    "date": "2026-11-17"
+   },
+   {
+    "name": "Whitmer Thomas",
+    "date": "2026-11-18"
+   },
+   {
+    "name": "Mattress",
+    "date": "2026-11-19"
+   },
+   {
+    "name": "Isaac Brock",
+    "date": "2026-11-19"
+   },
+   {
+    "name": "Babe Haven",
+    "date": "2026-11-23"
+   },
+   {
+    "name": "Sap",
+    "date": "2026-11-28"
+   },
+   {
+    "name": "The Kilans",
+    "date": "2026-11-30"
+   },
+   {
+    "name": "Fat, Evil Children",
+    "date": "2026-12-03"
+   },
+   {
+    "name": "Harbour",
+    "date": "2026-12-04"
+   },
+   {
+    "name": "Why?",
+    "date": "2026-12-06"
+   },
+   {
+    "name": "Alison's Halo",
+    "date": "2026-12-08"
+   },
+   {
+    "name": "Mason Jennings",
+    "date": "2026-12-11"
+   },
+   {
+    "name": "Anna Diem",
+    "date": "2026-12-11"
+   },
+   {
+    "name": "Robber Robber",
+    "date": "2026-12-12"
+   },
+   {
+    "name": "Ruby Haunt",
+    "date": "2026-12-13"
+   },
+   {
+    "name": "Graham Hunt",
+    "date": "2026-12-14"
+   },
+   {
+    "name": "The Duke Of Cello",
+    "date": "2026-12-10"
+   },
+   {
+    "name": "Swirlies",
+    "date": "2027-01-12"
+   }
+  ],
+  "notes": "About 200-cap commercial concert hall in a 1930 ballroom."
+ },
+ {
+  "slug": "press-room-fade",
+  "name": "Press Room",
+  "city": "Portsmouth",
+  "st": "NH",
+  "type": "Intimate Venue",
+  "site": "pressroomnh.com",
+  "active": "yes",
+  "latest_show": "2026-11-27",
+  "donation_basis": "no",
+  "donation_evidence": "Pub and restaurant with ticketed shows; jazz jam is free.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "The Betsi Feathers",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "DJ Chad Banks",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "The Unbound Collective",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "Steeplechase",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "Sorry Safari",
+    "date": "2026-11-18"
+   },
+   {
+    "name": "Mother Nimbus",
+    "date": "2026-11-18"
+   },
+   {
+    "name": "Opaline",
+    "date": "2026-11-18"
+   },
+   {
+    "name": "Diaspora Radio",
+    "date": "2026-11-19"
+   },
+   {
+    "name": "King Kyote",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "Seldom Playrights",
+    "date": "2026-11-23"
+   },
+   {
+    "name": "The Minus Scale",
+    "date": "2026-11-27"
+   },
+   {
+    "name": "Coyote Smoke",
+    "date": "2026-11-27"
+   }
+  ],
+  "notes": "Pub, restaurant and music room open since 1976."
+ },
+ {
+  "slug": "pure-life-house-of-music-2d55",
+  "name": "Pure Life House of Music",
+  "city": "LaGrange",
+  "st": "GA",
+  "type": "Intimate Venue",
+  "site": "purelifelagrange.com",
+  "active": "yes",
+  "latest_show": "2027-02-26",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed listening room, tickets about $27.50-$37.50; BYOB; non-refundable.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Mike Farris",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "Barry Waldrep",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "Barry Waldrep Band",
+    "date": "2026-11-27"
+   },
+   {
+    "name": "Rusty Brown",
+    "date": "2026-11-27"
+   },
+   {
+    "name": "Eliot Bronson",
+    "date": "2026-12-04"
+   },
+   {
+    "name": "Sarah Potenza",
+    "date": "2026-12-19"
+   },
+   {
+    "name": "David Robert King",
+    "date": "2026-12-19"
+   },
+   {
+    "name": "Trina Meade and Band",
+    "date": "2027-01-08"
+   },
+   {
+    "name": "Holler Choir",
+    "date": "2027-01-27"
+   },
+   {
+    "name": "Adam Chaffin & His Band",
+    "date": "2027-02-26"
+   }
+  ],
+  "notes": "130-seat singer-songwriter listening room, BYOB."
+ },
+ {
+  "slug": "purple-fiddle-407f",
+  "name": "Purple Fiddle",
+  "city": "Thomas",
+  "st": "WV",
+  "type": "Intimate Venue",
+  "site": "purplefiddle.com",
+  "active": "likely",
+  "latest_show": "2026-12-10",
+  "donation_basis": "likely",
+  "donation_evidence": "Afternoon shows listed as 'Free Concert - Tips Encouraged'; evening shows ticketed at $15-$30.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Meadow Makers",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "Megan Bee",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Trey Hedrick",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Redd & The Paper Flowers",
+    "date": "2026-11-19"
+   },
+   {
+    "name": "The Suitcase Junket",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "Alma Russ",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "The Heavy Heavy",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "The Fly Birds",
+    "date": "2026-11-27"
+   },
+   {
+    "name": "The Hillbilly Biscuits",
+    "date": "2026-11-27"
+   },
+   {
+    "name": "Davisson Brothers Band",
+    "date": "2026-11-28"
+   },
+   {
+    "name": "Bastard Bearded Irishmen",
+    "date": "2026-12-04"
+   },
+   {
+    "name": "Greg Klyma",
+    "date": "2026-12-05"
+   },
+   {
+    "name": "Smilo and the Ghost",
+    "date": "2026-12-05"
+   },
+   {
+    "name": "Jill Andrews",
+    "date": "2026-12-10"
+   }
+  ],
+  "notes": "Cafe and bar with tip-based free afternoon concerts and ticketed evening shows."
+ },
+ {
+  "slug": "raccoon-motel-31bf",
+  "name": "Raccoon Motel",
+  "city": "Davenport",
+  "st": "IA",
+  "type": "Intimate Venue",
+  "site": "theraccoonmotel.com",
+  "active": "likely",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "Bar and club with general admission shows; no money details for artists.",
+  "pay_methods": [],
+  "recent_artists": [],
+  "notes": "Dive-bar venue with Airbnb rooms; calendar did not load, says concerts nearly every night."
+ },
+ {
+  "slug": "randy-now-s-man-cave-3a29",
+  "name": "Randy Now's Man Cave",
+  "city": "Hightstown",
+  "st": "NJ",
+  "type": "Intimate Venue",
+  "site": "mancavenj.com",
+  "active": "yes",
+  "latest_show": "2026-11-14",
+  "donation_basis": "no",
+  "donation_evidence": "In-store concerts sold through 'Get Tickets' links; no price shown.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Vernon Reid",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "Corey Glover",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "Ashtray Floors",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "The Vibeke Saugestad Band",
+    "date": ""
+   }
+  ],
+  "notes": "Record store hosting small in-store concerts."
+ },
+ {
+  "slug": "red-bicycle-hall-e031",
+  "name": "Red Bicycle Hall",
+  "city": "Madison",
+  "st": "IN",
+  "type": "Intimate Venue",
+  "site": "redbicyclehall.com",
+  "active": "yes",
+  "latest_show": "2026-12-12",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed events; one December show is a benefit; no donation wording for artists.",
+  "pay_methods": [],
+  "recent_artists": [
+   {
+    "name": "Throwback Thursday Emo Night Live",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "Jimmy Davis",
+    "date": "2026-11-28"
+   },
+   {
+    "name": "Bill Lancton",
+    "date": "2026-11-28"
+   },
+   {
+    "name": "Tom Steveley",
+    "date": "2026-11-28"
+   },
+   {
+    "name": "Deano Crafton",
+    "date": "2026-11-28"
+   },
+   {
+    "name": "Josie Marcellino",
+    "date": "2026-12-03"
+   },
+   {
+    "name": "The Doctor's Band",
+    "date": "2026-12-04"
+   }
+  ],
+  "notes": "Historic event hall (about 200 cap) with concerts, comedy and rentals."
+ }
+]

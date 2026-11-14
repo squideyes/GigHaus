@@ -1,0 +1,1103 @@
+[
+ {
+  "slug": "seven-stars-arts-center-db14",
+  "name": "Seven Stars Arts Center",
+  "city": "Sharon",
+  "st": "VT",
+  "type": "Intimate Venue",
+  "site": "sevenstarsarts.org",
+  "active": "yes",
+  "latest_show": "2026-12-18",
+  "donation_basis": "no",
+  "donation_evidence": "Concerts ticketed at $20 online, $25 at door via Humanitix; donations only to the center.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Patti Casey, Colin McCaffrey & Eric O'Hara",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "Four Guitars",
+    "date": "2026-12-05"
+   },
+   {
+    "name": "Honky Tonk Christmas",
+    "date": "2026-12-18"
+   },
+   {
+    "name": "Beg Steal or Borrow",
+    "date": "2025-06"
+   }
+  ],
+  "notes": "Nonprofit arts center with ticketed concerts; summer outdoor events at separate Star Mountain property."
+ },
+ {
+  "slug": "shepherd-center-20f4",
+  "name": "Shepherd Center",
+  "city": "Fairhaven",
+  "st": "MA",
+  "type": "Intimate Venue",
+  "site": "theshepherdcenter.org",
+  "active": "yes",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "Admission is nominal or sponsor-funded; donation link supports the nonprofit itself, not artists.",
+  "pay_methods": [],
+  "recent_artists": [],
+  "notes": "Community nonprofit performing arts center; current events listed (Christmas radio play, Merry Jams fundraiser) but no dates in text."
+ },
+ {
+  "slug": "side-door-cabaret-at-the-palladium-8b45",
+  "name": "Side Door Cabaret at the Palladium",
+  "city": "St. Petersburg",
+  "st": "FL",
+  "type": "Intimate Venue",
+  "site": "mypalladium.org",
+  "active": "yes",
+  "latest_show": "2026-11",
+  "donation_basis": "no",
+  "donation_evidence": "Reserved-seat ticketed chamber series; donation pages support the Palladium/SPC Foundation.",
+  "pay_methods": [
+   "check",
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Nate Najar and Daniela Soledade",
+    "date": "2026-11"
+   }
+  ],
+  "notes": "College-affiliated performing arts center; chamber series temporarily at Gibbs Campus Music Center during renovation."
+ },
+ {
+  "slug": "singacoustic-a5ad",
+  "name": "Singacoustic",
+  "city": "Portland",
+  "st": "OR",
+  "type": "Intimate Venue",
+  "site": "singacoustic.com",
+  "active": "yes",
+  "latest_show": "2026-11-20",
+  "donation_basis": "likely",
+  "donation_evidence": "A listed show (Phoenix, Nov 14) is labeled a 'Donation Only Event'; venue is also a bar and restaurant.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Phoenix (Tim and Kathy Crosby)",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Ben Sandler",
+    "date": "2026-11-20"
+   }
+  ],
+  "notes": "52-seat listening room inside a bar/restaurant; mixed donation-only and ticketed events; Ben Sandler show is a private event."
+ },
+ {
+  "slug": "society-hall-a3d3",
+  "name": "Society Hall",
+  "city": "Alamosa",
+  "st": "CO",
+  "type": "Intimate Venue",
+  "site": "societyhall.org",
+  "active": "yes",
+  "latest_show": "2026-11-21",
+  "donation_basis": "no",
+  "donation_evidence": "Shows are ticketed; donate page is for the Society Hall Foundation building fund.",
+  "pay_methods": [
+   "check",
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Anam Cara with Michael Mandrell",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "Calistro Junior and Mickie Vasquez",
+    "date": "2026-11-21"
+   }
+  ],
+  "notes": "Restored church event center; also hosts theater."
+ },
+ {
+  "slug": "sofia-cc5d",
+  "name": "Sofia (B Street Theatre)",
+  "city": "Sacramento",
+  "st": "CA",
+  "type": "Intimate Venue",
+  "site": "bstreettheatre.org",
+  "active": "yes",
+  "latest_show": "2026-12-17",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed theatre and music series; donate form explicitly cannot accept tips for artists.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Mustache & Cleavage",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "Shelley Burns and Bill Dendle",
+    "date": "2026-11-19"
+   },
+   {
+    "name": "Vivian Lee Band with Jacam Manricks",
+    "date": "2026-12-17"
+   }
+  ],
+  "notes": "Professional theatre company venue; music is a side series."
+ },
+ {
+  "slug": "space-gallery-2564",
+  "name": "SPACE Gallery",
+  "city": "Portland",
+  "st": "ME",
+  "type": "Intimate Venue",
+  "site": "space538.org",
+  "active": "yes",
+  "latest_show": "2027-03-26",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed events; box office takes cash only; donate pages benefit the nonprofit.",
+  "pay_methods": [
+   "cash",
+   "check"
+  ],
+  "recent_artists": [
+   {
+    "name": "Sadurn with Kitchen",
+    "date": "2026-11-11"
+   },
+   {
+    "name": "Sutekh Hexen",
+    "date": "2026-11-24"
+   },
+   {
+    "name": "Adam O'Farrill's ELEPHANT",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Zootz Reunion",
+    "date": "2026-11-28"
+   },
+   {
+    "name": "Powwow People",
+    "date": "2026-11-30"
+   },
+   {
+    "name": "Advance Base with Karima Walker and Lisa/Liza",
+    "date": "2026-12-05"
+   },
+   {
+    "name": "Lily Seabird with Eliza Niemi",
+    "date": "2026-12-09"
+   },
+   {
+    "name": "otis. with Gnocchi and The Orrs",
+    "date": "2026-12-11"
+   },
+   {
+    "name": "Bucks Harbor",
+    "date": "2026-12-18"
+   },
+   {
+    "name": "FLOR Cuadro Flamenco",
+    "date": "2027-02-06"
+   },
+   {
+    "name": "Mei Semones with aron!",
+    "date": "2027-02-25"
+   },
+   {
+    "name": "The Body & Cel Genesis",
+    "date": "2027-03-26"
+   }
+  ],
+  "notes": "Contemporary arts nonprofit with gallery and a 300-cap music room; ticketed."
+ },
+ {
+  "slug": "spot-on-kirk-4617",
+  "name": "Spot on Kirk",
+  "city": "Roanoke",
+  "st": "VA",
+  "type": "Intimate Venue",
+  "site": "thespotonkirk.org",
+  "active": "yes",
+  "latest_show": "2027-01-30",
+  "donation_basis": "no",
+  "donation_evidence": "Shows are ticketed via Eventbrite; door sales accept cash, card, Apple Pay, Google Pay, Cash App; Venmo and PayPal not accepted.",
+  "pay_methods": [
+   "cash",
+   "Eventbrite",
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "The Concerns",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "The Horsenecks",
+    "date": "2026-11-17"
+   },
+   {
+    "name": "Brad Goodall with Lillian Hackett",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "Rebecca Porter & The Rhinestone Roses",
+    "date": "2026-12-04"
+   },
+   {
+    "name": "Erin Lunsford",
+    "date": "2026-12-04"
+   },
+   {
+    "name": "Kinnfolk",
+    "date": "2026-12-11"
+   },
+   {
+    "name": "Her Majesty",
+    "date": "2026-12-18"
+   },
+   {
+    "name": "Fishgirl",
+    "date": "2026-12-18"
+   },
+   {
+    "name": "Lydia Saint George",
+    "date": "2026-12-18"
+   },
+   {
+    "name": "Farmer Family Band",
+    "date": "2026-12-23"
+   },
+   {
+    "name": "Mariee Siou",
+    "date": "2027-01-15"
+   },
+   {
+    "name": "Oliver Wood",
+    "date": "2027-01-22"
+   },
+   {
+    "name": "That 1 Guy",
+    "date": "2027-01-30"
+   }
+  ],
+  "notes": "Nonprofit listening room with bar, no food; general admission."
+ },
+ {
+  "slug": "stage-door-theater-12e5",
+  "name": "Stage Door Theater (Blumenthal)",
+  "city": "Charlotte",
+  "st": "NC",
+  "type": "Intimate Venue",
+  "site": "blumenthalarts.org",
+  "active": "yes",
+  "latest_show": "2026-12",
+  "donation_basis": "no",
+  "donation_evidence": "Large performing arts center selling ticketed Broadway and concert events; donations support the organization.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Boney James",
+    "date": "2026-11-14"
+   }
+  ],
+  "notes": "Blumenthal Arts is a big commercial-scale presenter; Stage Door Theater is one small space within it and no events listed specifically for it."
+ },
+ {
+  "slug": "stolz-listening-room-69b1",
+  "name": "Stoltz Listening Room",
+  "city": "Easton",
+  "st": "MD",
+  "type": "Intimate Venue",
+  "site": "avalonfoundation.org",
+  "active": "yes",
+  "latest_show": "2026-12-05",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed shows (e.g. comedy $25 plus fees); foundation donations support the nonprofit.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Chloe Kimes",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "Fitzkee Brothers",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Low Lily",
+    "date": "2026-11-19"
+   },
+   {
+    "name": "The Reagan Years",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "Newmyer Flyer: The Joni Mitchell Songbook",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Erin Harpe",
+    "date": "2026-11-25"
+   },
+   {
+    "name": "The Seldom Scene",
+    "date": "2026-11-28"
+   },
+   {
+    "name": "Parsons Family Christmas",
+    "date": "2026-12-03"
+   }
+  ],
+  "notes": "Avalon Foundation runs several rooms; Stoltz Listening Room is its small venue (Chloe Kimes, Low Lily, Erin Harpe there)."
+ },
+ {
+  "slug": "stone-mountain-arts-center-fe2b",
+  "name": "Stone Mountain Arts Center",
+  "city": "Brownfield",
+  "st": "ME",
+  "type": "Intimate Venue",
+  "site": "stonemountainartscenter.com",
+  "active": "yes",
+  "latest_show": "2026-11-13",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed online with no refunds; an occasional 'Pay What You Can' show appears in past lists; food and drinks cash or check only.",
+  "pay_methods": [
+   "cash",
+   "check",
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Sarah Jarosz",
+    "date": "2026-11-12"
+   },
+   {
+    "name": "Alejandro Escovedo & The Electric Saints",
+    "date": "2026-11-13"
+   }
+  ],
+  "notes": "Owner-operated rural music barn; 20th anniversary; listing page truncated so later 2026 dates may exist."
+ },
+ {
+  "slug": "story-song-center-4ef7",
+  "name": "Story & Song Center",
+  "city": "Fernandina Beach",
+  "st": "FL",
+  "type": "Intimate Venue",
+  "site": "storyandsongarts.org",
+  "active": "yes",
+  "latest_show": "2026-11-22",
+  "donation_basis": "no",
+  "donation_evidence": "Bookstore, bistro and arts programs with fixed-price or free events; donations go to the foundation.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Jason Woods",
+    "date": "2026-11-22"
+   }
+  ],
+  "notes": "Mostly a bookstore and bistro with arts programming; not primarily a concert venue."
+ },
+ {
+  "slug": "sunrise-theater-b9f5",
+  "name": "Sunrise Theater",
+  "city": "Southern Pines",
+  "st": "NC",
+  "type": "Intimate Venue",
+  "site": "sunrisetheater.com",
+  "active": "yes",
+  "latest_show": "2026-06",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed concerts and movies; free First Friday lawn concerts; donation pages are for the theater nonprofit.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Chatham Rabbits",
+    "date": ""
+   },
+   {
+    "name": "Jason Scott & The High Heat",
+    "date": "2026-06-25"
+   }
+  ],
+  "notes": "Historic nonprofit movie and live-performance theater; 20th anniversary season 2026."
+ },
+ {
+  "slug": "swallow-hill-b73b",
+  "name": "Swallow Hill",
+  "city": "Denver",
+  "st": "CO",
+  "type": "Intimate Venue",
+  "site": "swallowhillmusic.org",
+  "active": "yes",
+  "latest_show": "2026-12-11",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed concerts on listening-room stages; nonprofit fundraising appeal is for the organization.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Drunken Hearts with Derek Dames Ohl",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "Jem Zornow",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "Kaia Kater",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Allison de Groot & Nic Gareiss",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Natalie Spears",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Alasdair Fraser Band",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "Alexandr Misko with Forest Bailey",
+    "date": "2026-11-15"
+   },
+   {
+    "name": "Harry & Friends feat. Rabbi Joe Black",
+    "date": "2026-11-19"
+   },
+   {
+    "name": "A.J. Fullerton & Jake Friel",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "Johnsmith",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "The Sax Syndicate",
+    "date": "2026-12-05"
+   },
+   {
+    "name": "Chris Daniels & The Kings",
+    "date": "2026-12-11"
+   }
+  ],
+  "notes": "Music school and nonprofit concert hall; mostly ticketed, some free community events."
+ },
+ {
+  "slug": "thrasher-opera-house-001d",
+  "name": "Thrasher Opera House",
+  "city": "Green Lake",
+  "st": "WI",
+  "type": "Intimate Venue",
+  "site": "thrasheroperahouse.com",
+  "active": "yes",
+  "latest_show": "2026-12-05",
+  "donation_basis": "no",
+  "donation_evidence": "Concerts ticketed ($50 and $22 examples); donation page (PayPal) supports the opera house nonprofit.",
+  "pay_methods": [
+   "PayPal",
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "The Fabulous Thunderbirds feat. Kim Wilson",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Ryanhood",
+    "date": "2026-12-05"
+   },
+   {
+    "name": "Switchback",
+    "date": "2025-12-13"
+   },
+   {
+    "name": "Dave Simonett",
+    "date": "2025-12-04"
+   },
+   {
+    "name": "Ronnie Baker Brooks",
+    "date": "2025-11-14"
+   },
+   {
+    "name": "Heartache Tonight",
+    "date": "2025-11-08"
+   },
+   {
+    "name": "Pressing Strings",
+    "date": "2025-10-16"
+   },
+   {
+    "name": "Crystal Bowersox",
+    "date": "2025-10-10"
+   },
+   {
+    "name": "Duane Betts & Palmetto Motel",
+    "date": "2025-09-26"
+   },
+   {
+    "name": "Della Mae",
+    "date": "2025-04-10"
+   },
+   {
+    "name": "Skerryvore",
+    "date": "2025-04-03"
+   },
+   {
+    "name": "Sonny Landreth & Cindy Cashdollar",
+    "date": "2025-03-22"
+   },
+   {
+    "name": "Jesse Roper",
+    "date": "2025-03-01"
+   },
+   {
+    "name": "The Sweet Lillies",
+    "date": "2025-02-28"
+   },
+   {
+    "name": "Adrian + Meredith",
+    "date": "2025-02-28"
+   }
+  ],
+  "notes": "Historic opera house, 200 cap; shows often sell out."
+ },
+ {
+  "slug": "tim-noah-thumbnail-theater-d1cc",
+  "name": "Tim Noah Thumbnail Theater",
+  "city": "Snohomish",
+  "st": "WA",
+  "type": "Intimate Venue",
+  "site": "thumbnailtheater.org",
+  "active": "likely",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "Concerts $25-$30 plus processing fee; open mic has $5 suggested donation but that goes to the nonprofit theater.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Taylor Made - The Music of James Taylor",
+    "date": ""
+   },
+   {
+    "name": "Dumas, Luquette & Knapp Trio",
+    "date": ""
+   },
+   {
+    "name": "Van Morrison Tribute Band",
+    "date": ""
+   },
+   {
+    "name": "John Whelan, Susan Burke & The Home Rulers",
+    "date": ""
+   },
+   {
+    "name": "Jose Gonzales Trio",
+    "date": ""
+   }
+  ],
+  "notes": "Current-looking schedule with Dec 19-20 holiday shows but no year given; weekend shows only."
+ },
+ {
+  "slug": "timucua-arts-foundation-19ed",
+  "name": "Timucua Arts Foundation",
+  "city": "Orlando",
+  "st": "FL",
+  "type": "Intimate Venue",
+  "site": "timucua.com",
+  "active": "yes",
+  "latest_show": "2027-02-06",
+  "donation_basis": "yes",
+  "donation_evidence": "Tickets are pay-what-you-like donations, purchased in advance or given at the door; bring wine to share.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Lesley Mok",
+    "date": "2026-11-16"
+   },
+   {
+    "name": "Swamp Xistas Power Lines",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Sheimyrah Mighty",
+    "date": "2026-11-22"
+   },
+   {
+    "name": "Caroline Leigh-Halleck and Greg Hankins",
+    "date": "2025"
+   },
+   {
+    "name": "Mudita and Jordan Foley",
+    "date": "2025"
+   },
+   {
+    "name": "Sokolowski Trombone Project",
+    "date": "2025"
+   },
+   {
+    "name": "Joshua Espinoza Trio",
+    "date": "2025"
+   }
+  ],
+  "notes": "Concerts at 'the white house', a 91-cap acoustic house-style room; chamber music festival Jan 15 to Feb 6, 2027; payment method for donations not specified."
+ },
+ {
+  "slug": "town-hall-theater-6dd5",
+  "name": "Town Hall Theater",
+  "city": "Middlebury",
+  "st": "VT",
+  "type": "Intimate Venue",
+  "site": "townhalltheater.org",
+  "active": "yes",
+  "latest_show": "2026-12-11",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed events; donations and membership support the theater.",
+  "pay_methods": [
+   "check",
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Tony Trischka",
+    "date": "2026-12-11"
+   }
+  ],
+  "notes": "Community theater mostly plays and films; cash bar at some events."
+ },
+ {
+  "slug": "uncommon-ground-6a0c",
+  "name": "Uncommon Ground",
+  "city": "Chicago",
+  "st": "IL",
+  "type": "Intimate Venue",
+  "site": "uncommonground.com/events-page",
+  "active": "yes",
+  "latest_show": "2026-11-17",
+  "donation_basis": "no",
+  "donation_evidence": "Restaurant and brewery with ticketed shows; performers get 100% of cover after $75 house sound fee.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Constellation Ensemble (Glee Pub: DIVAS)",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "Abigayle Oakley",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Fairhazel",
+    "date": "2026-11-14"
+   }
+  ],
+  "notes": "Restaurant listening room, 46 cap; artists expected to bring their audience; radius clause."
+ },
+ {
+  "slug": "upper-jay-art-center-171b",
+  "name": "Upper Jay Art Center",
+  "city": "Upper Jay",
+  "st": "NY",
+  "type": "Intimate Venue",
+  "site": "upperjayartcenter.org",
+  "active": "yes",
+  "latest_show": "2026-12-12",
+  "donation_basis": "unknown",
+  "donation_evidence": "Says all events are affordable and many free; donate page suggests amounts for the nonprofit.",
+  "pay_methods": [
+   "PayPal",
+   "Venmo",
+   "check"
+  ],
+  "recent_artists": [
+   {
+    "name": "Kathleen Parks Band",
+    "date": "2026-12-12"
+   },
+   {
+    "name": "Bad Penny Pleasuremakers",
+    "date": "2026-10-08"
+   },
+   {
+    "name": "Charlie Millard Band",
+    "date": "2026-10-01"
+   },
+   {
+    "name": "Dawn Tyler Watson",
+    "date": "2026-09-24"
+   },
+   {
+    "name": "David Sommerstein",
+    "date": "2026-08-08"
+   },
+   {
+    "name": "Isaac Newcomb",
+    "date": "2026-05-23"
+   }
+  ],
+  "notes": "Nonprofit arts center in a rural Adirondack setting (Recovery Lounge), mixed theater and music; ticket pricing not stated."
+ },
+ {
+  "slug": "vangarde-arts-04fb",
+  "name": "Vangarde Arts",
+  "city": "Sioux City",
+  "st": "IA",
+  "type": "Intimate Venue",
+  "site": "vangardearts.com/events",
+  "active": "yes",
+  "latest_show": "2026-11-20",
+  "donation_basis": "no",
+  "donation_evidence": "Ticketed shows, e.g. $15 advance and $20 day of show; memberships offered.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Goldpine",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Catfish Keith",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "Bywater Call",
+    "date": "2026-11-09"
+   },
+   {
+    "name": "The Claudettes",
+    "date": "2026-10-31"
+   },
+   {
+    "name": "Sexy Cash with Dead Poets",
+    "date": "2026-10-30"
+   }
+  ],
+  "notes": "Nonprofit gallery lounge and listening room."
+ },
+ {
+  "slug": "vanilla-bean-cafe-f2be",
+  "name": "Vanilla Bean Cafe",
+  "city": "Pomfret",
+  "st": "CT",
+  "type": "Intimate Venue",
+  "site": "thevanillabeancafe.com",
+  "active": "yes",
+  "latest_show": "2026-12-11",
+  "donation_basis": "no",
+  "donation_evidence": "Cash-only admission to general admission shows with set prices ($10, $30); restaurant venue.",
+  "pay_methods": [
+   "cash"
+  ],
+  "recent_artists": [
+   {
+    "name": "Poets at Large (Scott Laundati, Tommy Twilite)",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Garnet Rogers",
+    "date": "2026-12-04"
+   }
+  ],
+  "notes": "Country cafe in a barn; shows run October to April."
+ },
+ {
+  "slug": "venue-of-merging-arts-620f",
+  "name": "Venue of Merging Arts",
+  "city": "Johnstown",
+  "st": "PA",
+  "type": "Intimate Venue",
+  "site": "vomajohnstown.com",
+  "active": "yes",
+  "latest_show": "2026-12-05",
+  "donation_basis": "no",
+  "donation_evidence": "Admission $15 ($13 VIP members), at door or via Eventbrite; BYOB.",
+  "pay_methods": [
+   "Eventbrite",
+   "cash"
+  ],
+  "recent_artists": [
+   {
+    "name": "Charlie Barath Blues Band",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "Christopher Mark Jones and The Roots Ensemble",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "Jimmy Adler Blues Band",
+    "date": "2026-11-28"
+   },
+   {
+    "name": "Eleanor Walrus",
+    "date": "2026-12-05"
+   }
+  ],
+  "notes": "All-volunteer nonprofit arts center in a former church with Club VOMA listening room."
+ },
+ {
+  "slug": "white-eagle-saloon-65eb",
+  "name": "White Eagle Saloon",
+  "city": "Portland",
+  "st": "OR",
+  "type": "Intimate Venue",
+  "site": "mcmenamins.com/white-eagle-saloon-hotel/white-eagle",
+  "active": "yes",
+  "latest_show": "2026-12-10",
+  "donation_basis": "no",
+  "donation_evidence": "McMenamins pub and hotel with ticketed or cover shows; no donation model described.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Love Mischief",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "PDX Memorex",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Tire Kickers",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "Showman and Coole - The Lonesome Ace Brothers",
+    "date": "2026-11-17"
+   },
+   {
+    "name": "Papi Fimbres",
+    "date": "2026-11-18"
+   },
+   {
+    "name": "Trestles",
+    "date": "2026-11-19"
+   },
+   {
+    "name": "Dead Sometimes",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "Getlin Band",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "The Throwbacks",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "Bria Damage",
+    "date": "2026-11-25"
+   },
+   {
+    "name": "Earth to Ashes",
+    "date": "2026-11-25"
+   },
+   {
+    "name": "The Red Hots",
+    "date": "2026-12-03"
+   },
+   {
+    "name": "Big Foo",
+    "date": "2026-12-03"
+   },
+   {
+    "name": "Sean McLean and the Vibetenders",
+    "date": "2026-12-04"
+   },
+   {
+    "name": "JT Wise Band",
+    "date": "2026-12-04"
+   },
+   {
+    "name": "Bug Complex",
+    "date": "2026-12-05"
+   },
+   {
+    "name": "Ladybug Infestation",
+    "date": "2026-12-05"
+   },
+   {
+    "name": "Mexican Gunfight",
+    "date": "2026-12-05"
+   },
+   {
+    "name": "Daddy's Vinyl",
+    "date": "2026-12-10"
+   }
+  ],
+  "notes": "Commercial pub chain venue; nightly shows."
+ },
+ {
+  "slug": "white-horse-black-mountain-a97a",
+  "name": "White Horse Black Mountain",
+  "city": "Black Mountain",
+  "st": "NC",
+  "type": "Intimate Venue",
+  "site": "whitehorseblackmountain.org",
+  "active": "likely",
+  "latest_show": "",
+  "donation_basis": "likely",
+  "donation_evidence": "Most events are 'donate what you can' with a suggested price; 'every show is a benefit', money apparently to the nonprofit.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [],
+  "notes": "Nonprofit hall; pay-what-you-can ticketing but unclear how much goes to artists; calendar contents not in text and site copyright 2025."
+ },
+ {
+  "slug": "willingham-theater-e742",
+  "name": "Willingham Theater",
+  "city": "Yadkinville",
+  "st": "NC",
+  "type": "Intimate Venue",
+  "site": "yadkinarts.org/willingham-theater",
+  "active": "likely",
+  "latest_show": "",
+  "donation_basis": "no",
+  "donation_evidence": "Tickets purchased online, by phone or at the desk; donations support the arts council.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [],
+  "notes": "193-seat theater at Yadkin Cultural Arts Center; no dated events in scraped text."
+ },
+ {
+  "slug": "word-barn-a0d6",
+  "name": "Word Barn",
+  "city": "Exeter",
+  "st": "NH",
+  "type": "Intimate Venue",
+  "site": "thewordbarn.com",
+  "active": "yes",
+  "latest_show": "2026-11-28",
+  "donation_basis": "no",
+  "donation_evidence": "All concerts require tickets, usually sell out; membership gives ticket discounts.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Goodnight Moonshine Quartet feat. Molly Venter",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "Riverado",
+    "date": "2026-11-13"
+   },
+   {
+    "name": "John Gorka",
+    "date": "2026-11-14"
+   },
+   {
+    "name": "The Lion Sisters",
+    "date": "2026-11-20"
+   },
+   {
+    "name": "Laurie MacAllister",
+    "date": "2026-11-22"
+   },
+   {
+    "name": "Seth Glier",
+    "date": "2026-11-22"
+   },
+   {
+    "name": "Halley Neal and Sam Robbins",
+    "date": "2026-11-28"
+   }
+  ],
+  "notes": "Barn venue described as a 'glorified house concert' setting, but ticketed through Bright & Lyon Productions."
+ },
+ {
+  "slug": "zoetropolis-2b84",
+  "name": "Zoetropolis",
+  "city": "Lancaster",
+  "st": "PA",
+  "type": "Intimate Venue",
+  "site": "zoetropolis.com",
+  "active": "yes",
+  "latest_show": "2026-11-25",
+  "donation_basis": "no",
+  "donation_evidence": "Movie theater and distillery selling tickets; donate page supports the cinema.",
+  "pay_methods": [
+   "Apple Pay",
+   "other"
+  ],
+  "recent_artists": [
+   {
+    "name": "Low Lily",
+    "date": "2026-11-18"
+   },
+   {
+    "name": "The Angel Hour",
+    "date": "2026-11-21"
+   },
+   {
+    "name": "The Weird Heavy Revival",
+    "date": "2026-11-22"
+   },
+   {
+    "name": "Louise Bichan & Friends",
+    "date": "2026-11-05"
+   },
+   {
+    "name": "Karma Sutra",
+    "date": "2026-11-07"
+   },
+   {
+    "name": "The Nielsen Family Band",
+    "date": "2026-11-25"
+   }
+  ],
+  "notes": "Mostly cinema with some live music."
+ },
+ {
+  "slug": "zootown-arts-community-center-5ffa",
+  "name": "Zootown Arts Community Center",
+  "city": "Missoula",
+  "st": "MT",
+  "type": "Intimate Venue",
+  "site": "zootownarts.org",
+  "active": "yes",
+  "latest_show": "2026-11-06",
+  "donation_basis": "no",
+  "donation_evidence": "Show Room events ticketed; donations support the nonprofit arts center.",
+  "pay_methods": [
+   "other"
+  ],
+  "recent_artists": [],
+  "notes": "Nonprofit arts center with a 150-cap Show Room; artists not named in text."
+ }
+]

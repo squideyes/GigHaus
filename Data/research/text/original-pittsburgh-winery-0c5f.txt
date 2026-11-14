@@ -1,0 +1,5 @@
+VENUE: Original Pittsburgh Winery | Pittsburgh, PA | Intimate Venue
+SITE: pittsburghwinery.com
+CSV NOTES: Tim Gaber, Talent Buyer, rooms of 80 cap and 300 cap
+
+=== PAGE https://pittsburghwinery.com
