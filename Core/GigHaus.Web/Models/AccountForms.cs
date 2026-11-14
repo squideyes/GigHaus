@@ -46,13 +46,9 @@ public class VenueDetailsForm
     public string? VenueDescription { get; set; }
 }
 
+/// <summary>What an invited host fills in. Their email comes from the invitation.</summary>
 public sealed class HostSignupForm : VenueDetailsForm
 {
-    [Required(ErrorMessage = "Enter your email.")]
-    [EmailAddress(ErrorMessage = "That doesn't look like an email address.")]
-    [StringLength(200)]
-    public string Email { get; set; } = string.Empty;
-
     [Required(ErrorMessage = "Choose a password.")]
     [StringLength(100, MinimumLength = 10, ErrorMessage = "Use at least 10 characters.")]
     public string Password { get; set; } = string.Empty;

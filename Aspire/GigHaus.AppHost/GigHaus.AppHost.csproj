@@ -1,8 +1,8 @@
-<Project Sdk="Aspire.AppHost.Sdk/13.6.4">
+<Project Sdk="Aspire.AppHost.Sdk/13.6.5">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework>net11.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <UserSecretsId>7281f831-4a54-4dd8-9dab-46954feeed1b</UserSecretsId>
@@ -17,9 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aspire.Hosting.PostgreSQL" Version="13.6.4" />
-    <PackageReference Include="Aspire.Hosting.RabbitMQ" Version="13.6.4" />
-    <PackageReference Include="Aspire.Hosting.Redis" Version="13.6.4" />
+    <PackageReference Include="Aspire.Hosting.PostgreSQL" Version="13.6.5" />
+    <PackageReference Include="Aspire.Hosting.RabbitMQ" Version="13.6.5" />
+    <PackageReference Include="Aspire.Hosting.Redis" Version="13.6.5" />
   </ItemGroup>
 
 </Project>

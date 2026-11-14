@@ -15,6 +15,7 @@ namespace GigHaus.IntegrationTests.Services;
 public sealed class HostJourneyTests(PostgresFixture fixture) : IDisposable
 {
     private const string PortalUrl = "https://gighaus.test/portal";
+    private const string SignupUrl = "https://gighaus.test/signup";
     private const string SignupName = "Maple Street Sessions";
 
     private readonly IServiceScope _scope = fixture.Services.CreateScope();
@@ -26,48 +27,97 @@ public sealed class HostJourneyTests(PostgresFixture fixture) : IDisposable
     private IArtistRepository Artists => _scope.ServiceProvider.GetRequiredService<IArtistRepository>();
 
     [Fact]
-    public async Task SignUp_CreatesPendingHostLinkedToUser()
+    public async Task SignUp_WithAnInvitation_CreatesApprovedHostWithTheInvitedEmail()
     {
-        var result = await Onboarding.SignUpAsync(NewSignup());
+        var (lead, token) = await InviteAsync();
 
-        result.Success.ShouldBeTrue();
-        var host = await Hosts.GetByIdAsync(result.Value!.HostId!.Value);
-        host!.Status.ShouldBe(HostStatus.Pending);
+        var result = await Onboarding.SignUpAsync(NewSignup(token));
+
+        result.Success.ShouldBeTrue(result.Error);
+        result.Value!.Email.ShouldBe(lead.Email);
+        var host = await Hosts.GetByIdAsync(result.Value.HostId!.Value);
+        host!.Status.ShouldBe(HostStatus.Approved);
         host.Name.ShouldBe(SignupName);
     }
 
-    [Fact]
-    public async Task SignUp_TwiceWithOneEmail_FailsTheSecondTime()
+    [Theory]
+    [InlineData("")]
+    [InlineData("not-a-real-token")]
+    public async Task SignUp_WithoutAValidInvitation_IsRefused(string token)
     {
-        var signup = NewSignup();
-        await Onboarding.SignUpAsync(signup);
-
-        var second = await Onboarding.SignUpAsync(signup with { Email = signup.Email.ToUpperInvariant() });
-
-        second.Success.ShouldBeFalse();
-    }
-
-    [Fact]
-    public async Task SignUp_WithWeakPassword_LeavesNoHostBehind()
-    {
-        var signup = NewSignup() with { Password = "short" };
-
-        var result = await Onboarding.SignUpAsync(signup);
+        var result = await Onboarding.SignUpAsync(NewSignup(token));
 
         result.Success.ShouldBeFalse();
-        (await Hosts.GetByEmailAsync(signup.Email)).ShouldBeNull();
     }
 
     [Fact]
-    public async Task SignUp_MovesAMatchingLeadToSignedUp()
+    public async Task SignUp_UsesUpTheInvitation()
     {
-        var leads = _scope.ServiceProvider.GetRequiredService<ILeadRepository>();
-        var signup = NewSignup();
-        var lead = await leads.CreateAsync(new Lead { Name = SignupName, Email = signup.Email });
+        var (lead, token) = await InviteAsync();
+        await Onboarding.SignUpAsync(NewSignup(token));
 
-        await Onboarding.SignUpAsync(signup);
+        var second = await Onboarding.SignUpAsync(NewSignup(token));
 
-        (await leads.GetAllAsync()).Single(l => l.Id == lead.Id).Status.ShouldBe(LeadStatus.SignedUp);
+        second.Success.ShouldBeFalse();
+        (await Onboarding.FindInvitationAsync(token)).ShouldBeNull();
+        (await Leads.GetByIdAsync(lead.Id))!.Status.ShouldBe(LeadStatus.SignedUp);
+    }
+
+    [Fact]
+    public async Task SignUp_WithWeakPassword_LeavesNoHostBehindAndKeepsTheInvitation()
+    {
+        var (lead, token) = await InviteAsync();
+
+        var result = await Onboarding.SignUpAsync(NewSignup(token) with { Password = "short" });
+
+        result.Success.ShouldBeFalse();
+        (await Hosts.GetByEmailAsync(lead.Email)).ShouldBeNull();
+        (await Onboarding.FindInvitationAsync(token)).ShouldNotBeNull();
+    }
+
+    [Fact]
+    public async Task Invite_Again_ReplacesTheEarlierLink()
+    {
+        var (lead, first) = await InviteAsync();
+
+        var second = await InviteAsync(lead);
+
+        (await Onboarding.FindInvitationAsync(first)).ShouldBeNull();
+        (await Onboarding.FindInvitationAsync(second))!.Id.ShouldBe(lead.Id);
+    }
+
+    [Fact]
+    public async Task Invitation_StopsWorkingOnceItExpires()
+    {
+        var (lead, token) = await InviteAsync();
+        await Leads.SetInvitedAsync(lead.Id, new string('a', 64), DateTime.UtcNow.AddMinutes(-1));
+
+        (await Onboarding.FindInvitationAsync(token)).ShouldBeNull();
+        (await Leads.GetByInviteTokenHashAsync(new string('a', 64)))!.Status.ShouldBe(LeadStatus.Invited);
+        (await Onboarding.SignUpAsync(NewSignup(token))).Success.ShouldBeFalse();
+    }
+
+    [Fact]
+    public async Task InviteNew_ReusesAnOpenRequestForTheSameEmail()
+    {
+        var request = await Leads.CreateAsync(new Lead { Name = SignupName, Email = TestData.UniqueEmail() });
+
+        var invited = await Onboarding.InviteNewAsync("Someone Else", request.Email.ToUpperInvariant(), SignupUrl);
+
+        invited.Success.ShouldBeTrue(invited.Error);
+        invited.Value!.Id.ShouldBe(request.Id);
+        invited.Value.Status.ShouldBe(LeadStatus.Invited);
+    }
+
+    [Fact]
+    public async Task Invite_IsRefusedForAnEmailThatAlreadyHasAnAccount()
+    {
+        var (lead, token) = await InviteAsync();
+        await Onboarding.SignUpAsync(NewSignup(token));
+
+        var again = await Onboarding.InviteNewAsync(SignupName, lead.Email, SignupUrl);
+
+        again.Success.ShouldBeFalse();
     }
 
     [Fact]
@@ -140,10 +190,36 @@ public sealed class HostJourneyTests(PostgresFixture fixture) : IDisposable
 
     public void Dispose() => _scope.Dispose();
 
-    private static HostSignup NewSignup() => new()
+    private ILeadRepository Leads => _scope.ServiceProvider.GetRequiredService<ILeadRepository>();
+
+    /// <summary>Invites a new (or the given) lead and returns the token from the emailed link.</summary>
+    private async Task<(Lead Lead, string Token)> InviteAsync()
     {
+        var lead = await Leads.CreateAsync(new Lead { Name = SignupName, Email = TestData.UniqueEmail() });
+        return (lead, await InviteAsync(lead));
+    }
+
+    private async Task<string> InviteAsync(Lead lead)
+    {
+        string? token = null;
+        fixture.Email
+            .When(e => e.SendEmailAsync(Arg.Is<EmailMessage>(m => m.To == lead.Email), Arg.Any<CancellationToken>()))
+            .Do(call =>
+            {
+                var body = call.Arg<EmailMessage>().HtmlBody;
+                var start = body.IndexOf("invite=", StringComparison.Ordinal) + "invite=".Length;
+                token = body[start..body.IndexOf('"', start)];
+            });
+
+        var invited = await Onboarding.InviteAsync(lead.Id, SignupUrl);
+        invited.Success.ShouldBeTrue(invited.Error);
+        return token.ShouldNotBeNull();
+    }
+
+    private static HostSignup NewSignup(string inviteToken) => new()
+    {
+        InviteToken = inviteToken,
         Name = SignupName,
-        Email = TestData.UniqueEmail(),
         Password = TestData.Password,
         Address = TestData.Street,
         City = TestData.City,

@@ -25,7 +25,7 @@ GigHaus doesn't charge anyone, and takes no cut of what guests give. Guests cont
 
 | Layer | Technology |
 |---|---|
-| Language and runtime | C# 14 on .NET 10 |
+| Language and runtime | C# 15 on .NET 11 |
 | Orchestration | .NET Aspire 13.6 |
 | Website | Blazor Web App: static pages for the public site, interactive server pages for the portal and admin |
 | API | ASP.NET Core Minimal APIs |
@@ -72,7 +72,7 @@ Inside `GigHaus.Web/Components/Pages`, the folder decides who can reach a page:
 
 ## Running it locally
 
-You need the .NET 10 SDK and Docker Desktop.
+You need the .NET 11 SDK and Docker Desktop.
 
 The admin account is created at startup from an Aspire parameter. Set its password once per machine:
 

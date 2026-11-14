@@ -10,20 +10,29 @@ This page explains how GigHaus thinks about people, shows and money. For the pag
 | **Artist** | A performer. Hosts add artists to shows. Artists never have accounts. | `Artist` |
 | **Guest** | Someone who reserves a spot. Guests never have accounts, and only need an email address. | `Reservation.AttendeeName`, `AttendeeEmail` |
 | **Admin** | You, the one person who runs GigHaus. There are no staff. You review hosts and work leads. | role `Admin` |
-| **Lead** | A prospective host who filled in the contact form but may not have signed up. | `Lead` |
+| **Lead** | A prospective host: someone who asked for an invitation, or whom you invited directly. | `Lead` |
 
 The site says "guest" and "show". The code says "attendee" and "event". They mean the same things.
 
 ## How a host joins
 
-A new host can start in two ways:
+GigHaus is invite only. Nobody can create an account without an invitation from you.
 
-- **Sign up directly** at `/signup`. They're signed in straight away, and their status is Pending.
-- **Get in touch first** at `/contact`. That creates a lead for you to follow up.
+1. **They ask.** The form at `/request-invite` (also `/contact`) creates a lead with the status Requested.
+   You can also invite someone who never asked, from `/admin/leads`.
+2. **You invite.** Sending an invitation emails a sign-up link and moves the lead to Invited.
+   The link works once and lasts 14 days. Sending again replaces the earlier link.
+   Only a hash of the link's token is stored.
+3. **They sign up** at `/signup?invite=...`. The account gets the invited email address, the lead moves
+   to Signed up, and the host starts out Approved, because the invitation was the review.
+
+`/signup` without a valid link explains that GigHaus is invite only and points to the request form.
+A host is only Pending if it was created another way, such as through the API.
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Pending: Signs up
+    [*] --> Approved: Signs up with an invitation
+    [*] --> Pending: Created another way
     Pending --> Approved: Admin approves
     Approved --> Suspended: Admin suspends
     Pending --> Suspended: Admin suspends
