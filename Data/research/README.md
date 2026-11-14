@@ -2,8 +2,7 @@
 
 Paused on 2026-11-14. This folder holds a first pass at finding house concerts
 and intimate venues that GigHaus could serve, and the artists who play them.
-It was built from `Data/Troubador Concert Rooms.csv` (1,579 rows), which is
-**not** in the repository; copy it into `Data/` by hand to re-run the crawl.
+It was built from `Data/Troubador Concert Rooms.csv` (1,579 rows).
 
 ## Where it stands
 
